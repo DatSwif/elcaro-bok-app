@@ -1,0 +1,44 @@
+::ng-deep .p-drawer {
+  min-width: 400px;
+  width: 50vw;
+}
+
+@media (max-width: 768px) {
+  ::ng-deep .p-drawer {
+    min-width: 100vw;
+    max-width: 100vw;
+  }
+}
+
+::ng-deep .p-drawer {
+  background-color: var(--color-off-white);
+}
+
+::ng-deep .p-drawer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.section { 
+  border: 1px solid var(--color-gray-light); 
+  border-radius: 16px; 
+  padding: 16px; 
+  background-color: var(--color-white);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-label { color: var(--color-text-muted); font-size: 12px; margin-bottom: 4px; display: block; }
+.font-bold { font-weight: 600; margin-bottom: 4px; }
+.text-xl { font-size: 18px; }
+.text-header { color: var(--color-primary-blue); }
+.loading-label { color: var(--color-text-muted); font-size: 1rem; }
+
+.copy-icon {
+  height: 24px;
+  width: 24px;
+}

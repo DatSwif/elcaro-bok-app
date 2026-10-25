@@ -1,0 +1,2605 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="pl-PL" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="9086642360271527525" datatype="html">
+        <source>Rejestracja</source>
+        <target>Registration</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/auth-code/auth-code.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/register-form/register-form.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/register-success/register-success.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/start/start.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6730208270082417870" datatype="html">
+        <source>Logowanie</source>
+        <target>Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/auth-code/auth-code.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/login-form/login-form.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/start/start.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4635681909427457521" datatype="html">
+        <source>Zarejestruj się</source>
+        <target>Register</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/auth-code/auth-code.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/register-form/register-form.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2622782859314043460" datatype="html">
+        <source>Zaloguj się</source>
+        <target>Log In</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/auth-code/auth-code.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/login-form/login-form.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7691739043051407589" datatype="html">
+        <source>Przekroczony limit</source>
+        <target>Limit reached</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/limit-reached/limit-reached.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4536687455473664628" datatype="html">
+        <source>Wykorzystano maksymalną liczbę
+wysłanych wiadomości z kodem
+jednorazowym.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>Dostęp do aplikacji zostanie zablokowany na 3 godziny.</source>
+        <target>Maximum amount of single-use code messages was sent.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>Application access will be blocked for 3 hours.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/limit-reached/limit-reached.html</context>
+          <context context-type="linenumber">3,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4580706812419433538" datatype="html">
+        <source>Aby odblokować dostęp, proszę o kontakt z naszym Biurem Obsługi Klienta pod numerem telefonu <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;phone-link&quot; href=&quot;tel:+48222035200&quot;&gt;"/>22 20 35 200<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+lub skorzystać z pomocy w prawym górnym rogu.</source>
+        <target>To unlock the app, please contact customer support by calling the phone number <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;phone-link&quot; href=&quot;tel:+48222035200&quot;&gt;"/>22 20 35 200<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+or using the help button in the top right corner.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/limit-reached/limit-reached.html</context>
+          <context context-type="linenumber">7,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7863464601011006696" datatype="html">
+        <source>Podaj numer telefonu użyty podczas<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>zawierania umowy.</source>
+        <target>Enter the telephone number used when<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>concluding the contract.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/login-form/login-form.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1344948460579958251" datatype="html">
+        <source>Podaj poniżej dane aby zarejestrować się<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>w naszym serwisie ebok.</source>
+        <target>Fill in the details below to register<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>on our service.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/register-form/register-form.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4543008801498944664" datatype="html">
+        <source>Podaj numer klienta</source>
+        <target>Enter the client number</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/register-form/register-form.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1482433937863929951" datatype="html">
+        <source>Podaj e-mail</source>
+        <target>Enter e-mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/register-form/register-form.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2110965550093823431" datatype="html">
+        <source> Akceptuję <x id="START_LINK" ctype="x-a" equiv-text="&lt;a (click)=&quot;openTermsOfService()&quot; class=&quot;text-link&quot;&gt;"/>Regulamin<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> i <x id="START_LINK_1" equiv-text="&lt;a (click)=&quot;openPrivacyPolicy()&quot; class=&quot;text-link&quot;&gt;"/>Politykę prywatności<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target> I accept <x id="START_LINK" ctype="x-a" equiv-text="&lt;a (click)=&quot;openTermsOfService()&quot; class=&quot;text-link&quot;&gt;"/>Terms of Service<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> and <x id="START_LINK_1" equiv-text="&lt;a (click)=&quot;openPrivacyPolicy()&quot; class=&quot;text-link&quot;&gt;"/>Privacy Policy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/register-form/register-form.html</context>
+          <context context-type="linenumber">40,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6037577665291647533" datatype="html">
+        <source> Akceptuję <x id="START_LINK" ctype="x-a" equiv-text="&lt;a (click)=&quot;openMarketingConsents()&quot; class=&quot;text-link&quot;&gt;"/>Zgody marketingowe<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target> I accept <x id="START_LINK" ctype="x-a" equiv-text="&lt;a (click)=&quot;openMarketingConsents()&quot; class=&quot;text-link&quot;&gt;"/>Marketing consents<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/register-form/register-form.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8981836614350057152" datatype="html">
+        <source>Gratulacje! Twoje konto zostało założone pomyślnie. Zaloguj się aby korzystać ze wszystkich funkcji naszego systemu ebok.</source>
+        <target>Congratulations! Your account has been successfully created. Log in to use all the features of our eBOK system.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/register-success/register-success.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8679784725012763624" datatype="html">
+        <source>Przejdź do logowania</source>
+        <target>Go to login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/register-success/register-success.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1963380380421312489" datatype="html">
+        <source>Witaj w świecie elcaro</source>
+        <target>Welcome to the world of elcaro</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/header/header.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7318366437296865368" datatype="html">
+        <source>Czas na szybkie i wygodne zarządzanie usługami.</source>
+        <target>It's time for quick and convenient service management.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/header/header.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1283458677189174889" datatype="html">
+        <source>Użytkownik</source>
+        <target>User</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6235277948277677421" datatype="html">
+        <source>Awatar</source>
+        <target>Avatar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/header/header.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7930176965262791096" datatype="html">
+        <source>Wiadomości</source>
+        <target>Messages</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/header/header.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-header/messages-header.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3205533090300623286" datatype="html">
+        <source>Wyloguj się</source>
+        <target>Sign Out</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/header/header.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.dashboard" datatype="html">
+        <source>Pulpit</source>
+        <target>Dashboard</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/sidebar/sidebar.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.billing" datatype="html">
+        <source>Płatności</source>
+        <target>Billing</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/sidebar/sidebar.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.services" datatype="html">
+        <source>Usługi</source>
+        <target>Services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/sidebar/sidebar.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.offers" datatype="html">
+        <source>Oferta</source>
+        <target>Offers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/sidebar/sidebar.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.help" datatype="html">
+        <source>Pomoc</source>
+        <target>Help</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/sidebar/sidebar.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.messages" datatype="html">
+        <source>Wiadomości</source>
+        <target>Messages</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/sidebar/sidebar.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.settings" datatype="html">
+        <source>Ustawienia</source>
+        <target>Settings</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/sidebar/sidebar.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.chat" datatype="html">
+        <source>Chat</source>
+        <target>Chat</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/layout/sidebar/sidebar.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1804387313678421984" datatype="html">
+        <source>Stan rachunku</source>
+        <target>Account balance</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-account-info/billing-account-info.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8806903693459468078" datatype="html">
+        <source>(zaległość)</source>
+        <target>(arrear)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-account-info/billing-account-info.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5552022462911348087" datatype="html">
+        <source>(nadpłata)</source>
+        <target>(overpayment)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-account-info/billing-account-info.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6579195346114260596" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ account.balance.toFixed(2) }}"/> zł</source>
+        <target><x id="INTERPOLATION" equiv-text="{{ account.balance.toFixed(2) }}"/> PLN</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-account-info/billing-account-info.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-returns/billing-returns.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/transfer-details/transfer-details.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">93,94</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">78,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2415931562260516658" datatype="html">
+        <source> Zwrot </source>
+        <target> Return </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-account-info/billing-account-info.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8399893149823137123" datatype="html">
+        <source> Opłać </source>
+        <target> Pay </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-account-info/billing-account-info.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2959591667627903393" datatype="html">
+        <source> Twój indywidualny numer konta do wpłat </source>
+        <target> Your individual payment account number </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-account-info/billing-account-info.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2888144304906850489" datatype="html">
+        <source>Wybierz faktury do opłaty</source>
+        <target>Select invoices to pay</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1395265776864224819" datatype="html">
+        <source>Zaznacz zaległe</source>
+        <target>Select arrears</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2762670227280104541" datatype="html">
+        <source>Zaznacz wszystkie</source>
+        <target>Select all</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8358702866609004323" datatype="html">
+        <source>Odznacz wszystkie</source>
+        <target>Unselect all</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1442269478375825853" datatype="html">
+        <source>Data wystawienia:</source>
+        <target>Issue date:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6609335964953216526" datatype="html">
+        <source>Okres: <x id="INTERPOLATION" equiv-text="{{ invoice.period_start | date:&apos;dd.MM.yyyy&apos; }}"/> - <x id="INTERPOLATION_1" equiv-text="{{ invoice.period_end | date:&apos;dd.MM.yyyy&apos; }}"/></source>
+        <target>Period: <x id="INTERPOLATION" equiv-text="{{ invoice.period_start | date:&apos;dd.MM.yyyy&apos; }}"/> - <x id="INTERPOLATION_1" equiv-text="{{ invoice.period_end | date:&apos;dd.MM.yyyy&apos; }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7243224476138030215" datatype="html">
+        <source>Numer faktury:</source>
+        <target>Invoice number:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7883572467756115277" datatype="html">
+        <source>Termin płatności:</source>
+        <target>Payment due date:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="187187500641108332" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ invoice.due_date | date:&apos;dd.MM.yyyy&apos;}}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{ invoice.due_date | date:&apos;dd.MM.yyyy&apos;}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/faq-help/faq-details-page/faq-details-page.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7413367525734330783" datatype="html">
+        <source>Opłacona</source>
+        <target>Paid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8630149340734316119" datatype="html">
+        <source>Oczekująca</source>
+        <target>Pending</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7027194043305526937" datatype="html">
+        <source>Przeterminowana</source>
+        <target>Overdue</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3139393342205789567" datatype="html">
+        <source>Zapłacono:</source>
+        <target>Paid:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3509373238974857225" datatype="html">
+        <source>Do zapłaty:</source>
+        <target>To pay:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4671025268966561946" datatype="html">
+        <source>Opłać</source>
+        <target>Pay</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">103,104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2576559269552280211" datatype="html">
+        <source>Wybrana do opłaty</source>
+        <target>Selected for payment</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6484350839711167402" datatype="html">
+        <source>Zaznacz, aby opłacić</source>
+        <target>Select for payment</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1925543557236407399" datatype="html">
+        <source>Brak faktur</source>
+        <target>No invoices</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">83,85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="811980172528089881" datatype="html">
+        <source>Wybierz sposób płatności</source>
+        <target>Select payment method</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">89,90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="135786711464603764" datatype="html">
+        <source>Szybkie płatności online</source>
+        <target>Fast online payments</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4096001317337653783" datatype="html">
+        <source>Przelew tradycyjny</source>
+        <target>Traditional transfer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3783959270866671476" datatype="html">
+        <source>Pokaż dane do przelewu</source>
+        <target>Show transfer info</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4805563396267068239" datatype="html">
+        <source>Anuluj</source>
+        <target>Cancel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-invoices/billing-invoices.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/return-form/return-form.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">177,178</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">94,95</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/global-messages/global-messages.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/personal-messages/personal-messages.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="30562604787959109" datatype="html">
+        <source>Płatności</source>
+        <target>Payments</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-main/billing-main.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="billing.tabs.unpaid" datatype="html">
+        <source>Do zapłaty</source>
+        <target>Unpaid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-main/billing-main.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="billing.tabs.paid" datatype="html">
+        <source>Zapłacone</source>
+        <target>Paid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-main/billing-main.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="billing.tabs.payments" datatype="html">
+        <source>Wpłaty</source>
+        <target>Payments</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-main/billing-main.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="billing.tabs.returns" datatype="html">
+        <source>Zwroty nadpłat</source>
+        <target>Overpayment returns</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-main/billing-main.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7859232133083035262" datatype="html">
+        <source>Tytuł wpłaty</source>
+        <target>Payment title</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3551736772689784229" datatype="html">
+        <source>Termin wpłaty:</source>
+        <target>Payment date:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6835093344117977486" datatype="html">
+        <source>Rozliczona</source>
+        <target>Settled</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3912230126063696603" datatype="html">
+        <source>Odrzucona</source>
+        <target>Rejected</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5375694032608415966" datatype="html">
+        <source>Kwota transakcji:</source>
+        <target>Transaction amount:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-returns/billing-returns.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1263765462525268069" datatype="html">
+        <source>Brak płatności</source>
+        <target>No payments</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-payments/billing-payments.html</context>
+          <context context-type="linenumber">51,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="212806785670584" datatype="html">
+        <source>Numer konta bankowego:</source>
+        <target>Bank account number:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-returns/billing-returns.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7433882167729445805" datatype="html">
+        <source>Data złożenia:</source>
+        <target>Issue date:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-returns/billing-returns.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7334317080977974549" datatype="html">
+        <source>Rozliczono</source>
+        <target>Settled</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-returns/billing-returns.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7450249402336299957" datatype="html">
+        <source>Zlecono</source>
+        <target>Pending</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-returns/billing-returns.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3958995826413132053" datatype="html">
+        <source>Odrzucono</source>
+        <target>Rejected</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-returns/billing-returns.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2358487441664154460" datatype="html">
+        <source>Brak zwrotów</source>
+        <target>No returns</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/billing-returns/billing-returns.html</context>
+          <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6346602112204285005" datatype="html">
+        <source>Podgląd faktury</source>
+        <target>Invoice details</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6258342393963230740" datatype="html">
+        <source>Faktura</source>
+        <target>Invoice</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="241000197670873798" datatype="html">
+        <source>Sprzedawca</source>
+        <target>Seller</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5390323839219949608" datatype="html">
+        <source>Data wystawienia</source>
+        <target>Issue date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3424207390295126769" datatype="html">
+        <source>Data sprzedaży</source>
+        <target>Sale date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6364142650019246512" datatype="html">
+        <source>Sposób zapłaty</source>
+        <target>Payment method</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1983230446818394834" datatype="html">
+        <source>Termin płatności</source>
+        <target>Due date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2509086101739908598" datatype="html">
+        <source>Okres opłat stałych:</source>
+        <target>Fixed charge period:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1479153084874405177" datatype="html">
+        <source>Numer Abonenta:</source>
+        <target>Client Number:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4821285801195638626" datatype="html">
+        <source>Nabywca:</source>
+        <target>Buyer:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8671635573174736757" datatype="html">
+        <source>Rodzaj usługi</source>
+        <target>Service type</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="465898661952245019" datatype="html">
+        <source>Ilość</source>
+        <target>Count</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="261330938182681156" datatype="html">
+        <source>VAT</source>
+        <target>VAT</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3247189800310901004" datatype="html">
+        <source>Netto</source>
+        <target>Net</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">87,88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3503124831305422846" datatype="html">
+        <source>Brutto</source>
+        <target>Gross</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">91,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5688779566703501632" datatype="html">
+        <source>Kwota netto faktury</source>
+        <target>Net invoice amount</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="555604124831603554" datatype="html">
+        <source>Kwota brutto faktury</source>
+        <target>Gross invoice amount</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">103,104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9166399239381551885" datatype="html">
+        <source>Nr rachunku bankowego:</source>
+        <target>Bank account number:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">109,110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="458172204818045146" datatype="html">
+        <source>Powrót</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.html</context>
+          <context context-type="linenumber">118,119</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/transfer-details/transfer-details.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-header/help-header.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/faq-help/faq-details-page/faq-details-page.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-header/messages-header.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="billing.invoice" datatype="html">
+        <source>Faktura_<x id="PH" equiv-text="this.data.invoice_number.replace(/\s+/g, &apos;_&apos;)"/></source>
+        <target>Invoice_<x id="PH" equiv-text="this.data.invoice_number.replace(/\s+/g, &apos;_&apos;)"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/invoice-details/invoice-details.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="102950701243785559" datatype="html">
+        <source>Wniosek o zwrot nadpłaty</source>
+        <target>Application for refund</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/return-form/return-form.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5192599639463528576" datatype="html">
+        <source> Należy podać dane, określić kwotę zwrotu i numer konta bankowego które powiązane jest z właścicielem konta w serwisie ELCARO.
+      Kwota zwrotu nie może być większa niż należna kwota zwrotu i w przeciwnym razie zwrot zostanie odrzucony. Maksymalna kwota zwrotu to 500 zł. </source>
+        <target> Enter your personal details, specify the refund amount, and provide the bank account number associated with the ELCARO account holder. The refund amount cannot exceed the overpayment amount and will otherwise be rejected. Maximum refund amount is 500 PLN. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/return-form/return-form.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1411420506839760727" datatype="html">
+        <source>Nazwisko</source>
+        <target>Last name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/return-form/return-form.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9085079297417347388" datatype="html">
+        <source>Imię</source>
+        <target>First name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/return-form/return-form.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8996210399960879660" datatype="html">
+        <source>Kwota zwrotu</source>
+        <target>Return amount</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/return-form/return-form.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2314036357891505218" datatype="html">
+        <source>Numer konta bankowego</source>
+        <target>Bank account number</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/return-form/return-form.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3397754583992686929" datatype="html">
+        <source>Zwrot nadpłaty</source>
+        <target>Overpayment return</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/return-form/return-form.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7462233364069963076" datatype="html">
+        <source>Dane do przelewu</source>
+        <target>Transfer info</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/transfer-details/transfer-details.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7151614151335970139" datatype="html">
+        <source>Odbiorca</source>
+        <target>Recipient</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/transfer-details/transfer-details.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6309851289909661290" datatype="html">
+        <source>Adres odbiorcy</source>
+        <target>Recipient address</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/transfer-details/transfer-details.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7798737670230307943" datatype="html">
+        <source>Rachunek bankowy</source>
+        <target>Bank account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/transfer-details/transfer-details.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4670311563397745253" datatype="html">
+        <source>Tytuł przelewu</source>
+        <target>Transfer title</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/transfer-details/transfer-details.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1262060584434891507" datatype="html">
+        <source>Do zapłaty</source>
+        <target>Amount to pay</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/transfer-details/transfer-details.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5613438788389053978" datatype="html">
+        <source>Ładowanie...</source>
+        <target>Loading...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/billing/transfer-details/transfer-details.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2396468306593676106" datatype="html">
+        <source>Przejdź</source>
+        <target>Go to</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3216695389584564731" datatype="html">
+        <source>Wiadomości <x id="INTERPOLATION" equiv-text="{{ messagesNumber() &gt; 0 ? &apos;(&apos; + messagesNumber() + &apos;)&apos; : &apos;&apos; }}"/></source>
+        <target>Messages <x id="INTERPOLATION" equiv-text="{{ messagesNumber() &gt; 0 ? &apos;(&apos; + messagesNumber() + &apos;)&apos; : &apos;&apos; }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3661817872104356941" datatype="html">
+        <source>Cofnij</source>
+        <target>Previous</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6603754108432946039" datatype="html">
+        <source>Dalej</source>
+        <target>Next</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7588597875378742339" datatype="html">
+        <source>Brak wiadomości</source>
+        <target>No new messages</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">91,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="758225682817855933" datatype="html">
+        <source>Moje usługi</source>
+        <target>My services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1538770074285130690" datatype="html">
+        <source> aktywne <x id="INTERPOLATION" equiv-text="{{ service.activeCount }}"/> </source>
+        <target> active <x id="INTERPOLATION" equiv-text="{{ service.activeCount }}"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">118,119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4765573445147485934" datatype="html">
+        <source>Dodaj usługę</source>
+        <target>Add service</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">128,129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="334894324571871679" datatype="html">
+        <source>Oferty specjalne i promocje</source>
+        <target>Special offers and discounts</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.html</context>
+          <context context-type="linenumber">135,136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="type.internet" datatype="html">
+        <source>Internet</source>
+        <target>Internet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="type.television" datatype="html">
+        <source>Telewizja</source>
+        <target>Television</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="type.mobile" datatype="html">
+        <source>Telefon</source>
+        <target>Mobile</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="type.other" datatype="html">
+        <source>Inne</source>
+        <target>Other</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dashboard/dashboard-main/dashboard-main.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5765674263287534879" datatype="html">
+        <source>Pomoc</source>
+        <target>Help</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-header/help-header.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="help-header.tabs.contact" datatype="html">
+        <source>Kontakt</source>
+        <target>Contact</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-header/help-header.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="help-header.tabs.faq" datatype="html">
+        <source>FAQ</source>
+        <target>FAQ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-header/help-header.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="phoneAlt" datatype="html">
+        <source>Phone</source>
+        <target>Phone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/contact-service.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="callHotlineTitle" datatype="html">
+        <source>Zadzwoń na infolinię</source>
+        <target>Call the hotline</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/contact-service.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailAlt" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/contact-service.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sendMessageTitle" datatype="html">
+        <source>Wyślij wiadomość</source>
+        <target>Send a message</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/contact-service.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8036414707655027812" datatype="html">
+        <source>Brak pytań w tej kategorii.</source>
+        <target>There are no questions in this category.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/faq-help/faq-details-page/faq-details-page.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8602904164879137383" datatype="html">
+        <source>Nie znaleziono kategorii, której szukasz.</source>
+        <target>The category you are looking for was not found.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/faq-help/faq-details-page/faq-details-page.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="872092542127675695" datatype="html">
+        <source>Wróć do listy</source>
+        <target>Return</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/faq-help/faq-details-page/faq-details-page.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="346117894678205003" datatype="html">
+        <source>Wyszukaj</source>
+        <target>Search</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/faq-help/faq-help.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5009444203724972061" datatype="html">
+        <source>Szukaj</source>
+        <target>Search</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/faq-help/faq-help.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7629864430547452559" datatype="html">
+        <source> Wpisz frazę, aby wyszukać. </source>
+        <target> Enter a phrase to search. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/faq-help/faq-help.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1298244823374003170" datatype="html">
+        <source>Wyszukiwanie...</source>
+        <target>Searching... </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/faq-help/faq-help.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="683334727750479960" datatype="html">
+        <source> Nie znaleziono wyników dla podanej frazy. </source>
+        <target> No results found for the phrase you specified. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/help/help-tabs/faq-help/faq-help.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="messages-header.tabs.global" datatype="html">
+        <source>Wiadomości</source>
+        <target>Messages</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-header/messages-header.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="messages-header.tabs.personal" datatype="html">
+        <source>Powiadomienia</source>
+        <target>Notifications</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-header/messages-header.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5738093229137106886" datatype="html">
+        <source>Usunąć wiadomość?</source>
+        <target>Delete message?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/global-messages/global-messages.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1467508388583350055" datatype="html">
+        <source>Usuń</source>
+        <target>Delete</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/global-messages/global-messages.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/global-messages/global-messages.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/global-messages/global-messages.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/personal-messages/personal-messages.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/personal-messages/personal-messages.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7374008168230337450" datatype="html">
+        <source>Lista wiadomości jest pusta.</source>
+        <target>The message list is empty.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/global-messages/global-messages.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6034223997429967649" datatype="html">
+        <source>Oznacz jako przeczytane</source>
+        <target>Mark as read</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/global-messages/global-messages.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/global-messages/global-messages.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/personal-messages/personal-messages.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4927743959128893198" datatype="html">
+        <source>Wybierz wiadomość po lewej stronie.</source>
+        <target>Choose the message on the left.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/global-messages/global-messages.html</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="446155387971421483" datatype="html">
+        <source>Zamknij</source>
+        <target>Close</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/global-messages/global-messages.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8100160290057829111" datatype="html">
+        <source> Usunąć powiadomienie? </source>
+        <target> Delete notification? </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/personal-messages/personal-messages.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7605641856758587348" datatype="html">
+        <source>Lista powiadomień jest pusta.</source>
+        <target>The notification list is empty.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/messages/messages-tabs/personal-messages/personal-messages.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5188133633712572219" datatype="html">
+        <source>Oferta</source>
+        <target>Offers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offers-main/offers-main.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2136002656668708444" datatype="html">
+        <source>Ta oferta nie istnieje lub jest niedostępna.</source>
+        <target>This offer does not exist or is unavailable.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="711371333741147271" datatype="html">
+        <source>Wróć do listy ofert</source>
+        <target>Return to offers list</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5150640464724407412" datatype="html">
+        <source>Długość umowy: <x id="INTERPOLATION" equiv-text="{{block.duration_months}}"/> (miesięcy)</source>
+        <target>Contract duration: <x id="INTERPOLATION" equiv-text="{{block.duration_months}}"/> (months)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="705903426615157634" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{item.name}}"/>: <x id="INTERPOLATION_1" equiv-text="{{item.amount.toFixed(2)}}"/> zł</source>
+        <target><x id="INTERPOLATION" equiv-text="{{item.name}}"/>: <x id="INTERPOLATION_1" equiv-text="{{item.amount.toFixed(2)}}"/> PLN</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7166143178003805285" datatype="html">
+        <source>Zamów</source>
+        <target>Order</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8563208008743328078" datatype="html">
+        <source>Autoryzacja operacji</source>
+        <target>Authorizing operation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">119,120</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7248200464566992116" datatype="html">
+        <source>Sukces!</source>
+        <target>Success!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">121,122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7753608310910104392" datatype="html">
+        <source>Wystąpił błąd</source>
+        <target>An error occurred</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">123,124</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="757606506925287157" datatype="html">
+        <source>Przetwarzanie...</source>
+        <target>Processing...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">125,126</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1418024539589249611" datatype="html">
+        <source>Potwierdzenie zamówienia</source>
+        <target>Accepting order</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">127,128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6791553012666545786" datatype="html">
+        <source> Czy na pewno chcesz dodać tę usługę do swojego konta? Operacja wymaga autoryzacji kodem SMS. </source>
+        <target> Do you really want to add this service to your account? The operation requires an SMS code authentication. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2226494836919187182" datatype="html">
+        <source>Wybierz numer telefonu do wysyłki kodu:</source>
+        <target>Choose a phone number to send the code to:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">139,140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2450774035140760452" datatype="html">
+        <source>Wybierz numer telefonu</source>
+        <target>Choose a phone number</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">141,142</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7099994896963075364" datatype="html">
+        <source>Dodatkowe informacje zostały wysłane na Twój adres e-mail.</source>
+        <target>Additional information has been sent to your email address.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">158,159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2662023738980890925" datatype="html">
+        <source>Nie udało się dodać usługi. Prosimy spróbować ponownie później.</source>
+        <target>Failed to add the service. Please try again later.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">160,161</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2979851905624143542" datatype="html">
+        <source>Przetwarzanie zamówienia...</source>
+        <target>Processing order...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">162,163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">78,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6571764946725046000" datatype="html">
+        <source>Potwierdzam i wyślij kod</source>
+        <target>Accept and send code</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">176,177</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">93,94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6179406799758971239" datatype="html">
+        <source>Wróć do ofert</source>
+        <target>Return to offers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">180,181</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offer-variants/offer-variants.html</context>
+          <context context-type="linenumber">182,183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter.tag.promo" datatype="html">
+        <source>Promocje</source>
+        <target>Special Offers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offers-main/offers-main.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter.cat.internet" datatype="html">
+        <source>Internet</source>
+        <target>Internet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offers-main/offers-main.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter.cat.tv" datatype="html">
+        <source>Telewizja</source>
+        <target>Television</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offers-main/offers-main.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter.cat.bundle" datatype="html">
+        <source>Internet + Telewizja</source>
+        <target>Internet + Television</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offers-main/offers-main.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter.cat.mobile" datatype="html">
+        <source>Telefon</source>
+        <target>Mobile</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offers-main/offers-main.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter.cat.devices" datatype="html">
+        <source>Urządzenia</source>
+        <target>Devices</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/offers/offers-main/offers-main.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5983933441039487051" datatype="html">
+        <source>Pakiet aktywowany</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2739167169417183577" datatype="html">
+        <source>Dodanie pakietu <x id="INTERPOLATION" equiv-text="{{packageDetails?.name}}"/></source>
+        <target>Adding package <x id="INTERPOLATION" equiv-text="{{packageDetails?.name}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5049520867784784482" datatype="html">
+        <source>Dodajesz do swojej usługi <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{serviceName}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> pakiet <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;package-name&quot;&gt;"/><x id="INTERPOLATION_1" equiv-text="{{packageDetails?.name}}"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/> zawierający <x id="INTERPOLATION_2" equiv-text="{{packageDetails?.channels?.length}}"/> kanałów.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <target>You are adding to your <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{serviceName}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> service a package <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;package-name&quot;&gt;"/><x id="INTERPOLATION_1" equiv-text="{{packageDetails?.name}}"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> containing <x id="INTERPOLATION_2" equiv-text="{{packageDetails?.channels?.length}}"/> channels.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5623782418037275560" datatype="html">
+        <source>Opłata za pakiet będzie naliczana co miesiąc do Twojej faktury.</source>
+        <target>The package fee will be charged monthly to your invoice.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7244520993300531328" datatype="html">
+        <source>Cena pakietu: <x id="INTERPOLATION" equiv-text="{{packageDetails?.monthly_fee | number:&apos;1.2-2&apos;}}"/> zł/mc</source>
+        <target>Package price: <x id="INTERPOLATION" equiv-text="{{packageDetails?.monthly_fee | number:&apos;1.2-2&apos;}}"/> PLN/mo</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7196641273176776197" datatype="html">
+        <source>Wybierz numer telefonu do autoryzacji: </source>
+        <target>Choose a phone number for authorization: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3190883181658614800" datatype="html">
+        <source> Dodając pakiet akceptujesz <x id="START_LINK" ctype="x-a" equiv-text="&lt;a (click)=&quot;showPromotionRegulations()&quot; class=&quot;text-link&quot;&gt;"/>regulamin promocji<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <target> By adding the package, you accept the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a (click)=&quot;showPromotionRegulations()&quot; class=&quot;text-link&quot;&gt;"/>promotion regulations<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8777951555507194201" datatype="html">
+        <source>Pakiet został pomyślnie aktywowany. Zmiany będą widoczne na Twoim koncie w ciągu kilku minut.</source>
+        <target>Package has been successfully activated. Changes will be visible on your account within a few minutes.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6308102960091878282" datatype="html">
+        <source>Nie udało się aktywować pakietu. Prosimy spróbować ponownie później.</source>
+        <target>Failed to activate the package. Please try again later.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">76,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7154397076122677656" datatype="html">
+        <source>Wróć do usług</source>
+        <target>Return to services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/package-details/package-details.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="644164219492544598" datatype="html">
+        <source>Adres usługi</source>
+        <target>Service address</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2591715540352498698" datatype="html">
+        <source>Okres zobowiązania</source>
+        <target>Active until</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8009089008830092122" datatype="html">
+        <source>Parametry</source>
+        <target>Information</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7359960157538841787" datatype="html">
+        <source>Powiązane urządzenia</source>
+        <target>Related hardware</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="551706091014097835" datatype="html">
+        <source>Pakiety</source>
+        <target>Packages</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7606696928632047167" datatype="html">
+        <source>Liczba kanałów: <x id="INTERPOLATION" equiv-text="{{item.channels.length}}"/></source>
+        <target>Channels: <x id="INTERPOLATION" equiv-text="{{item.channels.length}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="30094470879519546" datatype="html">
+        <source>Usuń pakiet</source>
+        <target>Remove package</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="920361173779308506" datatype="html">
+        <source>Dodaj pakiet</source>
+        <target>Add package</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/service-details/service-details.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9140391181029993714" datatype="html">
+        <source>Usługi</source>
+        <target>Services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1073840007938287889" datatype="html">
+        <source>Wybierz adres</source>
+        <target>Choose address</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3167987717113274527" datatype="html">
+        <source>Dowolny adres</source>
+        <target>Any address</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6386493422576820274" datatype="html">
+        <source>Umowa od: <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{contract_start_date}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> do: <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION_1" equiv-text="{{contract_end_date}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <target>Contract active from: <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{contract_start_date}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> until: <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION_1" equiv-text="{{contract_end_date}}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.html</context>
+          <context context-type="linenumber">23,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2814368633616176716" datatype="html">
+        <source> Dodaj usługę </source>
+        <target> Add a service </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4875223390760672168" datatype="html">
+        <source> Przedłuż umowę </source>
+        <target> Extend contract </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8007197980895324992" datatype="html">
+        <source>Opłata miesięczna: <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{service.monthly_fee ? service.monthly_fee.toFixed(2) : &apos;--&apos;}}"/> zł<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <target>Monthly fee: <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{service.monthly_fee ? service.monthly_fee.toFixed(2) : &apos;--&apos;}}"/> pln<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.html</context>
+          <context context-type="linenumber">63,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6476168394088540033" datatype="html">
+        <source>Brak usług dla wybranego adresu.</source>
+        <target>No services for selected address.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.html</context>
+          <context context-type="linenumber">67,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="services.indefinitePeriod" datatype="html">
+        <source>Czas nieokreślony</source>
+        <target>Indefinite period</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="status.pending" datatype="html">
+        <source>Oczekuje na uruchomienie</source>
+        <target>Pending</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="status.suspended" datatype="html">
+        <source>Blokada</source>
+        <target>Blocked</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="status.active" datatype="html">
+        <source>Aktywny</source>
+        <target>Active</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="status.inactive" datatype="html">
+        <source>Zawieszony</source>
+        <target>Suspended</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/services/services-main/services-main.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8028499464007134031" datatype="html">
+        <source>Ustawienia</source>
+        <target>Settings</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.account" datatype="html">
+        <source>Konto</source>
+        <target>Account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.settings" datatype="html">
+        <source>Ustawienia</source>
+        <target>Settings</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.termsOfService" datatype="html">
+        <source>Regulamin</source>
+        <target>Terms of service</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.privacyPolicy" datatype="html">
+        <source>Polityka prywatności</source>
+        <target>Privacy policy</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.hardware" datatype="html">
+        <source>Sprzęt</source>
+        <target>Hardware</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.marketingConsents" datatype="html">
+        <source>Zgody marketingowe</source>
+        <target>Marketing consents</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4901839338874923087" datatype="html">
+        <source>Dane personalne</source>
+        <target>Personal data</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5070230227108499246" datatype="html">
+        <source>Numer klienta</source>
+        <target>Client number</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9017858074124443565" datatype="html">
+        <source>Organizacja</source>
+        <target>Organization</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="537635395078497255" datatype="html">
+        <source>Dane kontaktowe</source>
+        <target>Contact data</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6476072427307915059" datatype="html">
+        <source>Telefon <x id="INTERPOLATION" equiv-text="{{ i + 1 }}"/></source>
+        <target>Phone <x id="INTERPOLATION" equiv-text="{{ i + 1 }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">76,77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2422973376539799808" datatype="html">
+        <source>E-mail <x id="INTERPOLATION" equiv-text="{{ i + 1 }}"/></source>
+        <target>E-mail <x id="INTERPOLATION" equiv-text="{{ i + 1 }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">128,129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7556907890092537814" datatype="html">
+        <source><x id="TAG_IMG" ctype="image" equiv-text="&lt;img src=&quot;assets/icons/fi-rr-trash.svg&quot; alt=&quot;Usuń&quot; i18n-alt&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">145,146</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4978901760456406501" datatype="html">
+        <source> + Dodaj telefon </source>
+        <target> + Add phone </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3934990398127813158" datatype="html">
+        <source> + Dodaj e-mail </source>
+        <target> + Add e-mail </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">160</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2710335112537352851" datatype="html">
+        <source>Zapisz zmiany</source>
+        <target>Save changes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">175,176</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/lang-notif-settings/lang-notif-settings.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/marketing-consents/marketing-consents.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/lang-notif-settings/lang-notif-settings.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/marketing-consents/marketing-consents.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2657437575502467200" datatype="html">
+        <source>Edytuj dane</source>
+        <target>Edit data</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.html</context>
+          <context context-type="linenumber">177,178</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="success.saved.title" datatype="html">
+        <source>Sukces</source>
+        <target>Success</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.ts</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/lang-notif-settings/lang-notif-settings.ts</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/marketing-consents/marketing-consents.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="success.saved" datatype="html">
+        <source>Zmiany zostały zapisane.</source>
+        <target>The changes have been saved.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/account-settings/account-settings.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/lang-notif-settings/lang-notif-settings.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/marketing-consents/marketing-consents.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4488606365220534090" datatype="html">
+        <source> Usługa: <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;service-name&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ serviceLabel }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Service: <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;service-name&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ serviceLabel }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-item/hardware-item.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-item/hardware-item.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5240050608057080222" datatype="html">
+        <source>Otwórz</source>
+        <target>Open</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-item/hardware-item.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2795513703219256706" datatype="html">
+        <source> Własność: <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;owner&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ ownerLabel }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Owner: <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;owner&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ ownerLabel }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-item/hardware-item.html</context>
+          <context context-type="linenumber">21,25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-item/hardware-item.html</context>
+          <context context-type="linenumber">62,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3567533150159021911" datatype="html">
+        <source> Zwróć </source>
+        <target> Return </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-item/hardware-item.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5683529672495531803" datatype="html">
+        <source> Zgłoś awarię </source>
+        <target> Report issue </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-item/hardware-item.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2141662055975884870" datatype="html">
+        <source>Podgląd sprzętu</source>
+        <target>Hardware information</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-item/hardware-item.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2457944221043339050" datatype="html">
+        <source> Numer Seryjny: <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ item.serialNumber }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Serial Number: <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ item.serialNumber }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-item/hardware-item.html</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1582908692102889035" datatype="html">
+        <source>Grupuj po usłudze</source>
+        <target>Group by service</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-settings.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5964125489264904662" datatype="html">
+        <source>Brak sprzętu</source>
+        <target>No devices</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-settings.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hardware.owner.rented" datatype="html">
+        <source>Wynajęty</source>
+        <target>Rented</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-settings.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hardware.owner.owned" datatype="html">
+        <source>Własny</source>
+        <target>Owned</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-settings.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hardware.owner.other" datatype="html">
+        <source>Inne</source>
+        <target>Other</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/hardware-settings/hardware-settings.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6336235494200123593" datatype="html">
+        <source>Domyślny język</source>
+        <target>Default language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/lang-notif-settings/lang-notif-settings.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/lang-notif-settings/lang-notif-settings.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6963028083622036173" datatype="html">
+        <source>Powiadomienia</source>
+        <target>Notifications</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/lang-notif-settings/lang-notif-settings.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8365265009422719474" datatype="html">
+        <source> W każdej chwili możesz odwołać zgody marketingowe i na profilowanie w dowolnej formie, w szczególności w Stancjonarnym Punkcie Sprzedaży lub pod numerem +48 574 182 792 </source>
+        <target> You can withdraw your marketing and profiling consents at any time in any form, in particular at a physical point of sale or by calling +48 574 182 792 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/marketing-consents/marketing-consents.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5404715321682865965" datatype="html">
+        <source>Zaznacz/odznacz wszystkie</source>
+        <target>Select/Unselect All</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-tabs/marketing-consents/marketing-consents.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="clipboard.summary" datatype="html">
+        <source>Schowek</source>
+        <target>Clipboard</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/clipboard-utils-service.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/clipboard-utils-service.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/clipboard-utils-service.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="clipboard.copySuccess" datatype="html">
+        <source>Skopiowano do schowka</source>
+        <target>Copied to clipboard</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/clipboard-utils-service.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/clipboard-utils-service.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="clipboard.copyError" datatype="html">
+        <source>Błąd kopiowania</source>
+        <target>Copy error</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/clipboard-utils-service.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8028499464007134031" datatype="html">
+        <source>Ustawienia</source>
+        <target>Settings</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.account" datatype="html">
+        <source>Konto</source>
+        <target>Account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.settings" datatype="html">
+        <source>Ustawienia</source>
+        <target>Settings</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.termsOfService" datatype="html">
+        <source>Regulamin</source>
+        <target>Terms of service</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.privacyPolicy" datatype="html">
+        <source>Polityka prywatności</source>
+        <target>Privacy policy</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.hardware" datatype="html">
+        <source>Sprzęt</source>
+        <target>Hardware</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-header.tabs.marketingConsents" datatype="html">
+        <source>Zgody marketingowe</source>
+        <target>Marketing consents</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/settings/settings-header/settings-header.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1116407854878979596" datatype="html">
+        <source>Pobierz</source>
+        <target>Download</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/document-viewer/document-viewer.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.error" datatype="html">
+        <source>Błąd</source>
+        <target>Error</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.unexpected" datatype="html">
+        <source>Wystąpił nieoczekiwany błąd serwera.</source>
+        <target>An unexpected server error occurred.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.connection" datatype="html">
+        <source>Błąd połączenia</source>
+        <target>Connection error</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.unreachable" datatype="html">
+        <source>Serwer jest nieosiągalny. Sprawdź połączenie z internetem.</source>
+        <target>The server is unreachable. Check internet connection.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.badRequest" datatype="html">
+        <source>Błąd żądania</source>
+        <target>Request error</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.badRequestDesc" datatype="html">
+        <source>Sprawdź, czy wszystkie pola zostały wypełnione poprawnie.</source>
+        <target>Please check that all fields have been completed correctly.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.unauthorized" datatype="html">
+        <source>Brak autoryzacji</source>
+        <target>Unauthorized</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.unauthorizedDesc" datatype="html">
+        <source>Zaloguj się ponownie, aby kontynuować.</source>
+        <target>Session expired. Log in again to continue.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.forbidden" datatype="html">
+        <source>Dostęp zabroniony</source>
+        <target>Access denied</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.forbiddenDesc" datatype="html">
+        <source>Nie masz dostępu do tego zasobu.</source>
+        <target>You don't have access to this resource.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.notFound" datatype="html">
+        <source>Nie znaleziono</source>
+        <target>Not found</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.notFoundDesc" datatype="html">
+        <source>Żądany zasób nie został znaleziony.</source>
+        <target>Requested resource was not found.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.validation" datatype="html">
+        <source>Nieprawidłowy kod</source>
+        <target>Invalid code</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.validationDesc" datatype="html">
+        <source>Sprawdź poprawność wprowadzonego kodu.</source>
+        <target>Please double check the entered code.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.AuthError" datatype="html">
+        <source>Błąd autoryzacji</source>
+        <target>Authorization error</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6519856847661055896" datatype="html">
+        <source>@@errors.AuthErrorDesc:Sesja wygasła. Prosimy zalogować się ponownie.</source>
+        <target>Session expired. Please log in again.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.serverError" datatype="html">
+        <source>Błąd serwera</source>
+        <target>Server error</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.serverErrorDesc" datatype="html">
+        <source>Wewnętrzny błąd serwera. Spróbuj ponownie później.</source>
+        <target>Internal server error. Please try again later.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errors.status" datatype="html">
+        <source>Błąd <x id="PH" equiv-text="error.status"/></source>
+        <target>Error <x id="PH" equiv-text="error.status"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interceptors/error.interceptor.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4254998162216798743" datatype="html">
+        <source>Podaj numer telefonu</source>
+        <target>Enter your phone number</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/phone-input/phone-input.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="country.germany" datatype="html">
+        <source>Niemcy</source>
+        <target>Germany</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/phone-input/phone-input.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="country.poland" datatype="html">
+        <source>Polska</source>
+        <target>Poland</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/phone-input/phone-input.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="country.ukraine" datatype="html">
+        <source>Ukraina</source>
+        <target>Ukraine</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/phone-input/phone-input.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="country.usa" datatype="html">
+        <source>Stany Zjednoczone</source>
+        <target>USA</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/phone-input/phone-input.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7422443714517615776" datatype="html">
+        <source>Kod nie przyszedł?</source>
+        <target>Didn't receive the code?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/sms-confirmation/sms-confirmation.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3433392583080774887" datatype="html">
+        <source>Wyślij ponownie</source>
+        <target>Resend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/sms-confirmation/sms-confirmation.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3181906651219857503" datatype="html">
+        <source>Na podany numer telefonu&lt;br&gt;wysłaliśmy jednorazowy kod.</source>
+        <target>We have sent a one-time code&lt;br&gt;to the provided phone number.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/sms-confirmation/sms-confirmation.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2198100058320643895" datatype="html">
+        <source>Potwierdź</source>
+        <target>Confirm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/sms-confirmation/sms-confirmation.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

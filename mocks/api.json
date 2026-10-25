@@ -1,0 +1,1737 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Terms of Service API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/dashboard": {
+      "get": {
+        "summary": "Get dashboard main data",
+        "description": "Returns account info, messages, services and offers for the dashboard.",
+        "responses": {
+          "200": {
+            "description": "Dashboard data",
+            "content": {
+              "application/json": {
+                "example": {
+                  "account": {
+                    "account_number": "12 1000 2222 4444 0000 1234 0000",
+                    "balance": 1
+                  },
+                  "messages": [
+                    {
+                      "id": 1,
+                      "title": "Przypomnienie o aktualizacji danych",
+                      "content": "Drogi użytkowniku. Prosimy o aktualizację Twoich danych w Ustaw..."
+                    },
+                    {
+                      "id": 2,
+                      "title": "Nowa wiadomość",
+                      "content": "Masz nową wiadomość w skrzynce odbiorczej."
+                    },
+                    {
+                      "id": 3,
+                      "title": "Informacja",
+                      "content": "Sprawdź najnowsze zmiany w usługach."
+                    }
+                  ],
+                  "services": [
+                    {
+                      "service_type": "Internet",
+                      "activeCount": 3
+                    },
+                    {
+                      "service_type": "Television",
+                      "activeCount": 1
+                    },
+                    {
+                      "service_type": "UnknownType",
+                      "activeCount": 2
+                    },
+                    {
+                      "service_type": "Other",
+                      "activeCount": 10
+                    }, 
+                    {
+                      "service_type": "dada",
+                      "activeCount": 2
+                    }
+                  ],
+                  "offers": [
+                    {
+                      "id": 1,
+                      "title": "Internet 1 Gb/s",
+                      "subtitle": "Szybki internet do domu i pracy.",
+                      "image_url": null
+                    },
+                    {
+                      "id": 2,
+                      "title": "Telewizja Premium",
+                      "subtitle": "Najlepsze kanały i pakiety dodatkowe.",
+                      "image_url": null
+                    },
+                    {
+                      "id": 3,
+                      "title": "Pakiet Internet + TV",
+                      "subtitle": "Zestaw w lepszej cenie.",
+                      "image_url": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/terms-of-service": {
+      "get": {
+        "summary": "Get grouped Terms of Service documents",
+        "description": "Returns a hierarchical list of document sections and their metadata (ID, title, type) without the heavy HTML content.",
+        "responses": {
+          "200": {
+            "description": "A list of document sections with nested document metadata",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "label": "Usługi telekomunikacyjne",
+                    "type": "telecommunications-services",
+                    "documents": [
+                      { "id": "d1", "title": "Regulamin świadczenia usług telekomunikacyjnych", "type": "telecommunications-services" },
+                      { "id": "d3", "title": "Regulamin promocji \"Oferta na bloki_lato 2024\"", "type": "telecommunications-services" }
+                    ]
+                  },
+                  {
+                    "label": "Inne",
+                    "type": "other",
+                    "documents": [
+                      { "id": "d6", "title": "Specyfikacja techniczna usług", "type": "other" }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/privacy-policy": {
+      "get": {
+        "summary": "Get grouped Privacy Policy documents",
+        "description": "Retrieves all privacy-related documents and marketing consents, grouped by their respective categories.",
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of privacy policy documents",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "label": "Polityka prywatności",
+                    "type": "privacy",
+                    "documents": [
+                      { "id": "p1", "title": "Polityka prywatności", "type": "privacy" }
+                    ]
+                  },
+                  {
+                    "label": "Zgody",
+                    "type": "consents",
+                    "documents": [
+                      { "id": "p2", "title": "Zgoda marketingowa", "type": "consents" }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/terms-of-service": {
+      "get": {
+        "summary": "Get the registration terms of service document",
+        "description": "Returns the terms of service document for the registration flow.",
+        "responses": {
+          "200": {
+            "description": "Terms of service document",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": "t1",
+                  "title": "Regulamin rejestracji",
+                  "text": "<h3>Regulamin</h3><p>Warunki korzystania z serwisu ebok...</p>",
+                  "type": "terms"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/privacy-policy": {
+      "get": {
+        "summary": "Get the registration privacy policy document",
+        "description": "Returns the privacy policy document for the registration flow.",
+        "responses": {
+          "200": {
+            "description": "Privacy policy document",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": "p1",
+                  "title": "Polityka prywatności rejestracji",
+                  "text": "<h3>Polityka prywatności</h3><p>Twoje dane będą przetwarzane zgodnie z...</p>",
+                  "type": "privacy"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/marketing-consents": {
+      "get": {
+        "summary": "Get the registration marketing consents document",
+        "description": "Returns the marketing consents document for the registration flow.",
+        "responses": {
+          "200": {
+            "description": "Marketing consents document",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": "m1",
+                  "title": "Zgody marketingowe",
+                  "text": "<h3>Zgody marketingowe</h3><p>Wyrażam zgodę na komunikację marketingową...</p>",
+                  "type": "marketing-consents"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clients/phone-numbers": {
+      "get": {
+        "summary": "Get a list of phone numbers for the authenticated user",
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of privacy policy documents",
+            "content": {
+              "application/json": {
+                "example": [
+                  { "phone_number": "+48123456789" },
+                  { "phone_number": "+48987654321" },
+                  { "phone_number": "+380123456789" }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/settings/privacy-policy": {
+      "get": {
+        "summary": "Get grouped Privacy Policy documents",
+        "description": "Retrieves all privacy-related documents and marketing consents, grouped by their respective categories.",
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of privacy policy documents",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "label": "Polityka prywatności",
+                    "type": "privacy",
+                    "documents": [
+                      { "id": "p1", "title": "Polityka prywatności", "type": "privacy" }
+                    ]
+                  },
+                  {
+                    "label": "Zgody",
+                    "type": "consents",
+                    "documents": [
+                      { "id": "p2", "title": "Zgoda marketingowa", "type": "consents" }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/settings/terms-of-service": {
+      "get": {
+        "summary": "Get grouped Terms of Service documents",
+        "description": "Returns a hierarchical list of document sections and their metadata (ID, title, type) without the heavy HTML content.",
+        "responses": {
+          "200": {
+            "description": "A list of document sections with nested document metadata",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "label": "Usługi telekomunikacyjne",
+                    "type": "telecommunications-services",
+                    "documents": [
+                      { "id": "d1", "title": "Regulamin świadczenia usług telekomunikacyjnych", "type": "telecommunications-services" },
+                      { "id": "d3", "title": "Regulamin promocji \"Oferta na bloki_lato 2024\"", "type": "telecommunications-services" }
+                    ]
+                  },
+                  {
+                    "label": "Inne",
+                    "type": "other",
+                    "documents": [
+                      { "id": "d6", "title": "Specyfikacja techniczna usług", "type": "other" }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/services/promotions-regulations": {
+      "get": {
+        "summary": "Get promotion regulations document",
+        "description": "Returns the promotion regulations document for package purchase confirmation.",
+        "responses": {
+          "200": {
+            "description": "Promotion regulations document",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": "d3",
+                  "title": "Regulamin promocji \"Oferta na bloki_lato 2024\"",
+                  "text": "<h3>Regulamin promocji</h3><p>Opis szczegółowy regulaminu promocji dla pakietów usług telekomunikacyjnych.</p><p>Warunki promocji obowiązują zgodnie z zasadami określonymi w umowie oraz niniejszym regulaminie.</p>",
+                  "type": "telecommunications-services"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/{id}/text": {
+      "get": {
+        "summary": "Get document HTML content",
+        "description": "Returns the full HTML body of a document identified by its unique ID for on-demand loading.",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTML content of the document",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": "d3",
+                  "text": "<h3>I. KORZYŚCI PROMOCJI</h3><ol><li>Obniżone opłaty za usługi telekomunikacyjne w każdym Okresie Rozliczeniowym w Okresie Promocji (przez okres nie dłuższy niż 24 miesiące), tj. nabycie usług telekomunikacyjnych na preferencyjnych warunkach (z rabatem określonym w niniejszym Regulaminie Promocji).</li><li>Obniżone Opłaty Jednorazowe w przypadku aktywacji usług telekomunikacyjnych.</li><li>Otrzymanie dodatkowych rabatów za wyrażenie wszystkich Zgód marketingowych (rabat 5 zł miesięcznie) oraz wyrażenie zgody na e-Fakturę (rabat 5 zł miesięcznie) przyznawanych zgodnie z odrębnym Regulaminem Promocji „Zgody marketingowe/e faktura”.</li></ol><h3>II. DEFINICJE</h3><ol><li>Organizator Promocji – ELCARO Spółka z ograniczoną odpowiedzialnością z siedzibą w Warszawie (03-140), przy ul. Odkrytej 1A, wpisana pod numerem 0000623333 do rejestru przedsiębiorców KRS, prowadzonego przez Sąd Rejonowy dla m. st. Warszawy w Warszawie, XIII Wydział Gospodarczy KRS, której nadano NIP: 5242803567 oraz REGON: 364717322;</li><li>Abonent – nowy klient oraz pełnoletnia osoba fizyczna, która łącznie spełnia następujące warunki:<ol type=\"a\"><li>w okresie 3 (słownie: trzech) miesięcy przed Przystąpieniem do promocji nie był Abonentem Organizatora Promocji w zakresie jakiekolwiek z Usług stacjonarnych,</li><li>nie zalega względem Organizatora Promocji z płatnościami z jakiegokolwiek tytułu,</li><li>przystępuje do Promocji w celach nie związanych z działalnością gospodarczą;</li></ol></li><li>Promocja – kampania promocyjna prowadzona przez Organizatora Promocji pod hasłem „Oferta na bloki_lato 2024”, stanowiąca warunki, zasady nabywania i świadczenia Usług określonych w niniejszym Regulaminie Promocji.</li><li>Korzyści – korzyści o których mowa w pkt. I Regulaminu Promocji;</li><li>Umowa – Umowa o świadczenie Usług przez Organizatora Promocji zawarta na warunkach promocyjnych, na czas określony 24 miesięcy dla usług oferowanych przez Organizatora Promocji w niniejszym Regulaminie Promocji;</li><li>Przystąpienie do promocji – data zawarcia przez Uczestnika Promocji Umowy na warunkach określonych w Umowie oraz w niniejszym Regulaminie Promocji;</li><li>Uczestnik Promocji – Abonent który zawarł Umowę z Organizatorem Promocji;</li><li>Usługa – usługi telekomunikacyjne lub pakiet usług telekomunikacyjnych świadczonych przez Organizatora Promocji na podstawie Umowy.</li><li>Okres rozliczeniowy – okres za który dokonywane są rozliczenia należności Uczestnika Promocji wobec Organizatora Promocji z tytułu świadczenia Usług, rozpoczynający się i kończący we wskazanym przed Organizatora Promocji dniach miesiąca. O ile nie wskazano inaczej okres rozliczeniowy wynosi jeden miesiąc kalendarzowy.</li></ol>"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/{id}/pdf": {
+      "get": {
+        "summary": "Download document as PDF",
+        "description": "Generates and returns a PDF version of the requested document.",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "The document file in PDF format",
+            "content": { "application/pdf": { "schema": { "type": "string", "format": "binary" } } }
+          }
+        }
+      }
+    },
+    "/api/layout": {
+      "get": {
+        "summary": "Get layout header data",
+        "description": "Returns the current user's first name, last name, and message count for the header.",
+        "responses": {
+          "200": {
+            "description": "Layout data",
+            "content": {
+              "application/json": {
+                "example": {
+                  "firstName": "Zbigniew",
+                  "lastName": "Kuźniecowski",
+                  "messageCount": 5,
+                  "appLanguage": "en"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/contact-help": {
+    "get": {
+        "summary": "Get contact help data",
+        "responses": {
+            "200": {
+                "description": "Success",
+                "content": {
+                    "application/json": {
+                        "example": {
+                            "phone": {
+                                "number": "409 901 990",
+                                "schedule": {
+                                    "days": "Pn-Nd",
+                                    "hours": "8:00-22:00"
+                                }
+                            },
+                            "email": {
+                                "address": "info@elcaroco.pl",
+                                "schedule": {
+                                    "days": "Pn-Nd",
+                                    "hours": "24/7"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    },
+    "/api/faq/categories": {
+    "get": {
+        "summary": "Get FAQ categories",
+        "responses": {
+        "200": {
+            "description": "Success",
+            "content": {
+            "application/json": {
+                "example": [
+                {
+                    "id": "1",
+                    "icon": "assets/icons/fi-rr-credit-card-2.svg",
+                    "title": "Faktury i płatności",
+                    "route": "billing"
+                },
+                {
+                    "id": "2",
+                    "icon": "assets/icons/fi-rr-question.svg",
+                    "title": "Pomoc techniczna",
+                    "route": "support"
+                },
+                {
+                    "id": "3",
+                    "icon": "assets/icons/fi-rr-document-signed.svg",
+                    "title": "Moja umowa",
+                    "route": "contract"
+                },
+                {
+                    "id": "4",
+                    "icon": "assets/icons/fi-rr-internet.svg",
+                    "title": "Usługi i pakiety",
+                    "route": "services-and-packages"
+                },
+                {
+                    "id": "5",
+                    "icon": "assets/icons/fi-rr-settings-sliders.svg",
+                    "title": "Zarządzanie kontem",
+                    "route": "account"
+                },
+                {
+                    "id": "6",
+                    "icon": "assets/icons/fi-rr-browser.svg",
+                    "title": "Pozostale",
+                    "route": "other"
+                }
+                ]
+            }
+            }
+        }
+        }
+    }
+    },
+    "/api/faq/categories/{route}": {
+    "get": {
+        "summary": "Get FAQ questions by category route",
+        "parameters": [
+        {
+            "name": "route",
+            "in": "path",
+            "required": true,
+            "schema": {
+            "type": "string"
+            }
+        }
+        ],
+        "responses": {
+        "200": {
+            "description": "FAQ page data",
+            "content": {
+            "application/json": {
+                "example": {
+                "id": "billing",
+                "title": "Faktury i płatności",
+                "content": [
+                    {
+                    "id": "q1",
+                    "title": "Pierwsza faktura po zawarciu lub zmianie umowy",
+                    "answer": "Pierwsza faktura zostanie przesłana w terminie 14 dni roboczych od dnia wykonania instalacji. Faktura zostanie wystawiona w formie elektronicznej bqdź tradycyjnej zgodnie ze złożonq dgspozgcjq podczas podpisywania umowy.",
+                    "type": "Faktury"
+                    },
+                    {
+                    "id": "q2",
+                    "title": "Jakie płatności są obsługiwane przez aplikację.",
+                    "answer": "Text",
+                    "type": "Faktury"
+                    },
+                    {
+                    "id": "q3",
+                    "title": "Co robić w przypadku awarii?",
+                    "answer": "Text",
+                    "type": "Faktury"
+                    },
+                    {
+                    "id": "q4",
+                    "title": "Internet",
+                    "answer": "Text",
+                    "type": "Płatności"
+                    },
+                    {
+                    "id": "q5",
+                    "title": "Właściwe ustawienie Routera",
+                    "answer": "Text",
+                    "type": "Płatności"
+                    },
+                    {
+                    "id": "q6",
+                    "title": "Co robić w przypadku awarii?",
+                    "answer": "Text",
+                    "type": "Płatności"
+                    }
+                ]
+                }
+            }
+            }
+        },
+        "404": {
+            "description": "Category not found"
+        }
+        }
+    }
+    },
+    "/api/faq/search": {
+    "get": {
+        "summary": "Search FAQ questions",
+        "parameters": [
+        {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+            "type": "string"
+            }
+        }
+        ],
+        "responses": {
+        "200": {
+            "description": "Search results",
+            "content": {
+            "application/json": {
+                "example": [
+                {
+                    "id": "q1",
+                    "title": "Pierwsza faktura po zawarciu lub zmianie umowy",
+                    "answer": "Pierwsza faktura zostanie przesłana w terminie 14 dni roboczych od dnia wykonania instalacji. Faktura zostanie wystawiona w formie elektronicznej bqdź tradycyjnej zgodnie ze złożonq dgspozgcjq podczas podpisywania umowy.",
+                    "type": "Faktury"
+                },
+                {
+                    "id": "q2",
+                    "title": "Jakie płatności są obsługiwane przez aplikację.",
+                    "answer": "Text",
+                    "type": "Faktury"
+                },
+                {
+                    "id": "q3",
+                    "title": "Co robić w przypadku awarii?",
+                    "answer": "Text",
+                    "type": "Faktury"
+                },
+                {
+                    "id": "q4",
+                    "title": "Internet",
+                    "answer": "Text",
+                    "type": "Płatności"
+                },
+                {
+                    "id": "q5",
+                    "title": "Właściwe ustawienie Routera",
+                    "answer": "Text",
+                    "type": "Płatności"
+                },
+                {
+                    "id": "q6",
+                    "title": "Co robić w przypadku awarii?",
+                    "answer": "Text",
+                    "type": "Płatności"
+                }
+                ]
+            }
+            }
+        }
+        }
+    }
+    },
+    "/api/messages/global": {
+    "get": {
+        "summary": "Get global messages list",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+        "200": {
+            "description": "Success",
+            "content": {
+            "application/json": {
+                "example": [
+                {
+                    "id": 1,
+                    "title": "Pierwsza wiadomość",
+                    "content": "To jest treść pierwszej wiadomości.",
+                    "is_read": false,
+                    "read_at": null
+                },
+                {
+                    "id": 2,
+                    "title": "Druga wiadomość",
+                    "content": "To jest treść drugiej wiadomości.",
+                    "is_read": false,
+                    "read_at": null
+                },
+                {
+                    "id": 3,
+                    "title": "Druga wiadomość",
+                    "content": "To jest treść drugiej wiadomości.",
+                    "is_read": false,
+                    "read_at": null
+                },
+                {
+                    "id": 4,
+                    "title": "Druga wiadomość",
+                    "content": "To jest treść drugiej wiadomości.",
+                    "is_read": false,
+                    "read_at": null
+                },
+                {
+                    "id": 5,
+                    "title": "Druga wiadomość",
+                    "content": "To jest treść drugiej wiadomości.",
+                    "is_read": false,
+                    "read_at": null
+                },
+                {
+                    "id": 6,
+                    "title": "Druga wiadomość",
+                    "content": "To jest treść drugiej wiadomości.",
+                    "is_read": false,
+                    "read_at": null
+                },
+                {
+                    "id": 7,
+                    "title": "Druga wiadomość",
+                    "content": "To jest treść drugiej wiadomości.",
+                    "is_read": false,
+                    "read_at": null
+                },
+                {
+                    "id": 8,
+                    "title": "Druga wiadomość",
+                    "content": "To jest treść drugiej wiadomości.",
+                    "is_read": false,
+                    "read_at": null
+                }
+                ]
+            }
+            }
+        },
+        "401": { "description": "Unauthorized (Missing or invalid token)" }
+        }
+    }
+    },
+    "/api/messages/global/{message_id}": {
+        "put": {
+            "summary": "Mark a global message as read",
+            "parameters": [
+            {
+                "name": "message_id",
+                "in": "path",
+                "required": true,
+                "schema": { "type": "integer" }
+            }
+            ],
+            "security": [{ "bearerAuth": [] }],
+            "responses": {
+            "200": { "description": "Message marked as read" },
+            "401": { "description": "Unauthorized (Missing or invalid token)" },
+            "404": { "description": "Message not found" }
+            }
+        },
+        "delete": {
+            "summary": "Delete a personal message by id",
+            "parameters": [
+            {
+                "name": "message_id",
+                "in": "path",
+                "required": true,
+                "schema": { "type": "integer" }
+            }
+            ],
+            "security": [{ "bearerAuth": [] }],
+            "responses": {
+            "200": { "description": "Message successfully deleted" },
+            "401": { "description": "Unauthorized (Missing or invalid token)" },
+            "404": { "description": "Message not found" }
+            }
+        }
+    },
+    "/api/messages/personal": {
+    "get": {
+        "summary": "Get personal messages list",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+        "200": {
+            "description": "Success",
+            "content": {
+            "application/json": {
+                "example": [
+                {
+                    "id": 1,
+                    "title": "Planowane są prace remontowe w dniach 20.02.2025r - 23.02.2025r.",
+                    "level": 1,
+                    "is_read": false,
+                    "read_at": null
+                },
+                {
+                    "id": 2,
+                    "title": "Wystąpiła awaria!. Niektóre z usług mogą działać nieprawidłowe lub wcale. Nasi technicy pracują na usunięciem problemu...",
+                    "level": 2,
+                    "is_read": false,
+                    "read_at": null
+                }
+                ]
+            }
+            }
+        },
+        "401": { "description": "Unauthorized (Missing or invalid token)" }
+        }
+    }
+    },
+    "/api/messages/personal/{message_id}": {
+        "put": {
+            "summary": "Mark a personal message as read",
+            "parameters": [
+            {
+                "name": "message_id",
+                "in": "path",
+                "required": true,
+                "schema": { "type": "integer" }
+            }
+            ],
+            "security": [{ "bearerAuth": [] }],
+            "responses": {
+            "200": { "description": "Message marked as read" },
+            "401": { "description": "Unauthorized (Missing or invalid token)" },
+            "404": { "description": "Message not found" }
+            }
+        },
+        "delete": {
+            "summary": "Delete a personal message by id",
+            "parameters": [
+            {
+                "name": "message_id",
+                "in": "path",
+                "required": true,
+                "schema": { "type": "integer" }
+            }
+            ],
+            "security": [{ "bearerAuth": [] }],
+            "responses": {
+            "200": { "description": "Message successfully deleted" },
+            "401": { "description": "Unauthorized (Missing or invalid token)" },
+            "404": { "description": "Message not found" }
+            }
+        }
+    },
+    "/api/terms": {
+      "get": {
+        "summary": "Get the Terms of Service",
+        "parameters": [{
+          "in": "header",
+          "name": "Accept-Language",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "example": "pl"
+        }],
+        "security": [{
+          "bearerAuth": []
+        }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": [
+                {
+                  "title": "Document 1",
+                  "content": "Contents of Document 1 from the mock server\r\nSecond line of Document 1"
+                },
+                {
+                  "title": "Document 2",
+                  "content": "Contents of Document 2 from the mock server"
+                }]
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized (Missing or invalid token)"
+          }
+        }
+      }
+    },
+    "/api/services/addresses": {
+      "get": {
+        "summary": "Get the list of addresses for the authenticated user",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "A list of addresses",
+            "content": {
+              "application/json": {
+                "example": [
+                  { 
+                    "address_id": 1, 
+                    "address": "ul. Marszałkowska 10/2, Warszawa", 
+                    "contract_active_from": "2018-08-21",
+                    "contract_active_until": "2026-08-21"
+                  },
+                  { 
+                    "address_id": 2, 
+                    "address": "ul. Długa 5, Kraków",
+                    "contract_active_from": "2021-08-21",
+                    "contract_active_until": null
+                  }
+                ]
+              }
+            }
+          },
+          "401": { "description": "Unauthorized: example" }
+        }
+      }
+    },
+    "/api/services": {
+      "get": {
+        "summary": "Get all user's services for all of their addresses",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "User's services for all of their addresses",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 1,
+                    "address_id": 1,
+                    "name": "600/120 Mb/s",
+                    "status": "Blocked",
+                    "monthly_fee": 126.5,
+                    "service_type": "Internet"
+                  },
+                  {
+                    "id": 2,
+                    "address_id": 1,
+                    "name": "Komfort Plus 4K",
+                    "status": "Active",
+                    "monthly_fee": 59.5,
+                    "service_type": "Television"
+                  },
+                  {
+                    "id": 3,
+                    "address_id": 1,
+                    "name": "20 nagran / 60 dni",
+                    "status": "Pending",
+                    "monthly_fee": null,
+                    "service_type": "Mobile"
+                  },
+                  {
+                    "id": 4,
+                    "address_id": 1,
+                    "name": "No limit 56",
+                    "status": "Suspended",
+                    "monthly_fee": 55.99,
+                    "service_type": "Mobile"
+                  },
+                  {
+                    "id": 5,
+                    "address_id": 1,
+                    "name": "Inna usługa",
+                    "status": "Active",
+                    "monthly_fee": 55.99,
+                    "service_type": "Other"
+                  },
+                  {
+                    "id": 6,
+                    "address_id": 1,
+                    "name": "Inna usługa",
+                    "status": "Pending",
+                    "monthly_fee": null,
+                    "service_type": "Other"
+                  },
+                  {
+                    "id": 7,
+                    "address_id": 1,
+                    "name": "600/120 Mb/s",
+                    "status": "Blocked",
+                    "monthly_fee": 126.5,
+                    "service_type": "Internet"
+                  },
+                  {
+                    "id": 8,
+                    "address_id": 2,
+                    "name": "600/120 Mb/s",
+                    "status": "Blocked",
+                    "monthly_fee": 126.5,
+                    "service_type": "Internet"
+                  },
+                  {
+                    "id": 9,
+                    "address_id": 2,
+                    "name": "1000GB",
+                    "status": "Active",
+                    "monthly_fee": 126.5,
+                    "service_type": "Mobile"
+                  },
+                  {
+                    "id": 10,
+                    "address_id": 2,
+                    "name": "Telewizja standard",
+                    "status": "Pending",
+                    "monthly_fee": 40,
+                    "service_type": "Television"
+                  }
+                ]
+              }
+            }
+          },
+          "401": { "description": "Unauthorized: example" }
+        }
+      }
+    },
+    "/api/services/{user_service_id}": {
+      "get": {
+        "summary": "Get extended details for a specific service",
+        "parameters": [
+          {
+            "name": "user_service_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Detailed service information including hardware and TV packages",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "TelevisionService": {
+                    "value": {
+                      "user_service_id": 2,
+                      "address_id": 1,
+                      "name": "Telewizja komfort 4K",
+                      "status": "Active",
+                      "monthly_fee": 59.99,
+                      "service_type": "Television",
+                      "start_date": "2026-08-21",
+                      "end_date": "2026-09-21",
+                      "description": "128 kanałów 4K",
+                      "related_hardware": [{ "id": 1512, "name": "Dekoder Sullemid 4K DD718" }],
+                      "packages": [
+                        {
+                          "id": 101,
+                          "name": "Multiroom",
+                          "monthly_fee": null,
+                          "is_base_package": true,
+                          "channels": [
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." }
+                          ]
+                        },
+                        {
+                          "id": 102,
+                          "name": "Multisport",
+                          "monthly_fee": 59.99,
+                          "is_base_package": false,
+                          "channels": [{ "name": "Polsat sport 1", "pictogram": "base64..." }]
+                        }
+                      ],
+                      "available_add_ons": [
+                        {
+                          "id": 103,
+                          "name": "Przygoda i natura",
+                          "monthly_fee": 29.99,
+                          "channels": [{ "name": "National Geographic", "pictogram": "base64..." }]
+                        },
+                        {
+                          "id": 104,
+                          "name": "HBO Max Bundle",
+                          "monthly_fee": 40.00,
+                          "channels": [{ "name": "HBO Max", "pictogram": "base64..." }]
+                        },
+                        {
+                          "id": 105,
+                          "name": "Przygoda i natura",
+                          "monthly_fee": 29.99,
+                          "channels": [
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "Polsat", "pictogram": "base64..." },
+                            { "name": "TVP", "pictogram": "base64..." },
+                            { "name": "TVP", "pictogram": "base64..." },
+                            { "name": "TVP", "pictogram": "base64..." },
+                            { "name": "TVP", "pictogram": "base64..." },
+                            { "name": "TVP", "pictogram": "base64..." },
+                            { "name": "TVP", "pictogram": "base64..." },
+                            { "name": "TVP", "pictogram": "base64..." },
+                            { "name": "TVP", "pictogram": "base64..." }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "InternetService": {
+                    "value": {
+                      "user_service_id": 1,
+                      "address_id": 1,
+                      "name": "Internet światłowodowy 600/120 Mb/s",
+                      "status": "Active",
+                      "monthly_fee": 126.5,
+                      "service_type": "Internet",
+                      "start_date": "2026-08-21",
+                      "end_date": "2026-09-21",
+                      "description": "Wysyłanie: do 90 mb/s, Pobieranie: do 940 mb/s",
+                      "related_hardware": [{ "id": 123, "name": "ASUS TG3492LG" }],
+                      "packages": []
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/api/services/{user_service_id}/packages/{package_id}": {
+      "post": {
+        "summary": "Subscribe to a new channel package",
+        "parameters": [
+          { "name": "user_service_id", "in": "path", "required": true, "schema": { "type": "integer" } },
+          { "name": "package_id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Package successfully added" },
+          "401": { "description": "Unauthorized (Invalid token or no access to this service)" }
+        }
+      },
+      "delete": {
+        "summary": "Unsubscribe from a channel package",
+        "parameters": [
+          { "name": "user_service_id", "in": "path", "required": true, "schema": { "type": "integer" } },
+          { "name": "package_id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Package successfully removed" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/api/offers" : {
+      "get": {
+        "summary": "Get an offers list for the authenticated user (may include special personal offers)",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 0,
+                    "title": "Telewizja w najlepszej wersji",
+                    "subtitle": "Najszybciej trafi do Ciebie",
+                    "image_url": null,
+                    "category": "TV",
+                    "tags": ["PROMO"],
+                    "featured": false
+                  },
+                  {
+                    "id": 2,
+                    "title": "Internet światłowodowy",
+                    "subtitle": "Najszybciej trafi do Ciebie",
+                    "image_url": null,
+                    "category": "INTERNET",
+                    "tags": ["PROMO"],
+                    "featured": true
+                  },
+                  {
+                    "id": 3,
+                    "title": "Kino w Twoim domu",
+                    "subtitle": "Wszystkie kanały HBO i Canal+ przez 3 miesiące za darmo",
+                    "image_url": "assets/images/banners/cinema-bg.jpg",
+                    "category": "TV",
+                    "tags": [],
+                    "featured": true
+                  },
+                  {
+                    "id": 4,
+                    "title": "Światłowód 400",
+                    "subtitle": "Idealny do pracy zdalnej",
+                    "image_url": "assets/images/cards/fiber-400.jpg",
+                    "category": "INTERNET",
+                    "tags": [],
+                    "featured": false
+                  },
+                  {
+                    "id": 5,
+                    "title": "Światłowód 600 + TV",
+                    "subtitle": "120 kanałów w cenie",
+                    "image_url": "assets/images/cards/bundle-tv.jpg",
+                    "category": "INTERNET_TV",
+                    "tags": [],
+                    "featured": false
+                  },
+                  {
+                    "id": 6,
+                    "title": "iPhone 15 Pro",
+                    "subtitle": "Rata 0%",
+                    "image_url": "assets/images/cards/iphone15.jpg",
+                    "category": "DEVICES",
+                    "tags": [],
+                    "featured": false
+                  },
+                  {
+                    "id": 7,
+                    "title": "Przesiadka która się opłaca",
+                    "subtitle": "Zmień operatora na lato!",
+                    "image_url": "assets/images/banners/operator-change.jpg",
+                    "category": "MOBILE",
+                    "tags": [],
+                    "featured": true
+                  },
+                  {
+                    "id": 8,
+                    "title": "Zaoszczędź na necie",
+                    "subtitle": "Zaszalej na wakacjach. Promocja letnia!",
+                    "image_url": "assets/images/banners/summer-vacation.jpg",
+                    "category": "INTERNET",
+                    "tags": ["PROMO"],
+                    "featured": true
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "401": {
+          "description": "Unauthorized (Missing or invalid token)"
+        }
+      }
+    },
+    "/api/offers/{offer_id}" : {
+      "get": {
+        "summary": "Get offer variant details for a specific offer",
+        "parameters": [
+          { "name": "offer_id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": 2,
+                  "title": "Zamów usługi online",
+                  "subtitle": "Mieszkasz w bloku? Sprawdź dostępność i zobacz promocyjne oferty na Internet Światłowodowy i Telewizję, które przygotowaliśmy dla Ciebie.",
+                  "legal_note": "Usługi objęte niniejszą Promocją mogą być świadczone wyłącznie w lokalach, w których w okresie 90 (słownie: dziewięćdziesięciu) dni przed przystąpieniem...",
+                  
+                  "variants": [
+                    {
+                      "id": 1,
+                      "name": "Światłowód 400",
+                      
+                      "pricing": {
+                        "regular_price": 56.90,
+                        "current_price": 39.00,
+                        "period": "MONTH",
+                        "promo_description": "+ 2 miesiące po 1 zł"
+                      },
+
+                      "blocks": [
+                        {
+                          "type": "PROMO_BADGE",
+                          "headline": "Do 30% taniej!!!",
+                          "subheadline": "Oferta dla bloków"
+                        },
+                        {
+                          "type": "INTERNET_SERVICE",
+                          "icon": "laptop-wifi",
+                          "service_type": "Światłowód",
+                          "primary_metric": "600 Mb/s",
+                          "secondary_metric": "Upload 150 Mb/s"
+                        },
+                        {
+                          "type": "PREMIUM_ADDONS",
+                          "title": "Pakiety premium w ofercie",
+                          "is_included": false,
+                          "description": "Nie dotyczy",
+                          "addons": [] 
+                        },
+                        {
+                          "type": "HARDWARE",
+                          "title": "Sprzęt w ofercie",
+                          "items": [
+                            {
+                              "icon": "router",
+                              "name": "Router Wi-Fi 6",
+                              "cost_note": "za 70 zł",
+                              "is_mandatory": true
+                            }
+                          ]
+                        },
+                        {
+                          "type": "CONTRACT_CONDITIONS",
+                          "title": "Warunki umowy",
+                          "duration_months": 24,
+                          "upfront_fees": [
+                            { "name": "Aktywacja", "amount": 19.00 },
+                            { "name": "Instalacja", "amount": 1.00 }
+                          ]
+                        }
+                      ]
+                    },{
+                      "id": 2,
+                      "name": "Światłowód 600",
+                      "pricing": {
+                        "regular_price": 69.90,
+                        "current_price": 48.90,
+                        "period": "MONTH",
+                        "promo_description": "+ 2 miesiące po 1 zł"
+                      },
+
+                      "blocks": [
+                        {
+                          "type": "PROMO_BADGE",
+                          "headline": "Do 30% taniej!!!",
+                          "subheadline": "Oferta dla bloków"
+                        },
+                        {
+                          "type": "INTERNET_SERVICE",
+                          "icon": "laptop-wifi",
+                          "service_type": "Światłowód",
+                          "primary_metric": "1000 Mb/s",
+                          "secondary_metric": "Upload 200 Mb/s"
+                        },
+                        {
+                          "type": "PREMIUM_ADDONS",
+                          "title": "Pakiety premium w ofercie",
+                          "is_included": false,
+                          "description": "Nie dotyczy",
+                          "addons": [] 
+                        },
+                        {
+                          "type": "HARDWARE",
+                          "title": "Sprzęt w ofercie",
+                          "items": [
+                            {
+                              "icon": "router",
+                              "name": "Router Wi-Fi 6",
+                              "cost_note": "za 70 zł",
+                              "is_mandatory": true
+                            }
+                          ]
+                        },
+                        {
+                          "type": "CONTRACT_CONDITIONS",
+                          "title": "Warunki umowy",
+                          "duration_months": 24,
+                          "upfront_fees": [
+                            { "name": "Aktywacja", "amount": 19.00 },
+                            { "name": "Instalacja", "amount": 1.00 }
+                          ]
+                        }
+                      ]
+                    },{
+                      "id": 3,
+                      "name": "Światłowód 1000",
+                      
+                      "pricing": {
+                        "regular_price": 77.90,
+                        "current_price": 59.00,
+                        "period": "MONTH",
+                        "promo_description": "+ 2 miesiące po 1 zł"
+                      },
+
+                      "blocks": [
+                        {
+                          "type": "PROMO_BADGE",
+                          "headline": "Do 30% taniej!!!",
+                          "subheadline": "Oferta dla bloków"
+                        },
+                        {
+                          "type": "INTERNET_SERVICE",
+                          "icon": "laptop-wifi",
+                          "service_type": "Światłowód",
+                          "primary_metric": "400 Mb/s",
+                          "secondary_metric": "Upload 100 Mb/s"
+                        },
+                        {
+                          "type": "PREMIUM_ADDONS",
+                          "title": "Pakiety premium w ofercie",
+                          "is_included": false,
+                          "description": "Nie dotyczy",
+                          "addons": [] 
+                        },
+                        {
+                          "type": "HARDWARE",
+                          "title": "Sprzęt w ofercie",
+                          "items": [
+                            {
+                              "icon": "router",
+                              "name": "Router Wi-Fi 6",
+                              "cost_note": "za 70 zł",
+                              "is_mandatory": true
+                            }
+                          ]
+                        },
+                        {
+                          "type": "CONTRACT_CONDITIONS",
+                          "title": "Warunki umowy",
+                          "duration_months": 24,
+                          "upfront_fees": [
+                            { "name": "Aktywacja", "amount": 19.00 },
+                            { "name": "Instalacja", "amount": 1.00 }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized (Missing or invalid token)"
+          },
+          "404": {
+            "description": "This offer does not exist or is unavailable (invalid link)"
+          }
+        }
+      }
+    },
+    "/api/offers/{offer_id}/variants/{variant_id}" : {
+      "post": {
+        "summary": "Confirm purchase of a service (specific variant) from the offers tab",
+        "parameters": [
+          { "name": "offer_id", "in": "path", "required": true, "schema": { "type": "integer" } },
+          { "name": "variant_id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Offer added successfully"
+          },
+          "401": {
+            "description": "Unauthorized (Missing or invalid token)"
+          }
+        }
+      }
+    },
+    "/api/billing": {
+      "get": {
+        "summary": "Get extended details for a specific service",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Detailed service information including hardware and TV packages",
+            "content": {
+              "application/json": {
+                "example": {
+                  "balance": 129.5,
+                  "account_number": "12 1000 2222 4444 0000 1234 0000"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized (Missing or invalid token)"
+          }
+        }
+      }
+    },
+    "/api/billing/invoices": {
+      "get": {
+        "summary": "Get a list of invoices for the authenticated user",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 74243,
+                    "invoice_number": "FV/2024/07/74243/23",
+                    "issue_date": "2024-07-01",
+                    "due_date": "2024-07-15",
+                    "period_start": "2024-07-01",
+                    "period_end": "2024-07-31",
+                    "status": "Overdue",
+                    "total_amount": 369.00,
+                    "document_id": "FV-2024-07-74243"
+                  },
+                  {
+                    "id": 74242,
+                    "invoice_number": "FV/2024/06/74242/23",
+                    "issue_date": "2024-06-01",
+                    "due_date": "2024-06-15",
+                    "period_start": "2024-06-01",
+                    "period_end": "2024-06-30",
+                    "status": "Unpaid",
+                    "total_amount": 369.00,
+                    "document_id": "FV-2024-06-74242"
+                  },
+                  {
+                    "id": 74241,
+                    "invoice_number": "FV/2024/05/74241/23",
+                    "issue_date": "2024-05-01",
+                    "due_date": "2024-05-15",
+                    "period_start": "2024-05-01",
+                    "period_end": "2024-05-31",
+                    "status": "Pending",
+                    "total_amount": 369.00,
+                    "document_id": "FV-2024-05-74241"
+                  },
+                  {
+                    "id": 74244,
+                    "invoice_number": "FV/2024/08/74244/23",
+                    "issue_date": "2024-08-01",
+                    "due_date": "2024-08-15",
+                    "period_start": "2024-08-01",
+                    "period_end": "2024-08-31",
+                    "status": "Paid",
+                    "total_amount": 369.00,
+                    "document_id": "FV-2024-08-74244"
+                  }
+                ]
+              }
+            }
+          },
+          "401": { 
+            "description": "Unauthorized (Missing or invalid token)" 
+          }
+        }
+      }
+    },
+    "/api/billing/invoices/{invoice_id}": {
+      "get": {
+        "summary": "Get extended details for a specific invoice",
+        "parameters": [
+          { "name": "invoice_id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { 
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": {
+                    "id": 74243,
+                    "invoice_number": "FV/2024/07/74243/23",
+                    "download_url": "https://storage.provider.com/invoices/2024/07/74243.pdf",
+                    "status": "Overdue",
+                    "dates": {
+                      "issue_date": "2024-07-01",
+                      "sale_date": "2024-07-01",
+                      "due_date": "2024-07-15",
+                      "period_start": "2024-07-01",
+                      "period_end": "2024-07-31"
+                    },
+                    "seller": {
+                      "name": "Elcaro Sp. z o.o.",
+                      "address": "ul. Testowa 1, 00-001 Warszawa",
+                      "nip": "1234567890"
+                    },
+                    "buyer": {
+                      "name": "Grzegorz Brzęczyszczykiewicz",
+                      "subscriber_number": "74243",
+                      "address": "Chrząszczyżewoszyce 13, 00-000 Łódź"
+                    },
+                    "line_items": [
+                      {
+                        "description": "Abonament za Internet w Pakiecie 100 mb/s",
+                        "quantity": 1,
+                        "unit": "szt.",
+                        "vat_rate": 23,
+                        "net_price": 100.00,
+                        "gross_price": 123.00
+                      },
+                      {
+                        "description": "Abonament za korzystanie z cyfrowej telewizji kablowej...",
+                        "quantity": 1,
+                        "unit": "szt.",
+                        "vat_rate": 23,
+                        "net_price": 100.00,
+                        "gross_price": 123.00
+                      }
+                    ],
+                    "totals": {
+                      "total_net": 300.00,
+                      "total_gross": 369.00
+                    },
+                    "payment_details": {
+                      "method": "przelew",
+                      "bank_account": "PL 82 1020 5226 0000 6102 0417 7895"
+                    }
+                }
+              }
+            }
+          },
+          "401": { "description": "Unauthorized (Missing or invalid token)" },
+          "404": { "description": "Invoice not found" }
+        }
+      }
+    },
+    "/api/billing/payments": {
+      "get": {
+        "summary": "Get a payments list for the authenticated user",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 0,
+                    "issue_date": "19.01.2025",
+                    "start_date": "21.12.2024",
+                    "end_date": "20.01.2025",
+                    "payment_title": "Opłata za media",
+                    "payment_date": "23.04.2025",
+                    "status": "Pending",
+                    "amount": 250
+                  },
+                  {
+                    "id": 1,
+                    "issue_date": "20.01.2025",
+                    "start_date": "20.12.2024",
+                    "end_date": "19.01.2025",
+                    "payment_title": "Opłata za media",
+                    "payment_date": "22.04.2025",
+                    "status": "Paid",
+                    "amount": 200
+                  },
+                  {
+                    "id": 2,
+                    "issue_date": "21.01.2025",
+                    "start_date": "22.12.2024",
+                    "end_date": "21.01.2025",
+                    "payment_title": "Opłata",
+                    "payment_date": "24.04.2025",
+                    "status": "Paid",
+                    "amount": 169.99
+                  },
+                  {
+                    "id": 3,
+                    "issue_date": "22.01.2025",
+                    "start_date": "23.12.2024",
+                    "end_date": "22.01.2025",
+                    "payment_title": "Opłata za media",
+                    "payment_date": "25.04.2025",
+                    "status": "Rejected",
+                    "amount": 169.99
+                  }
+                ]
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized (Missing or invalid token)"
+          }
+        }
+      }
+    },
+    "/api/billing/payments/{invoice_id}": {
+      "post": {
+        "summary": "Process a payment for a specific invoice for the authenticated user",
+        "parameters": [
+          { "name": "invoice_id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "amount": { 
+                    "type": "number", 
+                    "format": "float", 
+                    "example": 39.00 
+                  },
+                  "payment_method": { 
+                    "type": "string",
+                    "example": "BLIK"
+                  }
+                },
+                "required": ["amount", "payment_method"]
+              }
+            }
+          }
+        },
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Payment for the invoice added successfully" },
+          "401": { "description": "Unauthorized (Missing or invalid token)" },
+          "404": { "description": "Invoice not found" }
+        }
+      }
+    },
+    "/api/billing/returns": {
+      "get": {
+        "summary": "Get a returns list for the authenticated user",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 0,
+                    "account_number": "PL 82102052260000610204177895",
+                    "issue_date": "12.02.2025",
+                    "status": "Pending",
+                    "amount": 500
+                  },
+                  {
+                    "id": 1,
+                    "account_number": "PL 82102052260000610204177896",
+                    "issue_date": "30.01.2025",
+                    "status": "Accepted",
+                    "amount": 169.99
+                  },
+                  {
+                    "id": 2,
+                    "account_number": "PL 82102052260000610204177897",
+                    "issue_date": "30.01.2025",
+                    "status": "Rejected",
+                    "amount": 169.99
+                  }
+                ]
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized (Missing or invalid token)"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a request for a return for the authenticated user",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "first_name": { 
+                    "type": "string",
+                    "example": "Zbigniew"
+                  },
+                  "last_name": { 
+                    "type": "string",
+                    "example": "Kuźniecow"
+                  },
+                  "amount": { 
+                    "type": "number", 
+                    "format": "float", 
+                    "example": 39.00 
+                  },
+                  "account_number": { 
+                    "type": "string",
+                    "example": "PL 82 1020 5226 0000 6102 0417 7895"
+                  }
+                },
+                "required": ["first_name", "last_name", "amount", "account_number"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Success" },
+          "401": { "description": "Unauthorized (Missing or invalid token)" },
+          "400": { "description": "Bad request - One or more parameters are invalid"}
+        }
+      }
+    },
+    "/api/billing/transfer-details": {
+      "get": {
+        "summary": "Get transfer details for the authenticated user",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": {
+                  "receiver": "Elcaro Sp. z o.o.",
+                  "receiver_address": "Willowa 10B, 20-819 Lublin",
+                  "bank_account": "PL 82 1020 5226 0000 6102 0417 7895"
+                }
+              }
+            }
+          },
+          "401": { "description": "Unauthorized (Missing or invalid token)" },
+          "404": { "description": "Transfer details not found" }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

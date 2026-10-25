@@ -1,0 +1,181 @@
+<div class="account-settings">
+  @if (ready()) {
+  <div class="main-data">
+    <div class="text-and-data-box">
+      <h2 class="text-header" i18n>Dane personalne</h2>
+
+      @if (!isEditing()) {
+        <div class="data-box">
+          <div class="data-line">
+            <span class="title text-default" i18n>Numer klienta</span>
+            <span class="content text-default">{{ profile()?.clientNumber }}</span>
+          </div>
+          <div class="data-line">
+            <span class="title text-default" i18n>Imię</span>
+            <span class="content text-default">{{ profile()?.firstName }}</span>
+          </div>
+          <div class="data-line">
+            <span class="title text-default" i18n>Nazwisko</span>
+            <span class="content text-default">{{ profile()?.lastName }}</span>
+          </div>
+          <div class="data-line">
+            <span class="title text-default" i18n>Organizacja</span>
+            <span class="content text-default">{{ profile()?.organizationName }}</span>
+          </div>
+        </div>
+      } @else {
+        <div class="data-box-editing">
+          <div class="textfield-with-label text-default">
+            <span class="textfield-label" i18n>Numer klienta</span>
+            <input pInputText class="textfield" type="text" [value]="profile()?.clientNumber" disabled>
+          </div>
+
+          <div class="textfield-with-label text-default">
+            <span class="textfield-label" i18n>Imię</span>
+            <input
+              pInputText
+              class="textfield"
+              type="text"
+              [(ngModel)]="form.firstName"
+              [class.p-invalid]="isFieldInvalid(form.firstName, nameRegex)"
+            >
+          </div>
+
+          <div class="textfield-with-label text-default">
+            <span class="textfield-label" i18n>Nazwisko</span>
+            <input
+              pInputText
+              class="textfield"
+              type="text"
+              [(ngModel)]="form.lastName"
+              [class.p-invalid]="isFieldInvalid(form.lastName, nameRegex)"
+            >
+          </div>
+
+          <div class="textfield-with-label text-default">
+            <span class="textfield-label" i18n>Organizacja</span>
+            <input
+              pInputText
+              class="textfield"
+              type="text"
+              [(ngModel)]="form.organizationName"
+              [class.p-invalid]="isFieldInvalid(form.organizationName, orgRegex)"
+            >
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="text-and-data-box">
+      <h2 class="text-header" i18n>Dane kontaktowe</h2>
+
+      @if (!isEditing()) {
+        <div class="data-box">
+          @for (phone of form.phones; track phone.id; let i = $index) {
+            <div class="data-line">
+              <span class="title text-default" i18n>Telefon {{ i + 1 }}</span>
+              <span class="content text-default">{{ phone.value }}</span>
+            </div>
+          }
+
+          @for (email of form.emails; track email.id; let i = $index) {
+            <div class="data-line">
+              <span class="title text-default" i18n>E-mail {{ i + 1 }}</span>
+              <span class="content text-default">{{ email.value }}</span>
+            </div>
+          }
+        </div>
+      } @else {
+        <div class="data-box-editing">
+          @for (phone of form.phones; track phone.id; let i = $index) {
+            <div class="textfield-with-label text-default">
+              <span class="textfield-label" i18n>Telefon {{ i + 1 }}</span>
+              <div class="input-with-button">
+                <app-phone-input
+                  [(ngModel)]="phone.value"
+                  [ngModelOptions]="{ standalone: true }"
+                  [invalid]="isPhoneFieldInvalid(phone.value) || isDuplicatePhone(phone.value, phone.id)"
+                ></app-phone-input>
+                @if (canRemovePhone()) {
+                  <button
+                    type="button"
+                    class="btn btn-tertiary btn-delete"
+                    (click)="removePhone(phone.id)"
+                    i18n
+                  >
+                    <img src="assets/icons/fi-rr-trash.svg" alt="Usuń" i18n-alt>
+                  </button>
+                }
+              </div>
+            </div>
+          }
+
+          @if (form.phones.length < 3) {
+            <div class="add-button-wrapper-phone">
+            <button
+              type="button"
+              class="btn btn-tertiary btn-large"
+              (click)="addPhone()"
+              i18n
+            >
+              + Dodaj telefon
+            </button>
+            </div>
+          }
+
+          @for (email of form.emails; track email.id; let i = $index) {
+            <div class="textfield-with-label text-default">
+              <span class="textfield-label" i18n>E-mail {{ i + 1 }}</span>
+              <div class="input-with-button">
+                <input
+                  pInputText
+                  class="textfield"
+                  type="text"
+                  [(ngModel)]="email.value"
+                  [ngModelOptions]="{ standalone: true }"
+                  [class.p-invalid]="isEmailFieldInvalid(email.value) || isDuplicateEmail(email.value, email.id)"
+                >
+                @if (canRemoveEmail()) {
+                  <button
+                    type="button"
+                    class="btn btn-tertiary btn-delete"
+                    (click)="removeEmail(email.id)"
+                    i18n
+                  >
+                    <img src="assets/icons/fi-rr-trash.svg" alt="Usuń" i18n-alt>
+                  </button>
+                }
+              </div>
+            </div>
+          }
+
+          @if (form.emails.length < 3) {
+            <div class="add-button-wrapper-mail">
+            <button
+              type="button"
+              class="btn btn-tertiary btn-large"
+              (click)="addEmail()"
+              i18n
+            >
+              + Dodaj e-mail
+            </button>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+  <button
+    class="btn btn-secondary"
+    (click)="toggleEdit()"
+    [disabled]="isEditing() && !isFormValid()"
+  >
+    @if (isEditing()) {
+      <span i18n>Zapisz zmiany</span>
+    } @else {
+      <span i18n>Edytuj dane</span>
+    }
+  </button>
+  }
+</div>

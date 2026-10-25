@@ -1,0 +1,79 @@
+<div class="page-title-row">
+  <div class="navigate-button">
+    <a 
+      (click)="goBack()"
+      class="back-link"
+    >
+      <img src="assets/icons/fi-rr-angle-small-right.png" alt="back">
+    </a>
+  </div>
+  <h2 class="text-header text-default" i18n>Oferta</h2>
+</div>
+
+<div class="offers-container">
+  
+  <section class="featured-section">
+    <p-carousel 
+      [value]="featuredOffers()" 
+      [numVisible]="2" 
+      [numScroll]="1" 
+      [circular]="true" 
+      [autoplayInterval]="5000"
+      [responsiveOptions]="carouselResponsiveOptions">
+      <ng-template let-offer pTemplate="item">
+        <div 
+          class="featured-card"
+          [routerLink]="['details', offer.id]"
+          [class.gradient-background]="shouldShowGradient(offer)"
+          [style.backgroundImage]="!shouldShowGradient(offer) ? 'url(' + offer.image_url + ')' : ''"
+        >
+          @if (offer.image_url) {
+            <img 
+              [src]="offer.image_url" 
+              (error)="handleImageError(offer.id)" 
+              style="display: none;" 
+            />
+          }
+          <div class="featured-content">
+            <h1 class="featured-offer-title">{{ offer.title }}</h1>
+            <p class="featured-offer-subtitle">{{ offer.subtitle }}</p>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </section>
+
+  <nav class="filter-bar">
+    @for (btn of filterButtons(); track btn.label) {
+      <button 
+        (click)="toggleFilter(btn)"
+        [class.active-filter]="selectedFilter().name === btn.label"
+        [class]="selectedFilter().label === btn.label ? 'btn-primary' : 'btn-tertiary'"
+        class="btn"
+      ><small>{{btn.label}}</small></button>
+    }
+  </nav>
+
+  <main class="offers-grid">
+    @for (offer of filteredOffers(); track offer.id) {
+      <div class="offer-card"
+        [routerLink]="['details', offer.id]"
+        [class.gradient-background]="shouldShowGradient(offer)"
+        [style.backgroundImage]="!shouldShowGradient(offer) ? 'url(' + offer.image_url + ')' : ''"
+      >
+        @if (offer.image_url) {
+          <img 
+            [src]="offer.image_url" 
+            (error)="handleImageError(offer.id)" 
+            style="display: none;" 
+          />
+        }
+        <div class="card-body">
+          <h3 class="offer-title">{{ offer.title }}</h3>
+          <p class="offer-subtitle">{{ offer.subtitle }}</p>
+        </div>
+      </div>
+    }
+  </main>
+
+</div>

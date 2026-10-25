@@ -1,0 +1,36 @@
+.register-success-head {
+  padding: 0;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.auth-header {
+  margin: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-primary-blue);
+  line-height: 1.2;
+}
+
+.text {
+  margin: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.btn {
+  align-self: stretch;
+  box-shadow: var(--color-shadow-modal);
+}

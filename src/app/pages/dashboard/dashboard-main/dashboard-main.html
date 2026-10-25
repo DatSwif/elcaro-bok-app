@@ -1,0 +1,167 @@
+<div class="dashboard-main">
+  @if (ready()) {
+    <div class="billing-and-messages">
+      <section class="billing-section">
+        <div class="page-title-row">
+          <h2 class="text-header text-default" i18n>Płatności</h2>
+          <div class="navigate-button">
+            <a routerLink="/billing/paid" routerLinkActive="active">
+              <img src="assets/icons/fi-rr-angle-small-right.png" alt="Przejdź" i18n-alt>
+            </a>
+          </div>
+        </div>
+
+        <app-billing-account-info
+          [account]="account()"
+          (pay)="goToPay()"
+          (refund)="goToRefunds()"
+          (copied)="onAccountCopied($event)">
+        </app-billing-account-info>
+      </section>
+
+      <section class="global-messages-section messages-section">
+        <div class="page-title-row-2">
+          <div class="page-title-row">
+            <h2 class="text-header text-default" i18n>Wiadomości {{ messagesNumber() > 0 ? '(' + messagesNumber() + ')' : '' }}</h2>
+            <div class="navigate-button">
+              <a routerLink="/messages" routerLinkActive="active">
+                <img src="assets/icons/fi-rr-angle-small-right.png" alt="Przejdź" i18n-alt>
+              </a>
+            </div>
+          </div>
+
+          @if (messagesNumber() > 0) {
+          <div class="navigators">
+            <button
+              type="button"
+              class="navigator-button"
+              (click)="prevMessage()"
+              [disabled]="messagePage() === 0">
+              <img src="assets/icons/fi-rr-angle-small-right.png" alt="Cofnij" i18n-alt>
+            </button>
+
+            <button
+              type="button"
+              class="navigator-button"
+              (click)="nextMessage()"
+              [disabled]="messagePage() >= maxMessagePage()">
+              <img class="reverse" src="assets/icons/fi-rr-angle-small-right.png" alt="Dalej" i18n-alt>
+            </button>
+          </div>
+          }
+        </div>
+
+        @if (messagesNumber() > 0) {
+        <p-carousel
+          [value]="messages()"
+          [numVisible]="1"
+          [numScroll]="1"
+          [page]="messagePage()"
+          (onPage)="messagePage.set($event.page ?? 0)"
+          [circular]="false"
+          [showIndicators]="false"
+          [showNavigators]="false"
+        >
+          <ng-template pTemplate="item" let-message>
+            <div class="message-card">
+              <div class="message-text">
+                <span class="message-card-title text-default">
+                  {{ message.title }}
+                </span>
+
+                <span class="message-card-content text-default">
+                  {{ getPreview(message.content, 60) }}
+                </span>
+              </div>
+
+              <a
+                class="goto-button reverse"
+                (click)="openMessage(message.id)"
+              >
+                <img
+                  src="assets/icons/fi-rr-angle-small-right.png"
+                  alt="Przejdź"
+                  i18n-alt
+                >
+              </a>
+            </div>
+          </ng-template>
+        </p-carousel>
+        } @else {
+          <div class="empty-card text-default" i18n>Brak wiadomości</div>
+        }
+      </section>
+    </div>
+
+    <section class="services-section">
+      <div class="page-title-row">
+        <h2 class="text-header text-default" i18n>Moje usługi</h2>
+        <div class="navigate-button">
+          <a routerLink="/services" routerLinkActive="active">
+            <img src="assets/icons/fi-rr-angle-small-right.png" alt="Przejdź" i18n-alt>
+          </a>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        @for (service of services(); track service.service_type) {
+          <div class="service-card" (click)="openServices(service.service_type)">
+            <div class="service-icon">
+              <img [src]="getServiceIcon(service.service_type)" [alt]="getServiceTitle(service.service_type)" />
+            </div>
+
+            <div class="main-text">
+              <div class="service-title text-default">
+                {{ getServiceTitle(service.service_type) }}
+              </div>
+              <div class="service-active text-default" i18n>
+                aktywne {{ service.activeCount }}
+              </div>
+            </div>
+          </div>
+        }
+
+        <div class="add-card" [routerLink]="['/offers']">
+          <div class="add-icon">
+            <img src="assets/icons/fi-rr-add.svg"/>
+          </div>
+          <div class="add-title text-default" i18n>Dodaj usługę</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offers-section">
+      <div class="page-title-row">
+        <h2 class="text-header text-default" i18n>Oferty specjalne i promocje</h2>
+        <div class="navigate-button">
+          <a routerLink="/offers" routerLinkActive="active">
+            <img src="assets/icons/fi-rr-angle-small-right.png" alt="Przejdź" i18n-alt>
+          </a>
+        </div>
+      </div>
+
+      <div class="offers-row">
+        @for (offer of offers(); track offer.id) {
+          <div
+            class="offer-card"
+            [routerLink]="['/offers/details', offer.id]"
+            [class.gradient-background]="shouldShowGradient(offer)"
+            [style.backgroundImage]="!shouldShowGradient(offer) ? 'url(' + offer.image_url + ')' : ''"
+          >
+            @if (offer.image_url) {
+              <img
+                [src]="offer.image_url"
+                (error)="handleImageError(offer.id)"
+                style="display: none;"
+              />
+            }
+            <div class="card-body">
+              <h3 class="offer-title">{{ offer.title }}</h3>
+              <p class="offer-subtitle">{{ offer.subtitle }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  }
+</div>

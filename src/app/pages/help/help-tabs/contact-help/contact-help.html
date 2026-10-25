@@ -1,0 +1,29 @@
+<div class="contact-help">
+  <section class="contact-boxes">
+    @if (phoneBox(); as box) {
+      <a class="box phone-box" [href]="box.href">
+        <img [src]="box.icon" [alt]="box.alt" i18n-alt />
+
+        <div class="content">
+          <span class="small-text text-default">{{ box.title }}</span>
+          <span class="main-text text-default">{{ box.value }}</span>
+        </div>
+
+        <span class="small-text text-default">{{ box.schedule }}</span>
+      </a>
+    }
+
+    @if (emailBox(); as box) {
+      <a class="box email-box" [href]="box.href">
+        <img [src]="box.icon" [alt]="box.alt" i18n-alt />
+
+        <div class="content">
+          <span class="small-text text-default">{{ box.title }}</span>
+          <span class="main-text text-default">{{ box.value }}</span>
+        </div>
+
+        <span class="small-text text-default">{{ box.schedule }}</span>
+      </a>
+    }
+  </section>
+</div>

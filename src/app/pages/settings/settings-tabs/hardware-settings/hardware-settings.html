@@ -1,0 +1,49 @@
+<div class="hardware-settings">
+  @if (ready()) {
+    @if (hardwareItems().length > 0) {
+    <label class="checkbox-group-by checkbox active">
+      <div class="box">
+        <input
+          type="checkbox"
+          [checked]="groupByService()"
+          (change)="onGroupByServiceChange($event)"
+        >
+        <span class="checkmark"></span>
+      </div>
+      <div class="text no-select" i18n>Grupuj po usłudze</div>
+    </label>
+
+    @if (groupByService()) {
+      <section class="hardware-sections">
+        @for (service of servicesList(); track service.type) {
+          <section class="service-section">
+            <h2 class="text-header">{{ service.label }}</h2>
+
+            <section class="hardware">
+              @for (item of (groupedHardware()[service.type]); track item.id) {
+                <app-hardware-item
+                  [item]="item"
+                  [serviceLabel]="item.serviceType"
+                  [ownerLabel]="getOwnerTitle(item.owner)">
+                </app-hardware-item>
+              }
+            </section>
+          </section>
+        }
+      </section>
+    } @else {
+      <section class="hardware">
+        @for (item of hardwareItems(); track item.id) {
+          <app-hardware-item
+            [item]="item"
+            [serviceLabel]="item.serviceType"
+            [ownerLabel]="getOwnerTitle(item.owner)">
+          </app-hardware-item>
+        }
+      </section>
+    }
+    } @else {
+        <div class="text-default text-empty" i18n>Brak sprzętu</div>
+    }
+  }
+</div>

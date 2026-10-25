@@ -1,0 +1,53 @@
+<div class="payments-container">
+  @for (payment of payments(); track payment.id) {
+    <div class="payment-card">
+      <div class="section">
+        <small class="label-small" i18n>Data wystawienia:</small>
+        <span class="payment-date">{{ payment.issue_date }}</span>
+      </div>
+      
+      <div class="section">
+        <small class="label-small" i18n>Okres: {{ payment.start_date }} - {{ payment.end_date }}</small>
+      </div>
+      
+      <div class="section">
+        <small class="label-small" i18n>Tytuł wpłaty</small>
+        <span class="payment-title" i18n>{{ payment.payment_title }}</span>
+      </div>
+
+      <div class="section">
+        <small class="label-small" i18n>Termin wpłaty:</small>
+        @switch (payment.status) {
+          @case ('Paid') {
+            <span class="payment-date paid">{{ payment.payment_date }}</span>
+            <div class="status-indicator">
+              <img class="status-icon paid" src="assets/icons/fi-rr-thumbs-up.svg" alt="Paid">
+              <span class="status-label paid" i18n>Rozliczona</span>
+            </div>
+          }
+          @case ('Pending') {
+            <span class="payment-date pending">{{ payment.payment_date }}</span>
+            <div class="status-indicator">
+              <img class="status-icon pending" src="assets/icons/fi-rr-time-quarter-to.svg" alt="Pending">
+              <span class="status-label pending" i18n>Oczekująca</span>
+            </div>
+          }
+          @case ('Rejected') {
+            <span class="payment-date rejected">{{ payment.payment_date }}</span>
+            <div class="status-indicator">
+              <img class="status-icon rejected" src="assets/icons/fi-rr-thumbs-down.svg" alt="Rejected">
+              <span class="status-label rejected" i18n>Odrzucona</span>
+            </div>
+          }
+        }
+      </div>
+
+      <div class="section">
+        <small class="label-small" i18n>Kwota transakcji:</small>
+        <span class="payment-amount" i18n>{{ payment.amount.toFixed(2) }} zł</span>
+      </div>
+    </div>
+  } @empty {
+    <p class="text-default text-empty" i18n>Brak płatności</p>
+  }
+</div>

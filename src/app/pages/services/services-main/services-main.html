@@ -1,0 +1,78 @@
+<div class="page-title-row">
+  <div class="navigate-button">
+    <a 
+      (click)="goBack()"
+      class="back-link"
+    >
+      <img src="assets/icons/fi-rr-angle-small-right.png" alt="back">
+    </a>
+  </div>
+  <h2 class="text-header text-default" i18n>Usługi</h2>
+</div>
+
+<div class="dropdown-container">
+  <p class="address-label textfield-label" i18n>Wybierz adres</p>
+
+  <select class="dropdown" (change)="onAddressChange($event)">
+    <option value="0" selected i18n>Dowolny adres</option>
+    @for (addr of addresses; track addr.address_id) {
+      <option [value]="addr.address_id">{{addr.address}}</option>
+    }
+  </select>
+
+  <p class="address-label textfield-label" i18n>Umowa od: <b>{{contract_start_date}}</b> do: <b>{{contract_end_date}}</b></p>
+</div>
+
+<div class="options-panel">
+  <button class="btn btn-secondary" routerLink="/offers" i18n>
+    Dodaj usługę
+  </button>
+  <button class="btn btn-primary" disabled i18n>
+    Przedłuż umowę
+  </button>
+  <div class="checkbox-panel">
+    @for (type of serviceTypeStats; track type.apiKey) {
+      <label 
+        class="checkbox"
+        [class.active]="activeFilters.includes(type.apiKey)"
+        (click)="$event.preventDefault(); toggleFilter(type.apiKey)"
+      >
+        <div class="box">
+          <input 
+            type="checkbox"
+            [checked]="activeFilters.includes(type.apiKey)"
+            readonly
+          >
+          <span class="checkmark"></span>
+        </div>
+        <div class="text">
+          {{type.displayName}} ({{type.count}})
+        </div>
+      </label>
+    }
+  </div>
+</div>
+
+<div class="services-list">
+  @for (service of filteredServices; track service.id) {
+    <div class="service" (click)="openServiceDetails(service)">
+      <h3 class="service-name text-default">{{service.name}}</h3>
+      <p [class]="service.status.toLowerCase() + ' service-status'">
+        {{ statusMap[service.status.charAt(0).toUpperCase() + service.status.substring(1).toLowerCase()] || service.status }} ●
+      </p>
+      <p class="service-fee textfield-label" i18n>Opłata miesięczna: <b>{{service.monthly_fee ? service.monthly_fee.toFixed(2) : '--'}} zł</b></p>
+    </div>
+  }
+  @empty {
+    <p class="text-default" i18n>Brak usług dla wybranego adresu.</p>
+  }
+</div>
+
+@if (serviceInDrawer) {
+  <app-service-details 
+  [(visible)]="serviceDetailsOpen"
+  [serviceId]="serviceInDrawer.id"
+  [address]="serviceInDrawerAddress"
+  (visibleChange)="!$event ? closeServiceDetails() : null"
+  ></app-service-details>
+}

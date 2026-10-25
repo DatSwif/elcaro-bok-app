@@ -1,0 +1,187 @@
+<div class="page-title-row">
+  <div class="navigate-button">
+    <a 
+      (click)="goBack()"
+      class="back-link"
+    ><img src="assets/icons/fi-rr-angle-small-right.png" alt="back">
+    </a>
+  </div>
+  <h2 class="text-header text-default" i18n>Oferta</h2>
+</div>
+
+<div class="details-container">
+  @if (errorType() === 'NOT_FOUND') {
+    <div class="error-state">
+      <h1 class="error-status">404</h1>
+      <p class="error-description" i18n>Ta oferta nie istnieje lub jest niedostępna.</p>
+      <button routerLink="/offers" class="btn btn-primary" i18n>Wróć do listy ofert</button>
+    </div>
+  }
+  @else if (offer()) {
+    <h3 class="title-text">{{offer()!.title}}</h3>
+    <div class="subtitle-text">{{offer()!.subtitle}}</div>
+    <div class="variants-scroll-container">
+      @for (variant of offer()!.variants; track variant.id) {
+        <div class="variant-card">
+          @for (block of variant.blocks; track block.type) {
+            <div class="block">
+              @switch (block.type) {
+                @case ("PROMO_BADGE") {
+                  <p class="promo-headline">{{block.headline}}</p>
+                  <p class="promo-subheadline cyan-small">{{block.subheadline}}</p>
+                }
+                @case ("INTERNET_SERVICE") {
+                  <div class="block-row">
+                    <img class="block-icon" [src]="block.icon">
+                    <div class="block-column">
+                      <p class="internet-title">{{block.service_type}}</p>
+                      <p class="internet-primary-metric">{{block.primary_metric}}</p>
+                      <p class="internet-secondary-metric">{{block.secondary_metric}}</p>
+                    </div>
+                  </div>
+                }
+                @case ("TV_PACKAGES") {
+                  <div class="block-row">
+                    <img class="block-icon" [src]="block.icon">
+                    <div class="block-column">
+                      <p class="tv-title">{{block.title}}</p>
+                      <p class="tv-primary-metric">{{block.primary_metric}}</p>
+                      <p class="tv-secondary-metric">{{block.secondary_metric}}</p>
+                    </div>
+                  </div>
+                }
+                @case ("MOBILE_PLAN") {
+                  <div class="block-row">
+                    <img class="block-icon" [src]="block.icon">
+                    <div class="block-column">
+                      <p class="mobile-title">{{block.title}}</p>
+                      <p class="mobile-data-limit">{{block.data_limit}}</p>
+                      <p class="mobile-calls-sms">{{block.calls_sms}}</p>
+                      <p class="mobile-roaming">{{block.roaming}}</p>
+                    </div>
+                  </div>
+                }
+                @case ("PREMIUM_ADDONS") {
+                  <p class="addons-title cyan-small">{{block.title}}</p>
+                  <p class="addons-description">{{block.description}}</p>
+                }
+                @case ("HARDWARE") {
+                  <p class="hardware-title cyan-small">{{block.title}}</p>
+                  @for (item of block.items; track $index) {
+                    <img class="block-icon" [src]="item.icon">
+                    <p class="hardware-note">{{item.name}} {{item.cost_note}}</p>
+                  }
+                }
+                @case ("CONTRACT_CONDITIONS") {
+                  <p class="contract-title cyan-small">{{block.title}}</p>
+                  <p class="contract-duration" i18n>Długość umowy: {{block.duration_months}} (miesięcy)</p>
+                  @for (item of block.upfront_fees; track $index) {
+                    <small class="contract-upfront-fee" i18n>{{item.name}}: {{item.amount.toFixed(2)}} zł</small>
+                  }
+                }
+              }
+            </div>
+            @if (block.type == "PROMO_BADGE") {
+              <hr class="thick-line">
+            } @else {
+              <hr class="break-line">
+            }
+            
+          }
+          <div class="block">
+            @if (variant.pricing.regular_price) {
+              <p class="regular-price" i18n>{{variant.pricing.regular_price.toFixed(2)}} zł</p>
+            }
+            <p class="current-price" i18n>{{variant.pricing.current_price.toFixed(2)}} zł</p>
+            @if (variant.pricing.promo_description) {
+              <p class="promo-description">{{variant.pricing.promo_description}}</p>
+            }
+          </div>
+          <button class="btn btn-primary" (click)="goToConfirmation(variant.id)" i18n>Zamów</button>
+        </div>
+      }
+    </div>
+    <div class="legal-note-text">{{offer()!.legal_note}}</div>
+  }
+</div>
+
+<p-dialog
+  [(visible)]="dialogVisible" 
+  (onHide)="resetDialog()"
+  [modal]="true" 
+  [draggable]="false"
+  [dismissableMask]="dialogState() === 'CONFIRM' || dialogState() === 'ERROR' || dialogState() === 'SUCCESS'"
+  class="dialog"
+>
+  <ng-template #header>
+    @switch (dialogState()) {
+      @case ('VERIFY_CODE') {
+        <h3 class="text-header" i18n>Autoryzacja operacji</h3>
+      } @case ('SUCCESS') {
+        <h3 class="text-header" i18n>Sukces!</h3>
+      } @case ('ERROR') {
+        <h3 class="text-header" i18n>Wystąpił błąd</h3>
+      } @case ('LOADING') {
+        <h3 class="text-header" i18n>Przetwarzanie...</h3>
+      } @default {
+        <h3 class="text-header" i18n>Potwierdzenie zamówienia</h3>
+      }
+    }
+  </ng-template>
+  <ng-template #content>
+    @switch (dialogState()) {
+      
+      @case ('CONFIRM') {
+        <div class="input-group">
+          <p class="dialog-content text text-default" i18n>
+            Czy na pewno chcesz dodać tę usługę do swojego konta? Operacja wymaga autoryzacji kodem SMS.
+          </p>
+          <p class="dialog-content text text-default" i18n>Wybierz numer telefonu do wysyłki kodu:</p>
+          <select class="form-input dropdown dropdown-small" [(ngModel)]="chosenPhone">
+            <option value="" disabled selected hidden i18n>Wybierz numer telefonu</option>
+            @for (phone of phoneNumbers(); track phone) {
+              <option [value]="phone">{{ phone }}</option>
+            }
+          </select>
+        </div>
+      }
+
+      @case ('VERIFY_CODE') {
+        <app-sms-confirmation
+          [title]="''"
+          (verify)="onVerifySmsCode($event)"
+          (resend)="onResendSmsCode()">
+        </app-sms-confirmation>
+      }
+
+      @case ('SUCCESS') {
+        <p class="dialog-content text text-default" i18n>Dodatkowe informacje zostały wysłane na Twój adres e-mail.</p>
+      } @case ('ERROR') {
+        <p class="dialog-content text text-default" i18n>Nie udało się dodać usługi. Prosimy spróbować ponownie później.</p>
+      } @case ('LOADING') {
+        <p class="dialog-content text text-default" i18n>Przetwarzanie zamówienia...</p>
+      }
+    }
+  </ng-template>
+
+  @if (dialogState() != 'VERIFY_CODE') {
+    <ng-template #footer>
+      @switch (dialogState()) {
+      @case ('CONFIRM') {
+        <button 
+          class="btn btn-primary" 
+          [disabled]="!chosenPhone()" 
+          (click)="initiateSmsVerification()" 
+          i18n
+        >Potwierdzam i wyślij kod</button>
+        <button class="btn btn-tertiary" (click)="dialogVisible.set(false)" i18n>Anuluj</button>
+      }
+      @case ('SUCCESS') {
+        <button class="btn btn-primary" (click)="goBack()" i18n>Wróć do ofert</button>
+      } @case ('ERROR') {
+        <button class="btn btn-primary" (click)="goBack()" i18n>Wróć do ofert</button>
+      }
+    }
+    </ng-template>
+  }
+</p-dialog>

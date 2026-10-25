@@ -1,0 +1,58 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.phone-group {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(6px, 1vw, 16px);
+  width: 100%;
+}
+
+.flag {
+  height: 1.2rem;
+  width: auto;
+  object-fit: contain;
+  margin-right: 0.4rem;
+
+  border: 1px solid var(--color-border-dark);
+  background-size: 100%;
+  vertical-align: middle;
+}
+
+.text-flag {
+  text-align: left;
+  color: var(--color-text-dark) !important;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Inter';
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.text-flag-small {
+  text-align: left;
+  color: var(--color-text-dark) !important;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Inter';
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+::ng-deep .p-select-label {
+  padding-right: 0 !important;
+}
+
+::ng-deep .text-input {
+  text-align: left;
+  color: var(--color-text-dark);
+  font-size: 1rem;
+  font-weight: 700 !important;
+  font-family: 'Inter';
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 100%;
+  display: block;
+}

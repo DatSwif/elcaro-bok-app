@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+        { "source": "/en/**", "destination": "/en/index.html" },
+        { "source": "/pl/**", "destination": "/pl/index.html" },
+        { "source": "/", "destination": "/pl/index.html" }
+    ]
+}

@@ -1,0 +1,85 @@
+::ng-deep .p-drawer-right {
+  width: max(320px, 40vw) !important;
+  background-color: var(--color-off-white) !important;
+  border-top-left-radius: 16px !important;
+  border-bottom-left-radius: 16px !important;
+  border: none !important;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary-blue);
+}
+
+.text {
+  color: var(--color-text-dark);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* innerHTML content */
+::ng-deep .text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+}
+
+::ng-deep .text > ol {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+  counter-reset: main-item;
+}
+
+::ng-deep .text > ol > li {
+  counter-increment: main-item;
+  position: relative;
+  list-style: none;
+  padding-left: 16px;
+  margin-bottom: 10px;
+}
+
+::ng-deep .text > ol > li::before {
+  content: counter(main-item) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+::ng-deep .text ol ol {
+  margin-top: 4px;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: sub-item;
+}
+
+::ng-deep .text ol ol > li {
+  counter-increment: sub-item;
+  position: relative;
+  list-style: none;
+  padding-left: 16px;
+}
+
+::ng-deep .text ol ol > li::before {
+  content: counter(sub-item, lower-alpha) ") ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+::ng-deep .text li:last-child,
+::ng-deep .text p:last-child,
+::ng-deep .text ol:last-child,
+::ng-deep .text h3:last-child {
+  margin-bottom: 0;
+}
+
+.btn {
+  width: 100%;
+}

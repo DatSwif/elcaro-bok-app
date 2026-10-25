@@ -1,0 +1,56 @@
+<p-drawer
+  position="right"
+  [modal]="true" 
+  [(visible)]="visible"
+  (onHide)="onDrawerHidden()"
+  class="doc-side-drawer"
+>
+  <ng-template #header>
+    <h3 class="text-header" i18n>Wniosek o zwrot nadpłaty</h3>
+  </ng-template>
+  <ng-template #content>
+    <p class="description-label" i18n>
+      Należy podać dane, określić kwotę zwrotu i numer konta bankowego które powiązane jest z właścicielem konta w serwisie ELCARO.
+      Kwota zwrotu nie może być większa niż należna kwota zwrotu, w przeciwnym razie zwrot zostanie odrzucony. Maksymalna kwota zwrotu to 500 zł.
+    </p>
+    <form [formGroup]="returnForm" class="return-form-container">
+      
+      <div class="form-row grid-half">
+        <div class="input-group">
+          <label class="textfield-label" i18n>Nazwisko</label>
+          <input type="text" formControlName="last_name" class="textfield" />
+        </div>
+        <div class="input-group">
+          <label class="textfield-label" i18n>Imię</label>
+          <input type="text" formControlName="first_name" class="textfield" />
+        </div>
+      </div>
+
+      <div class="form-row grid-uneven">
+        <div class="input-group">
+          <label class="textfield-label" i18n>Kwota zwrotu</label>
+          <input type="text" formControlName="amount" class="textfield" placeholder="0.00 (zł)" />
+        </div>
+        <div class="input-group">
+          <label class="textfield-label" i18n>Numer konta bankowego</label>
+          <input type="text" formControlName="account_number" class="textfield" placeholder="PL __ ____ ____ ____ ____ ____ ____" />
+        </div>
+      </div>
+
+    </form>
+    <div class="drawer-buttons">
+      <button 
+        type="button" 
+        class="btn btn-tertiary" 
+        (click)="visible = false" 
+      i18n>Anuluj</button>
+      
+      <button 
+        type="button" 
+        class="btn btn-primary" 
+        [disabled]="returnForm.invalid"
+        (click)="submitForm()" 
+      i18n>Zwrot nadpłaty</button>
+    </div>
+  </ng-template>
+</p-drawer>

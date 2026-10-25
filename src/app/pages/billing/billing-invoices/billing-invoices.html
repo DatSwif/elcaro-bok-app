@@ -1,0 +1,124 @@
+@if (hasUnpaidStatus && (paymentModeService.isPaymentMode$ | async)) {
+  <div class="payment-filter">
+    <p class="filter-label" i18n>Wybierz faktury do opłaty</p>
+    <div class="filter-options">
+      <button class="btn btn-tertiary btn-small" (click)="selectOverdueInvoices()" i18n>Zaznacz zaległe</button>
+      <button class="btn btn-tertiary btn-small" (click)="selectAllInvoices()" i18n>Zaznacz wszystkie</button>
+      <button class="btn btn-tertiary btn-small" (click)="paymentModeService.clearSelection()" i18n>Odznacz wszystkie</button>
+    </div>
+  </div>
+}
+
+<div class="invoices-container">
+  @for (invoice of filteredInvoices(); track invoice.id) {
+    <div class="invoice-card" [class.selected]="(paymentModeService.selectedInvoices$ | async)?.has(invoice.id)">
+      <div class="section">
+        <small class="label-small" i18n>Data wystawienia:</small>
+        <span class="invoice-date">{{ invoice.issue_date | date:'dd.MM.yyyy' }}</span>
+      </div>
+
+      <div class="section">
+        <small class="label-small" i18n>Okres: {{ invoice.period_start | date:'dd.MM.yyyy' }} - {{ invoice.period_end | date:'dd.MM.yyyy' }}</small>
+      </div>
+
+      <div class="section">
+        <small class="label-small" i18n>Numer faktury:</small>
+        <span class="invoice-number">{{ invoice.invoice_number }}</span>
+      </div>
+
+      <div class="section">
+        <small class="label-small" i18n>Termin płatności:</small>
+        <span class="invoice-due-date" [ngClass]="invoice.status.toLowerCase()" i18n>{{ invoice.due_date | date:'dd.MM.yyyy'}}</span>
+        @if (invoice.status.toLowerCase() != 'unpaid') {
+          <div class="status-indicator">
+            @switch (invoice.status.toLowerCase()) {
+              @case ('paid') {
+                <img class="status-icon paid" src="assets/icons/fi-rr-thumbs-up.svg" alt="Paid">
+                <span class="status-label paid" i18n>Opłacona</span>
+              } @case ('pending') {
+                <img class="status-icon pending" src="assets/icons/fi-rr-time-quarter-to.svg" alt="Pending">
+                <span class="status-label pending" i18n>Oczekująca</span>
+              } @case ('overdue') {
+                <img class="status-icon overdue" src="assets/icons/fi-rr-bell-ring.svg" alt="Overdue">
+                <span class="status-label overdue" i18n>Przeterminowana</span>
+              }
+            }
+          </div>
+        }
+      </div>
+
+      <div class="float-end">
+        <div class="section">
+          @if (invoice.status.toLowerCase() === 'paid' || invoice.status.toLowerCase() === 'pending') {
+            <small class="label-small" i18n>Zapłacono:</small>
+          } @else {
+            <small class="label-small" i18n>Do zapłaty:</small>
+          }
+          <div class="details-box">
+            <span class="invoice-amount" i18n>{{ invoice.total_amount.toFixed(2) }} zł</span>
+            <img class="details-arrow" src="assets/icons/fi-rr-angle-small-right.svg" (click)="viewInvoiceDetails(invoice)" alt="Details">
+          </div>
+        </div>
+
+        @if (invoice.status.toLowerCase() === 'unpaid' || invoice.status.toLowerCase() === 'overdue') {
+          @if (!(paymentModeService.isPaymentMode$ | async)) {
+            <button class="btn btn-small btn-secondary float-bottom" (click)="paymentModeService.togglePaymentMode(true); paymentModeService.toggleInvoice(invoice.id)" i18n>Opłać</button>
+          } @else {
+            <label class="checkbox active">
+              <div class="box">
+                <input type="checkbox" [checked]="(paymentModeService.selectedInvoices$ | async)?.has(invoice.id)" (change)="paymentModeService.toggleInvoice(invoice.id)">
+                <span class="checkmark"></span>
+              </div>
+              @if ((paymentModeService.selectedInvoices$ | async)?.has(invoice.id)) {
+                <p class="checkbox-label selected" i18n>Wybrana do opłaty</p>
+              } @else {
+                <p class="checkbox-label" i18n>Zaznacz, aby opłacić</p>
+              }
+            </label>
+          }
+        }
+      </div>
+    </div>
+  } @empty {
+    <p class="text-default text-empty" i18n>Brak faktur</p>
+  }
+</div>
+
+@if (hasUnpaidStatus && (paymentModeService.isPaymentMode$ | async)) {
+  <div class="payment-footer">
+    <p class="payment-method-label" i18n>Wybierz sposób płatności</p>
+    <div class="payment-methods">
+      <div class="payment-method disabled-method">
+        <p class="payment-method-label disabled-method" i18n>Szybkie płatności online</p>
+      </div>
+      <div class="payment-method disabled-method">
+        <p class="payment-method-label disabled-method" i18n>Przelew tradycyjny</p>
+      </div>
+      <div [class.disabled-method]="paymentModeService.selectionEmpty()" class="payment-method"  (click)="!paymentModeService.selectionEmpty() && viewTransferDetails()">
+        <p class="payment-method-label" [class.disabled-method]="paymentModeService.selectionEmpty()" i18n>Pokaż dane do przelewu</p>
+        <img src="assets/icons/fi-rr-angle-small-right.svg">
+      </div>
+    </div>
+    <div class="button-container">
+      <button disabled class="btn btn-secondary" i18n>Opłać</button>
+      <button class="btn btn-tertiary" (click)="paymentModeService.togglePaymentMode(false)" i18n>Anuluj</button>
+    </div>
+    
+  </div>
+}
+
+@switch (activeDrawer) {
+  @case ("InvoiceDetails") {
+    <app-invoice-details
+      [invoiceId]="this.invoiceInDrawer!.id"
+      [documentId]="this.invoiceInDrawer!.document_id"
+      (close)="closeDrawer()"
+    ></app-invoice-details>
+  } @case ("TransferDetails") {
+    <app-transfer-details
+      [transfer_amount]="getSelectedInvoicesTotal()"
+      [transfer_title]="'Opłata faktur'"
+      (close)="closeDrawer()"
+    ></app-transfer-details>
+  }
+}

@@ -1,0 +1,72 @@
+<button class="hardware-item" type="button" (click)="drawerVisible = true">
+  <img class="hardware-icon" [src]="item.icon" [alt]="item.name">
+
+  <div class="hardware-bottom">
+    <div class="hardware-info">
+      <div class="hardware-description">
+        <span class="name text-default">{{ item.name }}</span>
+
+        <span class="service text-default" i18n>
+          Usługa:
+          <span class="service-name">{{ serviceLabel }}</span>
+        </span>
+      </div>
+
+      <div class="open-icon">
+        <img src="assets/icons/fi-rr-angle-small-right.png" alt="Otwórz" i18n-alt>
+      </div>
+    </div>
+
+    <span class="ownership text-default" i18n>
+      Własność:
+      <span class="owner">{{ ownerLabel }}</span>
+    </span>
+
+    <!-- @if (item.owner === 'elcaro') {
+      <div class="buttons">
+        <button class="btn btn-secondary btn-small" [disabled]="!item.isReturnable" i18n>
+          Zwróć
+        </button>
+
+        <button class="btn btn-primary btn-small" [disabled]="!item.isReportable" i18n>
+          Zgłoś awarię
+        </button>
+      </div>
+    } -->
+  </div>
+</button>
+
+<p-drawer
+  [(visible)]="drawerVisible"
+  position="right"
+  [showCloseIcon]="true"
+>
+  <ng-template #header>
+    <span class="title text-default" i18n>Podgląd sprzętu</span>
+  </ng-template>
+
+  <div class="hardware-details">
+    <img class="big-hardware-icon" [src]="item.icon" [alt]="item.name">
+
+    <div class="hardware-description">
+      <div class="hardware-main-description">
+        <span class="name text-default">{{ item.name }}</span>
+
+        <span class="service text-default" i18n>
+          Usługa: <span class="service-name">{{ serviceLabel }}</span>
+        </span>
+      </div>
+
+      <div class="hardware-second-description">
+        <span class="lable text-default" i18n>
+          Własność:
+          <span class="text">{{ ownerLabel }}</span>
+        </span>
+        <span class="lable text-default" i18n>
+          Numer Seryjny:
+          <span class="text">{{ item.serialNumber }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</p-drawer>

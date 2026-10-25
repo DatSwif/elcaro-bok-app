@@ -1,0 +1,31 @@
+<div class="auth-code-head">
+  <h3 class="auth-header">{{ title }}</h3>
+  <p class="text" [innerHTML]="description"></p>
+</div>
+
+<div class="form-container">
+  <div [formGroup]="codeForm" class="code-wrapper">
+    <p-inputOtp 
+      formControlName="otp"
+      [length]="4" 
+      [integerOnly]="true">
+    </p-inputOtp>
+  </div>
+
+  <div class="action-buttons">
+    <button 
+      (click)="$event.preventDefault(); verifyCode()" 
+      class="btn btn-primary w-full"
+      [disabled]="isLoading"
+    >{{ submitLabel }}</button>
+    
+    <p class="text resend-label" i18n>Kod nie przyszedł?</p>
+    
+    <button 
+      (click)="$event.preventDefault(); resendCode()"
+      class="btn btn-tertiary w-full mt-2"
+      [disabled]="isLoading"
+      i18n
+    >Wyślij ponownie</button>
+  </div>
+</div>

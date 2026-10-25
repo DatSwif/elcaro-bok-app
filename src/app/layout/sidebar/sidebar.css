@@ -1,0 +1,115 @@
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(12px, 2vh, 24px) clamp(8px, 1vw, 16px);
+  gap: 16px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+}
+
+.custom-mobile-drawer {
+  border-style: none;
+  background-color: var(--color-white);
+}
+
+.menu-item {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  padding: 8px 8px;
+  gap: 8px;
+  transition: all 0.1s;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Inter';
+  
+  position: relative; 
+  overflow: hidden;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.menu-item img {
+  filter: invert(55%) sepia(0%) saturate(1%) hue-rotate(114deg) brightness(94%) contrast(96%);
+}
+
+.menu-item.active {
+  color: var(--color-text-dark);
+  cursor: pointer;
+}
+
+.menu-item.active img {
+  filter: none;
+}
+
+.menu-item.active:hover {
+  background-color: var(--color-off-white);
+}
+
+.menu-item.active-selected {
+  background-color: var(--color-off-white);
+  color: var(--color-primary-blue);
+}
+
+.menu-item.active-selected img {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(93%) saturate(2732%) hue-rotate(221deg) brightness(88%) contrast(86%);
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+/* Mobile Part */
+
+.mobile-trigger {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .desktop-sidebar {
+    display: none;
+  }
+
+  .mobile-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    
+    background-color: var(--color-white);
+    width: 26px;
+    height: 78px;
+
+    border-radius: 0 6px 6px 0;
+
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    opacity: 0.75;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    transition: all 0.1s;
+    font-size: 18px;
+  }
+}
+
+.menu-text {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-text-dark);
+}

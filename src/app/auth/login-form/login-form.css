@@ -1,0 +1,57 @@
+.flex-align {
+  display: flex;
+  align-items: center;
+  line-height: normal;
+}
+
+.login-form-head {
+  padding: 0;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.auth-header {
+  margin: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-primary-blue);
+  line-height: 1.2;
+}
+
+.text {
+  margin: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+  padding: 0; 
+}
+
+::ng-deep .p-inputtext {
+  width: 100%;
+}
+
+::ng-deep .p-floatlabel {
+  width: 100%;
+}
+
+.btn-primary {
+  align-self: stretch;
+  box-shadow: 0px 15px 25px rgba(125, 33, 107, 0.15);
+}
+
+.w-full {
+  flex: stretch;
+}

@@ -1,0 +1,64 @@
+.billing-account-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.growing-box {
+  min-width: 300px;
+  flex: 1;
+}
+
+.account-number-box {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  border: 1px solid var(--color-border-light-blue-2);
+  padding: 16px clamp(16px, 1.25vw, 24px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.account-number-box:hover {
+  background-color: var(--color-off-white);
+  transition: all 0.1s;
+}
+
+.account-number-label {
+  color: var(--color-text-muted);
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.account-number {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.account-number img {
+  cursor: pointer;
+}
+
+.number {
+  color: var(--color-text-dark);
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: clamp(10px, 4vw, 14px);
+  white-space: nowrap;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+}

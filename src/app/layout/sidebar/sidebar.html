@@ -1,0 +1,52 @@
+<nav class="sidebar-nav desktop-sidebar no-select">
+  <ng-container *ngTemplateOutlet="menuList"></ng-container>
+</nav>
+
+<p-drawer [(visible)]="mobileSidebarVisible" class="custom-mobile-drawer" position="left" [showCloseIcon]="true">
+  <ng-template #header>
+    <span class="menu-text">Menu</span>
+  </ng-template>
+
+  <nav class="sidebar-nav mobile-nav-content no-select">
+    <ng-container *ngTemplateOutlet="menuList"></ng-container>
+  </nav>
+</p-drawer>
+
+<div class="mobile-trigger" (click)="mobileSidebarVisible = true" aria-label="Open menu">
+  <i class="pi pi-chevron-right"></i>
+</div>
+
+<ng-template #renderItems let-items>
+  @for (item of items; track item.id) {
+    @if (item.isActive) {
+      <a
+        class="menu-item active"
+        [routerLink]="item.route"
+        routerLinkActive="active-selected"
+        (click)="selectTab(item)"
+      >
+        <img [src]="item.icon" [alt]="item.label">
+        <span>{{ item.label }}</span>
+      </a>
+    } @else {
+      <div class="menu-item">
+        <img [src]="item.icon" [alt]="item.label">
+        <span>{{ item.label }}</span>
+      </div>
+    }
+  }
+</ng-template>
+
+<ng-template #menuList>
+  <ng-container
+    [ngTemplateOutlet]="renderItems"
+    [ngTemplateOutletContext]="{ $implicit: menuItems }"
+  ></ng-container>
+
+  <div class="mt-auto"></div>
+
+  <ng-container
+    [ngTemplateOutlet]="renderItems"
+    [ngTemplateOutletContext]="{ $implicit: bottomItems }"
+  ></ng-container>
+</ng-template>

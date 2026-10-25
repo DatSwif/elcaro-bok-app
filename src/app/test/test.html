@@ -1,0 +1,161 @@
+<!-- This is test component where you may find examples of some global UI controls. -->
+
+<div class="test-page">
+  <div class="test-part">
+    <h1> TEXTFIELD </h1>
+    <input type="text" class="textfield" placeholder="Podaj numer klienta" />
+    <input type="text" class="textfield" value="73046" />
+    <input type="text" class="textfield" disabled />
+    <input type="text" class="textfield" value="73046" disabled />
+
+    <div class="textfield-with-label">
+      <label class="textfield-label">Numer klienta</label>
+      <input type="text" class="textfield" />
+    </div>
+  </div>
+
+  <div class="test-part">
+    <h1> DROPDOWN </h1>
+    <select class="dropdown" required>
+      <option value="" disabled selected hidden>Wybierz</option>
+      <option value="73046">73046</option>
+      <option value="81234">81234</option>
+    </select>
+
+    <select class="dropdown">
+      <option>73046</option>
+    </select>
+
+    <select class="dropdown" disabled>
+    </select>
+
+    <select class="dropdown" disabled>
+      <option>73046</option>
+    </select>
+
+    <div class="dropdown-with-label">
+      <label class="dropdown-label">Numer klienta</label>
+      <select class="dropdown">
+      </select>
+    </div>
+  </div>
+
+  <div class="test-part">
+    <h1> BUTTONS </h1>
+    <button class="btn btn-primary">PRIMARY</button>
+    <button class="btn btn-secondary">SECONDARY</button>
+    <button class="btn btn-tertiary">TERTIARY</button>
+
+    <button class="btn btn-primary" disabled>PRIMARY</button>
+    <button class="btn btn-secondary" disabled>SECONDARY</button>
+    <button class="btn btn-tertiary" disabled>TERTIARY</button>
+
+    <button class="btn btn-large btn-primary">LARGE</button>
+    <button class="btn btn-default btn-primary">DEFAULT</button>
+    <button class="btn btn-small btn-primary">SMALL</button>
+  </div>
+
+  <div class="test-part">
+    <h1> TABS </h1>
+    <a class="tab active">Tabs name</a>
+    <a class="tab active-selected">Tabs name</a>
+    <a class="tab">Tabs name</a>
+  </div>
+
+  <div class="test-part">
+    <h1> BOXES </h1>
+    <a class="simple-box">
+      <img src="assets/icons/fi-rr-disco-ball.svg" alt="">
+      <div class="box-text">
+        <span class="title">Internet</span>
+        <span class="subtitle">aktywne 3</span>
+      </div>
+    </a>
+
+  <div class="payment-box">
+    <div class="state"> 
+      <div class="text">
+        <span class="title">Stan rachunku</span>
+        <span class="subtitle">(zaległość)</span>
+      </div>
+      <div class="account">
+        <img src="assets/icons/fi-rr-bell-ring.svg" alt="">
+        <span class="text">255,99 zł</span>
+      </div>
+    </div>
+    <button class="btn btn-small btn-primary">Opłać</button>
+  </div>
+
+  <div class="test-part">
+    <h1> CHECKBOXES </h1>
+    <label class="checkbox active">
+      <div class="box">
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </div>
+      <div class="text">Akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę prywatności</a>.</div>
+    </label>
+
+    <label class="checkbox active">
+      <div class="box">
+        <input type="checkbox" checked>
+        <span class="checkmark"></span>
+      </div>
+      <div class="text">Akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę prywatności</a>.</div>
+    </label>
+
+    <label class="checkbox">
+      <div class="box">
+        <input type="checkbox" disabled>
+        <span class="checkmark"></span>
+      </div>
+      <div class="text">Akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę prywatności</a>.</div>
+    </label>
+
+    <label class="checkbox">
+      <div class="box">
+        <input type="checkbox" disabled checked>
+        <span class="checkmark"></span>
+      </div>
+      <div class="text">Akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę prywatności</a>.</div>
+    </label>
+  </div>
+
+  <div class="test-part">
+    <h1>RADIO BUTTONS</h1>
+    <label class="radio-button active">
+      <div class="box">
+          <input type="radio" name="accept">
+          <span class="radio"></span>
+      </div>
+      <div class="text">Akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę prywatności</a>.
+      </div>
+    </label>
+
+    <label class="radio-button active">
+      <div class="box">
+        <input type="radio" name="accept" checked>
+        <span class="radio"></span>
+        </div>
+        <div class="text">
+        Akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę prywatności</a>.
+      </div>
+    </label>
+
+    <label class="radio-button">
+      <div class="box">
+        <input type="radio" name="accept-inactive" disabled>
+        <span class="radio"></span>
+      </div>
+      <div class="text">Akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę prywatności</a>.</div>
+    </label>
+
+    <label class="radio-button">
+      <div class="box">
+          <input type="radio" name="accept-inactive" checked disabled>
+          <span class="radio"></span>
+      </div>
+      <div class="text">Akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę prywatności</a>.</div>
+    </label>
+  </div>
+</div>

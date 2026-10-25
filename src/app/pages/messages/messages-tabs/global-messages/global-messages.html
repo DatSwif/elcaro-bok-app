@@ -1,0 +1,139 @@
+<p-confirmpopup #deleteConfirmPopup>
+  <ng-template #headless>
+    <div class="delete-confirm-popup">
+      <div
+        class="delete-confirm text-default"
+        i18n
+      >Usunąć wiadomość?</div>
+
+      <div class="delete-confirm-popup-actions">
+        <button
+          type="button"
+          class="btn btn-secondary btn-small btn-cancel"
+          (click)="deleteConfirmPopup.onReject()"
+          i18n
+        >Anuluj</button>
+
+        <button
+          type="button"
+          class="btn btn-secondary btn-small btn-delete"
+          (click)="deleteConfirmPopup.onAccept()"
+          autofocus
+          i18n
+        >Usuń</button>
+      </div>
+    </div>
+  </ng-template>
+</p-confirmpopup>
+
+<div class="global-messages">
+  @if (messages().length == 0) {
+    <div class="messages-empty">
+      <h3 class="text-header" i18n>Lista wiadomości jest pusta.</h3>
+    </div>
+  } @else {
+    <section class="messages-list">
+      @for (message of messages(); track message.id) {
+        <div
+          role="button"
+          tabindex="0"
+          class="message-card"
+          [class.active]="selectedMessageId() === message.id"
+          [class.unread]="!message.is_read"
+          (click)="selectMessage(message)"
+          (keydown)="onMessageCardKeydown($event, message)"
+        >
+          <div class="message-card-body">
+            <h3 class="text-header message-card-title">{{ message.title }}</h3>
+            <span class="text-default message-card-preview">{{ getPreview(message.content) }}</span>
+          </div>
+
+          <div class="message-card-actions">
+            <button
+              type="button"
+              class="icon-btn"
+              [disabled]="message.is_read"
+              (click)="markAsRead(message); $event.stopPropagation()"
+            >
+              <img [src]="message.is_read ? 'assets/icons/fi-rr-envelope-open.svg' : 'assets/icons/fi-rr-envelope.svg'" alt="Oznacz jako przeczytane" i18n-alt>
+            </button>
+
+            <button
+              #deleteButton
+              type="button"
+              class="icon-btn danger"
+              (click)="confirmDelete($event, message, deleteButton)"
+            >
+              <img src="assets/icons/fi-rr-trash.svg" alt="Usuń" i18n-alt>
+            </button>
+          </div>
+        </div>
+      }
+    </section>
+
+    @if (!isMobile()) {
+      @if (selectedMessage()) {
+        <ng-container *ngTemplateOutlet="messageDetail"></ng-container>
+      } @else {
+        <div class="message-empty">
+          <h3 class="text-header" i18n>Wybierz wiadomość po lewej stronie.</h3>
+        </div>
+      }
+    }
+  }
+</div>
+
+<ng-template #messageDetail>
+  <div class="message-content">
+    <div class="message-detail-wrapper">
+      <div class="message-header">
+        <h3 class="text-header">{{ selectedMessage()?.title }}</h3>
+
+        <div class="panel-actions">
+          <button
+            type="button"
+            class="icon-btn"
+            [disabled]="selectedMessage()?.is_read"
+            (click)="markAsRead(selectedMessage())"
+          >
+            <img [src]="selectedMessage()?.is_read ? 'assets/icons/fi-rr-envelope-open.svg' : 'assets/icons/fi-rr-envelope.svg'" alt="Oznacz jako przeczytane" i18n-alt>
+          </button>
+
+          <button
+            #deleteDetailButton
+            type="button"
+            class="icon-btn danger"
+            (click)="confirmDelete($event, selectedMessage(), deleteDetailButton)"
+          >
+            <img src="assets/icons/fi-rr-trash.svg" alt="Usuń" i18n-alt>
+          </button>
+
+          <button
+            type="button"
+            class="icon-btn"
+            (click)="selectedMessageId.set(null)"
+          >
+            <img src="assets/icons/fi-rr-cross.svg" alt="Zamknij" i18n-alt>
+          </button>
+        </div>
+      </div>
+
+      <div class="content-body">
+        <span class="text-default">{{ selectedMessage()?.content }}</span>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<p-drawer
+  [visible]="isDrawerOpen()"
+  (onHide)="selectedMessageId.set(null)"
+  position="right"
+  styleClass="mobile-message-drawer"
+>
+  <ng-template #headless>
+    @if (selectedMessage()) {
+      <ng-container *ngTemplateOutlet="messageDetail"></ng-container>
+    }
+  </ng-template>
+</p-drawer>

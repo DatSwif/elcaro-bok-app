@@ -1,0 +1,74 @@
+<p-confirmpopup #deleteConfirmPopup>
+  <ng-template #headless>
+    <div class="delete-confirm-popup">
+      <div
+        class="delete-confirm text-default"
+        i18n
+      >
+        Usunąć powiadomienie?
+      </div>
+
+      <div class="delete-confirm-popup-actions">
+        <button
+          type="button"
+          class="btn btn-secondary btn-small btn-cancel"
+          (click)="deleteConfirmPopup.onReject()"
+          i18n
+        >Anuluj</button>
+
+        <button
+          type="button"
+          class="btn btn-secondary btn-small btn-delete"
+          (click)="deleteConfirmPopup.onAccept()"
+          autofocus
+          i18n
+        >Usuń</button>
+      </div>
+    </div>
+  </ng-template>
+</p-confirmpopup>
+
+<div class="personal-messages">
+  @if (messages().length == 0) {
+    <div class="messages-empty">
+      <h3 class="text-header" i18n>Lista powiadomień jest pusta.</h3>
+    </div>
+  } @else {
+    <section class="messages-list">
+      @for (message of messages(); track message.id) {
+        <div
+          class="message-card"
+          [class.unread]="!message.is_read"
+        >
+          <div class="message-card-body">
+            <div class="level-rectangle" 
+                [class.level-1]="message.level === 1"
+                [class.level-2]="message.level === 2"
+            ></div>
+            <h3 class="text-header message-card-title">{{ message.title }}</h3>
+          </div>
+
+          <div class="message-card-actions">
+            <button
+              type="button"
+              class="icon-btn"
+              [disabled]="message.is_read"
+              (click)="markAsRead(message); $event.stopPropagation()"
+            >
+              <img [src]="message.is_read ? 'assets/icons/fi-rr-envelope-open.svg' : 'assets/icons/fi-rr-envelope.svg'" alt="Oznacz jako przeczytane" i18n-alt>
+            </button>
+
+            <button
+              #deleteButton
+              type="button"
+              class="icon-btn danger"
+              (click)="confirmDelete($event, message, deleteButton)"
+            >
+              <img src="assets/icons/fi-rr-trash.svg" alt="Usuń" i18n-alt>
+            </button>
+          </div>
+        </div>
+      }
+    </section>
+  }
+</div>

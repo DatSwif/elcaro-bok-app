@@ -1,0 +1,120 @@
+<p-drawer
+  position="right"
+  [modal]="true" 
+  [(visible)]="visible"
+  (onHide)="onDrawerHidden()"
+  class="doc-side-drawer"
+>
+  <ng-template #header>
+    <h3 class="text-header" i18n>Podgląd faktury</h3>
+  </ng-template>
+
+  <ng-template #content>
+    @if (data) {
+      <ng-container>
+        <div class="section flex-between">
+          <div>
+            <small class="section-label text-default" i18n>Faktura</small>
+            <p class="section-text font-bold text-default">{{ data.invoice_number }}</p>
+          </div>
+          <a (click)="downloadInvoice()" target="_blank" class="download-btn"><img src="assets/icons/fi-rr-download.svg"></a>
+        </div>
+
+        <div class="section">
+          <small class="section-label text-default" i18n>Sprzedawca</small>
+          <p class="section-text font-bold text-default">{{ data.seller.name }}</p>
+          <p class="section-text font-bold text-default">{{ data.seller.address }}</p>
+          <p class="section-text font-bold text-default">NIP {{ data.seller.nip }}</p>
+        </div>
+
+        <div class="section grid-4">
+          <div>
+            <small class="section-label text-default" i18n>Data wystawienia</small>
+            <p class="section-text font-bold text-default">{{ data.dates.issue_date }}</p>
+          </div>
+          <div>
+            <small class="section-label text-default" i18n>Data sprzedaży</small>
+            <p class="section-text font-bold text-default">{{ data.dates.sale_date }}</p>
+          </div>
+          <div>
+            <small class="section-label text-default" i18n>Sposób zapłaty</small>
+            <p class="section-text font-bold text-default">{{ data.payment_details.method }}</p>
+          </div>
+          <div>
+            <small class="section-label text-default" i18n>Termin płatności</small>
+            <p class="section-text font-bold text-default" [class.text-danger]="data.status === 'overdue'">
+              {{ data.dates.due_date }}
+            </p>
+            @if (data.status.toLowerCase() == 'overdue') {
+              <div class="overdue-warning text-danger">
+                <img src="assets/icons/fi-rr-bell-ring.svg" class="bell-icon"><span class="text-default font-bold" i18n>Przeterminowana</span>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="section">
+          <small class="section-label text-default" i18n>Okres opłat stałych:</small>
+          <p class="section-text font-bold text-default">{{ data.dates.period_start }} - {{ data.dates.period_end }}</p>
+        </div>
+
+        <div class="section grid-2">
+          <div>
+            <small class="section-label text-default" i18n>Numer Abonenta:</small>
+            <p class="section-text font-bold text-default">{{ data.buyer.subscriber_number }}</p>
+          </div>
+          <div>
+            <small class="section-label text-default" i18n>Nabywca:</small>
+            <p class="section-text font-bold text-default">{{ data.buyer.name }}</p>
+            <p class="section-text font-bold text-default">{{ data.buyer.address }}</p>
+          </div>
+        </div>
+        @for (item of data.line_items; track $index) {
+          <div class="section">
+            <small class="section-label text-default" i18n>Rodzaj usługi</small>
+            <p class="section-text font-bold mb-2 text-default">{{ item.description }}</p>
+            
+            <div class="grid-4">
+              <div>
+                <small class="section-label text-default" i18n>Ilość</small>
+                <p class="section-text font-bold text-default">{{ item.quantity }} {{ item.unit }}</p>
+              </div>
+              <div>
+                <small class="section-label text-default" i18n>VAT</small>
+                <p class="section-text font-bold text-default">{{ item.vat_rate }}%</p>
+              </div>
+              <div>
+                <small class="section-label text-default" i18n>Netto</small>
+                <p class="section-text font-bold text-default" i18n>{{ item.net_price.toFixed(2) }} zł</p>
+              </div>
+              <div>
+                <small class="section-label text-default" i18n>Brutto</small>
+                <p class="section-text font-bold text-default" i18n>{{ item.gross_price.toFixed(2) }} zł</p>
+              </div>
+            </div>
+          </div>
+        }
+        <div class="section grid-2">
+          <div>
+            <small class="section-label text-default" i18n>Kwota netto faktury</small>
+            <p class="section-text text-xl font-bold text-default" i18n>{{ data.totals.total_net.toFixed(2) }} zł</p>
+          </div>
+          <div>
+            <small class="section-label text-default" i18n>Kwota brutto faktury</small>
+            <p class="section-text text-xl font-bold text-default" i18n>{{ data.totals.total_gross.toFixed(2) }} zł</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <small class="section-label text-default" i18n>Nr rachunku bankowego:</small>
+          <p class="section-text font-bold text-default">{{ data.payment_details.bank_account }}</p>
+        </div>
+
+      </ng-container>
+    }
+  </ng-template>
+
+  <ng-template #footer>
+    <button class="btn btn-tertiary footer-btn" style="float: right;" (click)="visible = false" i18n>Powrót</button>
+  </ng-template>
+</p-drawer>

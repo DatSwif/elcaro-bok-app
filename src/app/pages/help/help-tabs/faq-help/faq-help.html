@@ -1,0 +1,56 @@
+<div class="faq-help">
+  @if (ready() && faqCategories().length > 0) {
+    <div class="search-bar">
+      <div class="textfield-with-label">
+        <label class="textfield-label" for="faq-search" i18n>Wyszukaj</label>
+        <label class="input-wrapper">
+          <input 
+            id="faq-search"
+            type="text" 
+            class="textfield" 
+            [(ngModel)]="searchText" 
+            (ngModelChange)="onInputChange()"
+            (keyup.enter)="onSearch()" 
+          />
+          <img src="assets/icons/fi-rr-search.svg" alt="Szukaj" i18n-alt class="search-icon" (click)="onSearch()" />
+        </label>
+      </div>
+    </div>
+
+    @if (emptySearchError()) {
+      <span class="text-error text-default" i18n> Wpisz frazę, aby wyszukać. </span>
+    } 
+    @else if (searching()) {
+      <span class="text-default" i18n>Wyszukiwanie...</span>
+    } 
+    @else if (hasSearched() && searchResults().length > 0) {
+      <div class="questions-list">
+        @for (item of searchResults(); track item.id) {
+          <details class="faq-card">
+            <summary class="faq-summary">
+              <span class="question-text text-default">{{ item.title }}</span>
+              <img src="assets/icons/chevron-down.svg" class="chevron" alt="Rozwiń">
+            </summary>
+            <div class="faq-content">
+              <span class="answer-text text-default">{{ item.answer }}</span>
+            </div>
+          </details>
+        }
+      </div>
+    } 
+    @else if (hasSearched() && searchResults().length === 0) {
+      <span class="text-error text-default" i18n> Nie znaleziono wyników dla podanej frazy. </span>
+    }
+
+    <div class="faq-boxes">
+        @for (box of faqCategories(); track box.id) {
+          <div class="faq-box" [routerLink]="['/help/faq', box.route]">
+            <div class="icon-wrapper">
+              <img [src]="box.icon" [alt]="box.title">
+            </div>
+            <span class="box-title text-default">{{ box.title }}</span>
+          </div>
+        }
+    </div>
+  }
+</div>

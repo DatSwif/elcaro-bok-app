@@ -1,0 +1,42 @@
+{
+  "documents": [
+    {
+      "id": "Doc1",
+      "lang-versions": [
+        {
+          "lang": "en",
+          "body": {
+            "name": "Document 1",
+            "text": "Contents of Document 1 from 'assets'\r\nSecond line of Document 1"
+          }
+        },
+        {
+          "lang": "pl",
+          "body": {
+            "name": "Dokument 1",
+            "text": "Treści dokumentu 1 z 'assets'\r\nDrugi wiersz Dokumentu 1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Doc2",
+      "lang-versions": [
+        {
+          "lang": "en",
+          "body": {
+            "name": "Document 2",
+            "text": "Contents of Document 2 from 'assets'"
+          }
+        },
+        {
+          "lang": "pl",
+          "body": {
+            "name": "Dokument 2",
+            "text": "Treści dokumentu 2 z 'assets'"
+          }
+        }
+      ]
+    }
+  ]
+}

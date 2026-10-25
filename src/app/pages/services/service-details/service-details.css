@@ -1,0 +1,138 @@
+::ng-deep .p-drawer {
+  background-color: var(--color-off-white);
+}
+
+.text-header {
+  color: var(--color-primary-blue);
+}
+
+.drawer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.box {
+  border: 1px solid var(--color-gray-lighter);
+  border-radius: 16px;
+}
+
+.details-box {
+  background-color: var(--color-white);
+  padding: 0.5rem 0.8rem 0.8rem;
+}
+
+.details-text {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.details-label {
+  color: var(--color-text-muted);
+}
+
+.package-box {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--color-blue-tint-secondary);
+}
+
+::ng-deep .p-popover {
+  visibility: hidden !important;
+}
+
+::ng-deep .p-popover-content {
+  visibility: visible !important;
+  background-color: var(--color-off-white);
+  padding: 4px !important;
+  border-radius: 8px;
+  transform: translate(-400px, -10px) !important;
+  box-shadow: var(--color-shadow-tertiary);
+}
+
+.pictogram-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr); 
+  gap: 4px;
+  max-width: 500px;
+  padding: 4px;
+}
+
+.channel-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 4px;
+  background-color: var(--color-white);
+}
+
+.included-check {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.package-text-zone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.package-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.channels-length {
+  color: var(--color-text-muted);
+}
+
+.monthly-fee {
+  float: right;
+  flex-shrink: 0;
+  
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.package-btn {
+  float: right;
+  font-size: 0.8rem;
+  width: auto;
+  height: auto;
+}
+
+.footer-btn {
+  float: right;
+}
+
+@media (max-width: 768px) {
+  ::ng-deep .p-drawer {
+    min-width: 100vw;
+    max-width: 100vw;
+  }
+
+  .package-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .package-text-zone {
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  ::ng-deep .p-drawer {
+    min-width: 500px;
+    width: 50vw !important;
+  }
+}

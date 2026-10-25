@@ -1,0 +1,756 @@
+/* =========================
+   GLOBAL COLORS
+========================= */
+
+:root {
+  /* Primary Colors */
+  --color-primary-blue: #1E429F;
+  --color-primary-blue-dark: #233876;
+  --color-primary-blue-light: #EBF5FF;
+  --color-primary-blue-bright: #1A56DB;
+  
+  /* Secondary Colors */
+  --color-cyan: #1699BF;
+  --color-cyan-dark: #28B6DF;
+  
+  /* Neutral Colors - Backgrounds */
+  --color-white: #ffffff;
+  --color-off-white: #F9FAFB;
+  --color-light-gray-bg: #f5f5f5;
+  --color-blue-tint: #eef2f8;
+  --color-blue-tint-secondary: #F3F4F6;
+  --color-blue-tint-light: #eff4f8;
+  
+  /* Neutral Colors - Text & Borders */
+  --color-text-dark: #383838;
+  --color-text-muted: #858585;
+  --color-text-secondary: #232323;
+  --color-border-light: #C2C2C2;
+  --color-border-medium: #D1D5DB;
+  --color-border-light-blue: #A4CAFE;
+  --color-border-light-blue-2: #C3DDFD;
+  --color-border-dark: #000000;
+  --color-gray-light: #EDEDED;
+  --color-gray-lighter: #DEDEDE;
+  --color-gray-even-lighter: #E5E7EB;
+  --color-gray-medium: #9CA3AF;
+  --color-gray-medium-2: #6B7280;
+  
+  /* Status Colors */
+  --color-error: #f44336;
+  --color-error-dark: #CE0000;
+  --color-error-secondary: #d32f2f;
+  --color-error-light-bg: #fff1f2;
+  --color-status-pending: #E8C600;
+  
+  /* Special Colors */
+  --color-checkbox-checked: #2f4ea1;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --color-shadow-modal: 0px 15px 25px 0px rgba(125, 33, 107, 0.15);
+  --color-border-modal: rgba(0, 0, 0, 0.6);
+  --color-shadow-secondary: 0px 1px 3px 0px #00000033;
+  --color-shadow-tertiary: 0 2px 4px rgba(0,0,0,0.1);
+  
+  /* Gradient Colors */
+  --color-gradient-blue-light: #C1DFFC;
+  --color-gradient-aqua: #A4FDEB;
+  --color-gradient-cyan-light: #a4feeb;
+  --color-gradient-blue-tint: #c3ddfd;
+}
+
+/* =========================
+   BODY & TEST PAGE
+========================= */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.test-page {
+  width: 381px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 100px;
+  margin-bottom: 100px
+}
+
+.test-part {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* =========================
+   TEXTFIELD
+========================= */
+
+.textfield {
+  height: 56px;
+
+  padding: 16px;
+
+  border-radius: 16px;
+  border: 1px solid var(--color-border-light);
+  background: var(--color-white);
+
+  font-size: 16px;
+  color: var(--color-text-dark);
+  font-weight: 700;
+  font-family: 'Inter';
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  outline: none;
+  transition: all 0.1s ease;
+
+  --p-inputtext-border-color: var(--color-border-light);
+  --p-inputtext-color: var(--color-text-dark);
+  --p-inputtext-border-radius: 16px;
+  --p-inputtext-focus-border-color: var(--color-primary-blue);
+}
+
+/* Placeholder */
+.textfield::placeholder {
+  color: var(--color-text-muted);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Focus = ACTIVE ENTERED */
+.textfield:focus {
+  border: 2px solid var(--color-primary-blue);
+}
+
+/* Disabled = INACTIVE */
+.textfield:disabled {
+  background: var(--color-gray-light);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-dark);
+  cursor: not-allowed;
+}
+
+.textfield-with-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.textfield-label {
+  text-align: left;
+  color: var(--color-text-dark);
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Inter';
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown {
+  height: 56px;
+
+  padding: 16px;
+
+  border-radius: 16px;
+  border: 1px solid var(--color-border-light);
+  background: var(--color-white);
+
+  font-size: 16px;
+  color: var(--color-text-dark);
+  font-weight: 700;
+  font-family: 'Inter';
+  letter-spacing: 0%;
+
+  outline: none;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  appearance: none;
+
+  /* Custom arrow */
+  background-image: url("assets/icons/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+}
+
+/* Focus */
+.dropdown:focus {
+  border: 2px solid var(--color-primary-blue);
+}
+
+/* Disabled */
+.dropdown:disabled {
+  background-color: var(--color-gray-light);
+  border: 1px solid var(--color-border-light);
+  cursor: not-allowed;
+}
+
+.dropdown:invalid {
+  color: var(--color-text-muted);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter';
+}
+
+.dropdown-with-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-label {
+  text-align: left;
+  color: var(--color-text-dark);
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Inter';
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  height: 42px;
+  padding: 10px 24px 10px 24px;
+
+  border-radius: 16px;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Inter';
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s ease;
+
+  white-space: nowrap;
+}
+
+/* SIZES */
+.btn-large {
+  height: 56px;
+  font-size: 18px;
+  padding: 16px 24px 16px 24px;
+}
+
+.btn-small {
+  height: 37px;
+  font-size: 14px;
+  padding: 10px 24px 10px 24px;
+}
+
+/* PRIMARY */
+.btn-primary {
+  background: var(--color-primary-blue);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-blue-dark);
+}
+
+.btn-primary:disabled {
+  background: var(--color-gray-lighter);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+/* SECONDARY */
+.btn-secondary {
+  background: var(--color-border-medium);
+  color: var(--color-primary-blue);
+}
+
+.btn-secondary:hover {
+  background: var(--color-gray-medium);
+}
+
+.btn-secondary:disabled {
+  background: var(--color-gray-lighter);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+/* TERTIARY */
+.btn-tertiary {
+  background: var(--color-white);
+  color: var(--color-primary-blue);
+}
+
+.btn-tertiary:hover {
+  background: var(--color-off-white);
+}
+
+.btn-tertiary:disabled {
+  background: var(--color-gray-lighter);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+/* =========================
+   TABS
+========================= */
+
+.tab {
+  background: var(--color-gray-lighter);
+  border-radius: 16px;
+  border: none;
+  padding: 16px 24px 16px 24px;
+
+  font-size: 16px;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  font-family: 'Inter';
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  position: relative; 
+  text-decoration: none;
+  cursor: not-allowed;
+
+  transition: all 0.1s;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+.tab.active {
+  background: var(--color-white);
+  color: var(--color-primary-blue);
+  cursor: pointer;
+}
+
+.tab.active:hover {
+  background-color: var(--color-primary-blue-light);
+}
+
+.tab.active-selected {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  box-shadow: var(--color-shadow-modal);
+  cursor: pointer;
+}
+
+.tab.active-selected:hover {
+  background-color: var(--color-primary-blue);
+}
+
+/* =========================
+   BOXES
+========================= */
+
+.simple-box {
+  background: var(--color-white);
+  border-radius: 16px;
+  border: 1px solid var(--color-border-light-blue);
+  padding: 16px;
+
+  width: 270.5px;
+  height: 152px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative; 
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.1s;
+}
+
+.simple-box:hover {
+  background: var(--color-off-white);
+}
+
+.simple-box .box-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.simple-box .title {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--color-primary-blue);
+}
+
+.simple-box .subtitle {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--color-text-muted);
+}
+
+/* PAYMENT */
+.payment-box {
+  background: var(--color-white);
+  border-radius: 16px;
+  border: 1px solid var(--color-border-light-blue-2);
+  padding: 27.5px 24px 27.5px 24px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative; 
+  overflow: hidden;
+  text-decoration: none;
+
+  transition: all 0.1s;
+  gap: 8px;
+}
+
+.payment-box:hover {
+  background: var(--color-off-white);
+}
+
+.payment-box .state {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(8px, 1vw, 16px);
+  height: 34px;
+}
+
+.payment-box .state .text {
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: clamp(12px, 1vw, 14px);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--color-text-dark);
+  text-align: right;
+}
+
+.payment-box .state .text .subtitle {
+  font-weight: 400;
+}
+
+.payment-box .state .account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-box .state .account .text {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: clamp(24px, 2.2vw, 32px);
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  text-align: left;
+
+  color: var(--color-primary-blue);
+}
+
+.payment-box-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Invoice Unpaid */
+
+/* Invoice Paid */
+
+/* =========================
+   CHECKBOXES
+========================= */
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.checkbox .box {
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+.checkbox.active {
+  cursor: pointer;
+}
+
+/* hide default checkbox */
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* custom checkbox square */
+.checkmark {
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-border-modal);
+  border-radius: 2px;
+  background: var(--color-white);
+  box-sizing: border-box;
+}
+
+/* checked state */
+.checkbox input:checked + .checkmark {
+  background: var(--color-checkbox-checked);
+  border-color: var(--color-checkbox-checked);
+}
+
+/* check icon */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* show check icon when checked */
+.checkbox input:checked + .checkmark::after {
+  display: block;
+}
+
+.checkmark::after {
+  left: 4.5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox input:disabled + .checkmark {
+  border-color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.checkbox input:disabled:checked + .checkmark {
+  border-color: var(--color-text-muted);
+  background-color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.checkbox .text {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0px;
+}
+
+.checkbox .text a {
+  color: var(--color-primary-blue);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  margin-left: 2px;
+}
+
+/* =========================
+   RADIO BUTTONS
+========================= */
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.radio-button.active {
+  cursor: pointer;
+}
+
+.radio-button .box {
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+/* hide native radio */
+.radio-button input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* outer circle */
+.radio {
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-border-medium);
+  border-radius: 8px;
+  background: var(--color-off-white);
+  box-sizing: border-box;
+}
+
+/* inner dot */
+.radio::after {
+  content: "";
+  position: absolute;
+  display: none;
+
+  width: 8px;
+  height: 8px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  background: var(--color-off-white);
+}
+
+/* checked */
+.radio-button input:checked + .radio {
+  border: 3.5px solid var(--color-primary-blue);
+}
+
+.radio-button input:checked + .radio::after {
+  display: block;
+}
+
+/* disabled */
+.radio-button input:disabled + .radio {
+  background: var(--color-gray-even-lighter);
+  border-color: var(--color-border-medium);
+  cursor: not-allowed;
+}
+
+.radio-button input:disabled:checked + .radio {
+  background: var(--color-off-white);
+  border: 3.5px solid var(--color-gray-medium-2);
+}
+
+.radio-button .text {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.radio-button .text a {
+  color: var(--color-primary-blue);
+  text-decoration: underline;
+  margin-left: 2px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.text-default {
+  font-family: "Inter";
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.text-header {
+  font-family: "Inter";
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  font-size: 16px;
+  color: var(--color-text-dark);
+  margin: 0px;
+}
+
+.no-select {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* =========================
+   PAGE TITLE ROW
+========================= */
+
+.page-title-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.page-title-row .navigate-button {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.page-title-row .navigate-button:hover {
+  background-color: var(--color-blue-tint-light);
+}
+
+.page-title-row .text-header {
+  font-size: 22px;
+  color: var(--color-text-dark);
+  margin: 0px;
+}
+
+/* ========================
+    ERROR MESSAGE TOAST
+======================== */
+
+.p-toast-message-content {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.p-toast-summary {
+    font-weight: 700 !important;
+    font-size: 1rem;
+}
+
+.p-toast-detail {
+    font-weight: 400 !important;
+    font-size: 0.875rem;
+}
+
+.p-toast-message {
+    border-radius: 16px !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+@media (max-width: 700px) {
+    .p-toast {
+        width: 90vw !important;
+        left: 5vw !important; /* Centers it if width is 90% */
+    }
+}

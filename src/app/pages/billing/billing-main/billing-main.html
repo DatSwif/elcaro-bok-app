@@ -1,0 +1,38 @@
+<div class="page-title-row">
+  <div class="navigate-button">
+    <a 
+      (click)="goBack()"
+      class="back-link"
+    >
+      <img src="assets/icons/fi-rr-angle-small-right.png" alt="back">
+    </a>
+  </div>
+  <h2 class="text-header text-default" i18n>Płatności</h2>
+</div>
+
+<app-billing-account-info
+  [account]="account"
+  (pay)="goToPay()"
+  (refund)="goToRefunds()"
+  (copied)="onAccountCopied($event)">
+</app-billing-account-info>
+
+<nav class="tabs-row">
+  @for (item of tabItems; track item.id) {
+    @if (item.isActive) {
+      <a
+        class="tab active"
+        [routerLink]="item.route"
+        routerLinkActive="active-selected"
+      >
+        {{ item.label }}
+      </a>
+    } @else {
+      <a class="tab">
+        {{ item.label }}
+      </a>
+    }
+  }
+</nav>
+
+<router-outlet></router-outlet>

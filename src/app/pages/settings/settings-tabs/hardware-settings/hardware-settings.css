@@ -1,0 +1,45 @@
+.hardware-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 8px;
+}
+
+.hardware-settings .text {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.hardware-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 24px;
+}
+
+.service-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 8px;
+}
+
+.hardware {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.text-empty {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-text-dark);
+    opacity: 0.45;
+}

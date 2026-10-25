@@ -1,0 +1,61 @@
+<div class="lang-notif-settings">
+  @if (ready()) {
+    <section class="lang-section">
+      <h2 class="text-header" i18n>Domyślny język</h2>
+
+      <div class="dropdown-with-label">
+        <label class="dropdown-label" i18n>Domyślny język</label>
+        <select
+          class="dropdown"
+          [ngModel]="selectedLanguage()"
+          (ngModelChange)="selectedLanguage.set($event)"
+        >
+          @for (item of langItems; track item.id) {
+            <option [value]="item.id">{{ item.title }}</option>
+          }
+        </select>
+      </div>
+    </section>
+
+    <section class="notif-section">
+      <table class="notif-table">
+        <thead>
+          <tr class="header-row">
+            <th>
+              <h2 class="text-header" i18n>Powiadomienia</h2>
+            </th>
+
+            @for (channel of channels; track channel.key) {
+              <th>
+                <h2 class="text-header">{{ channel.label }}</h2>
+              </th>
+            }
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (item of notifItems(); track item.id) {
+            <tr class="switch-row">
+              <td class="row-title text-default">
+                {{ item.title }}
+              </td>
+
+              @for (channel of channels; track channel.key) {
+                <td>
+                  <div class="switch-cell">
+                    <p-toggleswitch
+                      [ngModel]="item.channels[channel.key]"
+                      (ngModelChange)="item.channels[channel.key] = $event"
+                    ></p-toggleswitch>
+                  </div>
+                </td>
+              }
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+
+    <button class="btn btn-secondary" (click)="saveSettings()" i18n>Zapisz zmiany</button>
+  }
+</div>

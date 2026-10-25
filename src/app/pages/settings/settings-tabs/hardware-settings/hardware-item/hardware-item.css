@@ -1,0 +1,191 @@
+.hardware-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    width: 270px;
+    height: 320px;
+    border-radius: 16px;
+    padding: 16px;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-lighter);
+
+    cursor: pointer;
+}
+
+.hardware-item:hover {
+    border-color: var(--color-primary-blue);
+}
+
+.hardware-icon {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+}
+
+.hardware-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 16px;
+
+    width: 238px;
+    height: 144px;
+}
+
+.hardware-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hardware-info .open-icon {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    transform: rotate(180deg);
+}
+
+.hardware-description {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+
+    gap: 4px;
+}
+
+.hardware-description .name {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-primary-blue);
+}
+
+.hardware-description .service {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.hardware-description .service .service-name {
+    font-weight: 700;
+}
+
+.hardware-bottom .ownership {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--color-text-dark);
+}
+
+.hardware-bottom .owner {
+    font-weight: 700;
+}
+
+.hardware-bottom .buttons {
+    gap: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+::ng-deep .p-drawer-right {
+    width: max(320px, 40vw) !important;
+}
+
+::ng-deep .p-drawer {
+    background-color: var(--color-off-white) !important;
+    border-top-left-radius: 16px !important;
+    border-bottom-left-radius: 16px !important;
+    border: none !important;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-primary-blue);
+}
+
+.hardware-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    gap: 24px;
+    height: 100%;
+}
+
+.big-hardware-icon {
+    width: 95%;
+    height: min(95%, 320px);
+    object-fit: contain;
+}
+
+.hardware-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+
+    gap: 12px;
+    width: 100%;
+}
+
+.hardware-main-description {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+
+    padding: 16px;
+    gap: 4px;
+
+    background-color: var(--color-white);
+    border-radius: 16px;
+    border: 1px solid var(--color-gray-lighter);
+
+    width: 100%;
+}
+
+.hardware-main-description .name {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-primary-blue);
+}
+
+.hardware-main-description .service {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.hardware-second-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+
+    gap: 4px;
+}
+
+.hardware-second-description .lable {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-text-dark);
+}
+
+.hardware-second-description .text {
+    font-weight: 700;
+    word-break: break-all;
+}

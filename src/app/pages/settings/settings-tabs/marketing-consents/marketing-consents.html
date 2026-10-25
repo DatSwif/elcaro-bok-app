@@ -1,0 +1,41 @@
+<div class="marketing-consents">
+  @if (isReady()) {
+    <span class="top-text text-default" i18n>
+      W każdej chwili możesz odwołać zgody marketingowe i na profilowanie w dowolnej formie,
+      w szczególności w Stancjonarnym Punkcie Sprzedaży lub pod numerem +48 574 182 792
+    </span>
+
+    <div class="consents-section">
+      <label class="checkbox-mark-all checkbox active">
+        <div class="box">
+          <input type="checkbox" [checked]="allChecked()" (change)="toggleAll()">
+          <span class="checkmark"></span>
+        </div>
+        <div class="text no-select" i18n>Zaznacz/odznacz wszystkie</div>
+      </label>
+
+      <div class="consent-boxes">
+        @for (item of consentBoxes(); track item.code) {
+          <div class="consent-box">
+            <label class="checkbox active">
+              <div class="box">
+                <input
+                  type="checkbox"
+                  [ngModel]="item.checked"
+                  (ngModelChange)="onToggle(item.code, $event)"
+                  [disabled]="!item.editable"
+                >
+                <span class="checkmark"></span>
+              </div>
+              <div class="text no-select">{{ item.title }}</div>
+            </label>
+
+            <span class="description text-default">{{ item.description }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <button class="btn btn-secondary" (click)="saveConsents()" i18n>Zapisz zmiany</button>
+  }
+</div>

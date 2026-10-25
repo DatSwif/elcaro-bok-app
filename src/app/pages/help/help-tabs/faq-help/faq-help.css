@@ -1,0 +1,144 @@
+.faq-help {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  position: relative;
+  gap: 24px;
+  
+  width: 100%;
+  height: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 16px;
+  border: 1px solid var(--color-border-light);
+  background: var(--color-white);
+  padding: 11px 16px;
+  cursor: text;
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  transform: scale(1.1);
+}
+
+.textfield {
+  border: none;
+  outline: none;
+  padding: 0;
+  height: 20px;
+  border-radius: 0px;
+  width: max(200px, 20vw);
+}
+
+.faq-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+  position: relative;
+
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.faq-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  border-radius: 16px;
+  border: 1px solid var(--color-gray-lighter);
+  background: var(--color-white);
+  
+  width: 270px;
+  height: 255px;
+  padding: 16px;
+  gap: 8px;
+  
+  cursor: pointer;
+}
+
+.faq-box:hover {
+  background: var(--color-off-white);
+}
+
+.icon-wrapper img {
+  width: 48px;
+  height: 48px;
+}
+
+.box-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-primary-blue);
+  padding: 10px 24px;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  gap: 16px;
+  width: clamp(320px, 45vw, 866px);
+}
+
+.faq-card {
+  background: var(--color-white);
+  border-radius: 16px;
+}
+
+.faq-summary {
+  padding: 17.5px 24px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-summary::-webkit-details-marker { display: none; }
+
+.question-text {
+  font-weight: 700;
+  color: var(--color-text-dark);
+  font-size: 14px;
+}
+
+.chevron {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq-card[open] .chevron {
+  transform: rotate(180deg);
+}
+
+.answer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  color: var(--color-text-dark);
+  font-size: 14px;
+
+  padding: 0px 24px 24px 24px;
+}
+
+.text-default {
+  color: var(--color-text-dark);
+}

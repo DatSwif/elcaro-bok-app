@@ -1,0 +1,48 @@
+<div class="phone-group" [formGroup]="internalForm">
+  <p-select 
+    [options]="countries" 
+    formControlName="countryData" 
+    filterBy="name,prefix" 
+    optionLabel="prefix" 
+    class="prefix-dropdown"
+  >
+    <ng-template pTemplate="selectedItem" let-selectedOption>
+        <div class="flex-align v-center">
+          @if (selectedOption) {
+            <img 
+              [src]="'https://flagcdn.com/w40/' + selectedOption.code.toLowerCase() + '.png'"
+              class="flag"
+            >
+          }
+          <span class="text-flag-small">{{ selectedOption.prefix }}</span>
+        </div>
+      </ng-template>
+      
+      <ng-template pTemplate="item" let-country>
+        <div class="flex-align v-center">
+            <img 
+              [src]="'https://flagcdn.com/w40/' + country.code.toLowerCase() + '.png'"
+              class="flag"
+              [alt]="country.name"
+            >
+            <span class="text-flag">{{ country.name }} ({{ country.prefix }})</span>
+        </div>
+      </ng-template>
+  </p-select>
+
+  <p-floatLabel variant="on" class="main-input">
+    <p-inputMask
+      formControlName="phone"
+      slotChar=""
+      placeholder="123 456 789"
+      mask="999 999 999"
+      [unmask]="true"
+      [invalid]="invalid"
+      (onBlur)="onTouched()"
+      (onFocus)="snapToCorrectPosition($event)"
+      (click)="snapToCorrectPosition($event)"
+      class="text-input">
+    </p-inputMask>
+    <label class="textfield-label" i18n>Podaj numer telefonu</label>
+  </p-floatLabel>
+</div>

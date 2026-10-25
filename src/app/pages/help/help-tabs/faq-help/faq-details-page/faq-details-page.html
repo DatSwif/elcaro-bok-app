@@ -1,0 +1,45 @@
+<div class="faq-details-page">
+  @if (ready()) {
+    @if (pageData(); as page) {
+      <header class="faq-details-header">
+        <div class="page-title-row">
+          <div class="navigate-button">
+            <a [routerLink]="['/help/faq']">
+              <img src="assets/icons/fi-rr-angle-small-right.png" alt="Powrót" i18n-alt>
+            </a>
+          </div>
+          <h2 class="text-header text-default" i18n>{{ page.title }}</h2>
+        </div>
+      </header>
+
+      <div class="details-content">
+        @for (group of groupNames(); track group) {
+          <section class="faq-group-section">
+            <h2 class="text-header text-default">{{ group }}</h2>
+
+            <div class="questions-list">
+              @for (item of groupedQuestions()[group]; track item.id) {
+                <details class="faq-card">
+                  <summary class="faq-summary">
+                    <span class="question-text text-default">{{ item.title }}</span>
+                    <img src="assets/icons/chevron-down.svg" class="chevron" alt="Rozwiń">
+                  </summary>
+                  <div class="faq-content">
+                    <p class="answer-text text-default">{{ item.answer }}</p>
+                  </div>
+                </details>
+              }
+            </div>
+          </section>
+        } @empty {
+          <span class="text-default" i18n>Brak pytań w tej kategorii.</span>
+        }
+      </div>
+    } @else {
+      <div class="error-container">
+        <span class="text-default" i18n>Nie znaleziono kategorii, której szukasz.</span>
+        <button class="btn btn-primary" [routerLink]="['/help/faq']" i18n>Wróć do listy</button>
+      </div>
+    }
+  }
+</div>

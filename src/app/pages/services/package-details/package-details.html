@@ -1,0 +1,110 @@
+<p-dialog
+  [(visible)]="visible" 
+  (visibleChange)="closeDialog()"
+  [modal]="true" 
+  [draggable]="false"
+  [dismissableMask]="dialogState() === 'DETAILS' || dialogState() === 'SUCCESS' || dialogState() === 'ERROR'"
+  [style]="{ width: '90vw', maxWidth: '500px' }"
+  class="dialog-background">
+  
+  <ng-template #header>
+    @switch (dialogState()) {
+      @case ('VERIFY_CODE') {
+        <h3 class="text-header" i18n>Autoryzacja operacji</h3>
+      } @case ('SUCCESS') {
+        <h3 class="text-header" i18n>Pakiet aktywowany</h3>
+      } @case ('ERROR') {
+        <h3 class="text-header" i18n>Wystąpił błąd</h3>
+      } @case ('LOADING') {
+        <h3 class="text-header" i18n>Przetwarzanie...</h3>
+      } @default {
+        <h3 class="text-header" i18n>Dodanie pakietu {{packageDetails?.name}}</h3>
+      }
+    }
+  </ng-template>
+
+  <ng-template #content>
+    @switch (dialogState()) {
+      
+      @case ('DETAILS') {
+        <div class="dialog-content">
+          <p class="text" i18n>Dodajesz do swojej usługi <b>{{serviceName}}</b> pakiet <a class="package-name">{{packageDetails?.name}}</a><b> zawierający {{packageDetails?.channels?.length}} kanałów.</b></p>
+          
+          <div class="pictogram-grid mt-3">
+            @for (channel of packageDetails?.channels; track $index) {
+              <img class="channel-icon" [src]="getPictogram(channel)">
+            }
+          </div>
+          
+          <p class="text mt-3" i18n>Opłata za pakiet będzie naliczana co miesiąc do Twojej faktury.</p>
+          <div class="price-box my-3">
+            <h2 class="price-text" i18n>Cena pakietu: {{packageDetails?.monthly_fee | number:'1.2-2'}} zł/mc</h2>
+          </div>
+
+          <div class="input-group mb-4">
+            <label class="dialog-content text text-default" i18n>Wybierz numer telefonu do autoryzacji: </label>
+            <select class="dropdown dropdown-small form-input w-full" [(ngModel)]="chosenPhone">
+              <option value="" disabled i18n>Wybierz numer telefonu</option>
+              @for (phone of phoneNumbers(); track phone) {
+                <option [value]="phone">{{ phone }}</option>
+              }
+            </select>
+          </div>
+
+          <div class="checkbox-container">
+            <p-checkbox 
+              [(ngModel)]="acceptedTerms" 
+              [binary]="true" 
+              inputId="terms">
+            </p-checkbox>
+            <span class="text" i18n> Dodając pakiet akceptujesz <a (click)="showPromotionRegulations()" class="text-link">regulamin promocji</a>.</span>
+          </div>
+        </div>
+      }
+
+      @case ('VERIFY_CODE') {
+        <app-sms-confirmation
+          [title]="''"
+          (verify)="onVerifySmsCode($event)"
+          (resend)="onResendSmsCode()">
+        </app-sms-confirmation>
+      }
+
+      @case ('SUCCESS') {
+        <p class="dialog-content text text-default" i18n>Pakiet został pomyślnie aktywowany. Zmiany będą widoczne na Twoim koncie w ciągu kilku minut.</p>
+      } @case ('ERROR') {
+        <p class="dialog-content text text-default" i18n>Nie udało się aktywować pakietu. Prosimy spróbować ponownie później.</p>
+      } @case ('LOADING') {
+        <p class="dialog-content text text-default" i18n>Przetwarzanie zamówienia...</p>
+      }
+    }
+  </ng-template>
+
+  
+  @if (dialogState() != 'VERIFY_CODE') {
+    <ng-template #footer>
+      @switch (dialogState()) {
+        @case ('DETAILS') {
+          <button 
+            class="btn btn-primary" 
+            [disabled]="!chosenPhone() || !acceptedTerms" 
+            (click)="initiateSmsVerification()" 
+            i18n
+          >Potwierdzam i wyślij kod</button>
+          <button class="btn btn-tertiary" (click)="closeDialog()" i18n>Anuluj</button>
+        }
+        @case ('SUCCESS') {
+          <button class="btn btn-primary" (click)="closeDialog()" i18n>Wróć do usług</button>
+        } @case ('ERROR') {
+          <button class="btn btn-primary" (click)="closeDialog()" i18n>Zamknij</button>
+        }
+      }
+    </ng-template>
+  }
+</p-dialog>
+
+<app-document-viewer
+  [(visible)]="documentService.isDocumentVisible"
+  [document]="documentService.selectedDocument"
+  (close)="documentService.hideDocument()">
+</app-document-viewer>

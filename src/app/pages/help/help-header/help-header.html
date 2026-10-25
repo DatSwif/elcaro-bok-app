@@ -1,0 +1,31 @@
+<div class="help-header">
+  <div class="page-title-row">
+    <div class="navigate-button">
+      <a 
+        (click)="goBack()"
+        class="back-link"
+      >
+        <img src="assets/icons/fi-rr-angle-small-right.png" alt="Powrót" i18n-alt>
+      </a>
+    </div>
+    <h2 class="text-header text-default" i18n>Pomoc</h2>
+  </div>
+
+  <nav class="tabs-row">
+    @for (item of tabItems; track item.id) {
+      @if (item.isActive) {
+        <a
+          class="tab active"
+          [routerLink]="item.route"
+          routerLinkActive="active-selected"
+        >
+          {{ item.label }}
+        </a>
+      } @else {
+        <a class="tab">
+          {{ item.label }}
+        </a>
+      }
+    }
+  </nav>
+</div>

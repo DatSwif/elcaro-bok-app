@@ -1,0 +1,28 @@
+.limit-reached-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 280px;
+}
+
+.auth-header {
+  color: var(--color-primary-blue);
+  font-size: 22px;
+}
+
+.text-default {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-text-dark);
+}
+
+.red {
+  color: var(--color-error-dark);
+}
+
+.phone-link {
+  color: var(--color-primary-blue);
+  letter-spacing: 0.5px;
+  text-underline-offset: 1.5px;
+}

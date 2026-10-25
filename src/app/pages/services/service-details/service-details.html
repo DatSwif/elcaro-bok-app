@@ -1,0 +1,102 @@
+
+<p-drawer
+  position="right"
+  [(visible)]="visible" 
+  (visibleChange)="visibleChange.emit($event)"
+  [modal]="true" 
+  class="doc-side-drawer"
+>
+  <ng-template #header>
+    <h3 class="text-header">{{service?.name}}</h3>
+  </ng-template>
+  <div class="drawer-content">
+    <div class="box details-box">
+      <small class="details-label textfield-label" i18n>Adres usługi</small>
+      <p class="details-text text-default">{{address}}</p>
+    </div>
+    <div class="box details-box">
+      <small class="details-label textfield-label" i18n>Okres zobowiązania</small>
+      <p class="details-text text-default">{{service?.end_date}}</p>
+    </div>
+    <div class="box details-box">
+      <small class="details-label textfield-label" i18n>Parametry</small>
+      <p class="details-text text-default">{{service?.description}}</p>
+    </div>
+    <div class="box details-box">
+      <small class="details-label textfield-label" i18n>Powiązane urządzenia</small>
+      @for (item of service?.related_hardware; track item.id) {
+        <p class="details-text text-default">{{item.name}}</p>
+      }
+    </div>
+    @if (service?.packages.length) {
+      <h3 class="text-header" i18n>Pakiety</h3>
+      <div #leftAnchor style="position: absolute; left: 0; top: 50%; width: 1px; height: 1px;"></div>
+      
+      <p-popover styleClass="left-side-popover" #op appendTo="body">
+        <div class="pictogram-grid">
+          @for (channel of hoveredChannels; track $index) {
+            <img 
+              [src]="getPictogram(channel)" 
+              [alt]="channel.name" 
+              [title]="channel.name" 
+              class="channel-icon">
+          }
+        </div>
+      </p-popover>
+      @for (item of service?.packages; track item.id) {
+        <div 
+          class="box package-box"
+          [attr.disabled]="packageDialogOpen ? true : null"
+          (mouseenter)="!packageDialogOpen && onPackageHover($event, item.channels, leftAnchor, op)" 
+          (mouseleave)="onPackageLeave(op)"
+        >
+          <img src="assets/icons/included-check.svg" class="included-check" alt="included">
+          <div class="package-text-zone">
+            <p class="package-name text-default">{{item.name}}</p>
+            <small class="channels-length textfield-label" i18n>Liczba kanałów: {{item.channels.length}}</small>
+          </div>
+          @if (item.monthly_fee) {
+            <p class="monthly-fee text-header" i18n>{{item.monthly_fee.toFixed(2)}} zł</p>
+          }
+          <button 
+            class="btn btn-tertiary package-btn"
+            [disabled]="item.is_base_package"
+            (click)="$event.preventDefault(); deletePackage(item.id)"
+          i18n>Usuń pakiet</button>
+        </div>
+      }
+      @for (item of service?.available_add_ons; track item.id) {
+        <div class="box package-box"
+          (mouseenter)="!packageDialogOpen && onPackageHover($event, item.channels, leftAnchor, op)" 
+          (mouseleave)="onPackageLeave(op)"
+        >
+          <div class="package-text-zone">
+            <p class="package-name text-default">{{item.name}}</p>
+            <small class="channels-length textfield-label" i18n>Liczba kanałów: {{item.channels.length}}</small>
+          </div>
+          @if (item.monthly_fee) {
+            <p class="monthly-fee text-header" i18n>{{item.monthly_fee.toFixed(2)}} zł</p>
+          }
+          <button 
+            class="btn btn-primary package-btn"
+            (click)="$event.preventDefault(); openPackageDetails(item)"
+          i18n>Dodaj pakiet</button>
+        </div>
+      }
+    }
+  </div>
+  <ng-template #footer>
+    <button 
+      class="btn btn-tertiary footer-btn"
+      (click)="closeDrawer();"
+    i18n>Powrót</button>
+  </ng-template>
+</p-drawer>
+@if (packageDialogOpen) {
+  <app-package-details 
+    [(visible)]="packageDialogOpen"
+    [serviceName]="service.name"
+    [serviceId]="serviceId"
+    [packageDetails]="selectedPackageForDialog">
+  </app-package-details>
+}

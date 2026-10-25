@@ -1,0 +1,57 @@
+<p-drawer
+  position="right"
+  [modal]="true" 
+  [(visible)]="visible"
+  (onHide)="onDrawerHidden()"
+  class="doc-side-drawer"
+>
+  <ng-template #header>
+    <h3 class="text-header" i18n>Dane do przelewu</h3>
+  </ng-template>
+  <ng-template #content>
+    @if (data) {
+      <div class="section">
+        <div>
+          <small class="section-label text-default" i18n>Odbiorca</small>
+          <p class="section-text font-bold text-default">{{data.receiver}}</p>
+        </div>
+        <img src="assets/icons/fi-rr-copy-alt.svg" (click)="copyText(data!.receiver)" class="copy-icon">
+      </div>
+      <div class="section">
+        <div>
+          <small class="section-label text-default" i18n>Adres odbiorcy</small>
+          <p class="section-text font-bold text-default">{{data.receiver_address}}</p>
+        </div>
+        <img src="assets/icons/fi-rr-copy-alt.svg" (click)="copyText(data!.receiver_address)" class="copy-icon">
+      </div>
+      <div class="section">
+        <div>
+          <small class="section-label text-default" i18n>Rachunek bankowy</small>
+          <p class="section-text font-bold text-default">{{data.bank_account}}</p>
+        </div>
+        <img src="assets/icons/fi-rr-copy-alt.svg" (click)="copyText(data!.bank_account)" class="copy-icon">
+      </div>
+      <div class="section">
+        <div>
+          <small class="section-label text-default" i18n>Tytuł przelewu</small>
+          <p class="section-text font-bold text-default">{{data.transfer_title}}</p>
+        </div>
+        <img src="assets/icons/fi-rr-copy-alt.svg" (click)="copyText(data.transfer_title)" class="copy-icon">
+      </div>
+      <div class="section">
+        <div>
+          <small class="section-label text-default" i18n>Do zapłaty</small>
+          <p class="section-text font-bold text-xl text-default" i18n>{{data.transfer_amount | number:'1.2-2'}} zł</p>
+        </div>
+        <img src="assets/icons/fi-rr-copy-alt.svg" (click)="copyText(data.transfer_amount.toString())" class="copy-icon">
+      </div>
+    } @else {
+      <p class="text-default font-bold loading-label" i18n>Ładowanie...</p>
+    }
+  </ng-template>
+
+
+  <ng-template #footer>
+    <button class="btn btn-tertiary footer-btn" style="float: right;" (click)="visible = false" i18n>Powrót</button>
+  </ng-template>
+</p-drawer>

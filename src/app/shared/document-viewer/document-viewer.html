@@ -1,0 +1,16 @@
+<p-drawer
+  [(visible)]="visible"
+  (visibleChange)="visibleChange.emit($event)"
+  position="right"
+  [showCloseIcon]="true"
+>
+  <ng-template #header>
+    <span class="title text-default">{{ document?.title }}</span>
+  </ng-template>
+
+  <div class="text text-default" [innerHTML]="document?.text"></div>
+
+  <ng-template #footer>
+    <button class="btn btn-tertiary" i18n (click)="downloadPdf()">Pobierz</button>
+  </ng-template>
+</p-drawer>

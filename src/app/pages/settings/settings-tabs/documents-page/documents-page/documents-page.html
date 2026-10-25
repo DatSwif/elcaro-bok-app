@@ -1,0 +1,24 @@
+<div class="documents-page">
+  @if (!isLoading) {
+    @for (section of sections; track section.type) {
+      <section class="document-section">
+        <h2 class="text-header">{{ section.label }}</h2>
+        <div class="documents-list">
+          @for (doc of section.documents; track doc.id) {
+            <button class="doc-row" (click)="showDocument(doc)">
+              <span class="doc-title">{{ doc.title }}</span>
+              <img src="assets/icons/fi-rr-angle-small-right.svg" alt="Open">
+            </button>
+          }
+        </div>
+      </section>
+    }
+  }
+</div>
+
+<app-document-viewer
+  [visible]="isDocumentVisible()"
+  [document]="selectedDocument()"
+  [isLoading]="isLoadingContent()"
+  (visibleChange)="onVisibleChange($event)">
+</app-document-viewer>

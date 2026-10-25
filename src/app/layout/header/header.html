@@ -1,0 +1,62 @@
+<p-toolbar class="header-toolbar">
+    <ng-template #start>
+        <div class="logo">
+            <img src="assets/icons/Elcaro_logo_color_short_RGB.svg" alt="Logo" aria-hidden="true">
+        </div>
+    </ng-template>
+
+    <ng-template #center>
+        <div class="welcome-section">
+            <p class="welcome-title" i18n>Witaj w świecie elcaro</p>
+            <p class="welcome-subtitle" i18n>Czas na szybkie i wygodne zarządzanie usługami.</p>
+        </div>
+    </ng-template>
+
+    <ng-template #end>
+        <div class="user-section">
+            <div 
+                class="user-info"
+                (click)="$event.preventDefault();"
+                [routerLink]="['/settings/account']"
+                routerLinkActive="active"
+            >
+                <span class="user-name">
+                    @if (layoutService.firstName()) {
+                        {{ layoutService.firstName() }} <br>
+                        {{ layoutService.lastName() }}
+                    } @else {
+                        <span i18n>Użytkownik</span>
+                    }
+                </span>
+                <p-avatar 
+                    image="assets/avatar.png" 
+                    alt="Awatar" i18n-alt 
+                    shape="circle" 
+                    class="user-avatar"
+                ></p-avatar>
+            </div>
+            
+            <div class="separator"></div>
+            
+            <div 
+                class="icon-btn"
+                (click)="$event.preventDefault();"
+                [routerLink]="['/messages/personal']"
+                routerLinkActive="active"
+            >
+                <img src="assets/icons/fi-rr-bell.svg" alt="Wiadomości" i18n-alt>
+                @if (layoutService.messageCount() > 0) {
+                    <p-badge [value]="layoutService.messageCount()" severity="danger" class="msg-badge"></p-badge>
+                }
+            </div>
+            <div 
+                class="icon-btn"
+                (click)="$event.preventDefault(); logout();"
+                [routerLink]="['/start']"
+                routerLinkActive="active"
+            >
+                <img src="assets/icons/fi-rr-sign-out-alt.svg" alt="Wyloguj się" i18n-alt>
+            </div>
+        </div>
+    </ng-template>
+</p-toolbar>

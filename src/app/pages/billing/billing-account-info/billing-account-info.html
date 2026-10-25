@@ -1,0 +1,52 @@
+<div class="billing-account-info">
+  <div class="payment-box growing-box">
+    <div class="state">
+      <div class="text">
+        <span class="title" i18n>Stan rachunku</span>
+
+        @if (account.balance < 0) {
+          <span class="subtitle" i18n>(zaległość)</span>
+        } @else {
+          <span class="subtitle" i18n>(nadpłata)</span>
+        }
+      </div>
+
+      <div class="account">
+        @if (account.balance < 0) {
+          <img src="assets/icons/fi-rr-bell-ring.svg">
+        }
+        <span class="text" i18n>{{ account.balance.toFixed(2) }} zł</span>
+      </div>
+    </div>
+
+    <div class="payment-box-buttons">
+    @if (account.balance > 0) {
+      <button type="button" class="btn btn-small btn-secondary" (click)="onRefund()" i18n>
+        Zwrot
+      </button>
+    }
+
+    @if (!(paymentModeService.isPaymentMode$ | async)) {
+      <button type="button" class="btn btn-small btn-primary" (click)="onPay()" i18n>
+        Opłać
+      </button>
+    }
+    </div>
+  </div>
+
+  <div class="account-number-box growing-box">
+    <small class="account-number-label" i18n>
+      Twój indywidualny numer konta do wpłat
+    </small>
+
+    <div class="account-number">
+      <span class="number">{{ account.account_number }}</span>
+      <img
+        src="assets/icons/fi-rr-copy-alt.svg"
+        alt="Copy"
+        class="copy-icon"
+        (click)="copyAccountNumber()"
+      />
+    </div>
+  </div>
+</div>

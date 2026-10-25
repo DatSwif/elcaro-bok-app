@@ -1,0 +1,71 @@
+<div class="register-form-head">
+  <h3 class="auth-header" i18n>Rejestracja</h3>
+  <p class="text" i18n>Podaj poniżej dane aby zarejestrować się<br>w naszym serwisie ebok.</p>
+</div>
+
+<div class="form-container">
+  <form [formGroup]="registerForm" (ngSubmit)="$event.preventDefault(); verifyForm()" class="register-form">
+    
+    <p-floatLabel variant="on">
+      <input 
+        id="client" 
+        type="text" 
+        pInputText 
+        formControlName="clientNumber" 
+        class="w-full text-bold">
+      <label for="client" class="text-floatlabel" i18n>Podaj numer klienta</label>
+    </p-floatLabel>
+
+    <p-floatLabel variant="on">
+      <input 
+        id="email" 
+        type="email" 
+        pInputText 
+        formControlName="email" 
+        class="w-full text-bold">
+      <label for="email" class="text-floatlabel" i18n>Podaj e-mail</label>
+    </p-floatLabel>
+
+    <app-phone-input formControlName="phoneNumber"></app-phone-input>
+
+    <div class="consent-container">
+      
+      <div class="checkbox">
+        <p-checkbox 
+          [binary]="true" 
+          inputId="terms"
+          formControlName="acceptTerms"
+        ></p-checkbox>
+        <span class="text" i18n>
+          Akceptuję <a (click)="openTermsOfService()" class="text-link">Regulamin</a>
+          i <a (click)="openPrivacyPolicy()" class="text-link">Politykę prywatności</a>
+        </span>
+      </div>
+
+      <div class="checkbox">
+        <p-checkbox 
+          [binary]="true" 
+          inputId="marketing"
+          formControlName="acceptMarketingConsents">
+        </p-checkbox>
+        <span class="text" i18n>
+          Akceptuję <a (click)="openMarketingConsents()" class="text-link">Zgody marketingowe</a>
+        </span>
+      </div>
+
+    </div>
+
+    <button 
+      label="Register" 
+      type="submit" 
+      class="w-full mt-4 btn btn-primary"
+      i18n
+    >Zarejestruj się</button>
+  </form>
+</div>
+
+<app-document-viewer
+  [(visible)]="documentService.isDocumentVisible"
+  [document]="documentService.selectedDocument"
+  (close)="documentService.hideDocument()">
+</app-document-viewer>

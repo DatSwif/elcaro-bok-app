@@ -1,0 +1,109 @@
+.address-label {
+  margin: 0.2rem 0;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  width: 500px;
+  padding-right: 32px;
+}
+
+.options-panel {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1.2rem;
+}
+
+.checkbox-panel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.checkbox label {
+  gap: 0;
+  flex-direction: row;
+}
+
+.box {
+  height: 18px;
+  width: 18px;
+}
+
+.checkmark {
+  left: 0;
+  top: 0;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.service {
+  width: 210px;
+  border-radius: 16px;
+  border: 1px solid var(--color-gray-lighter);
+  padding: 16px;
+}
+
+.service-name {
+  margin: 0;
+  color: var(--color-primary-blue);
+}
+
+.service-status {
+  font-family: "Inter";
+  line-height: 1.5;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.service-fee {
+  margin-bottom: 0; 
+}
+
+.pending {
+  color: var(--color-status-pending);
+}
+
+.blocked {
+  color: var(--color-error-dark);
+}
+
+p.active.service-status {
+  color: var(--color-cyan);
+}
+
+.suspended {
+  color: var(--color-text-muted);
+}
+
+@media (max-aspect-ratio: 1.2/1) {
+  .dropdown-container {
+      width: 90% ;
+      max-width: 90%;
+      left: 5vw;
+  }
+
+  .dropdown {
+    width: auto;
+  }
+
+  .service {
+    margin: 0 auto;
+  }
+}

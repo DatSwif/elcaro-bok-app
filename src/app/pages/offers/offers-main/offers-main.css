@@ -1,0 +1,170 @@
+.offers-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* FEATURED */
+
+.featured-card {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer !important;
+}
+
+.featured-content {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.featured-offer-title {
+    text-align: center;
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--color-primary-blue);
+    margin: 0;
+}
+
+.featured-offer-subtitle {
+    text-align: center;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--color-white);
+    margin: 0;
+}
+
+/* CAROUSEL */
+
+:host ::ng-deep .p-carousel-indicators-list {
+    padding: 1rem;
+    gap: 8px;
+}
+
+:host ::ng-deep .p-carousel-indicator {
+    width: 1rem;
+    height: 1rem;
+    border: 3px solid var(--color-primary-blue);
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+:host ::ng-deep .p-carousel-indicator:hover {
+    transform: scale(1.2);
+}
+
+
+:host ::ng-deep .p-carousel-indicator-active {
+    background: var(--color-primary-blue) !important;
+    transform: scale(1.2);
+}
+
+:host ::ng-deep .p-carousel-indicator-button {
+    border: none;
+    width: 1rem;
+    height: 1rem;
+    background: none !important;
+}
+
+/* FILTER BAR */
+
+.filter-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.btn-primary, .btn-tertiary {
+    /* The Magic Trio: */
+    display: flex;
+    flex: 1;                 /* Grow and shrink equally */
+    flex-basis: 0;           /* Ignore internal content for initial width calc */
+    min-width: max-content;  /* ...BUT grow if the label is too long to fit */
+    justify-content: baseline;
+    align-items: center;
+}
+
+small {
+    text-align: center;
+}
+
+/* OFFERS */
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.offer-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.gradient-background {
+    /* Use a standard two-color gradient fallback */
+    background: linear-gradient(0deg, var(--color-gradient-blue-light) 0%, var(--color-gradient-aqua) 100%);
+    background-size: cover;
+}
+
+/* Ensure the card image container maintains its shape even when empty */
+.card-image, .featured-card {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-body {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 8px;
+}
+
+.offer-title {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 1.5rem;
+    max-width: 80%;
+    color: var(--color-primary-blue);
+    margin: 1rem 0 0;
+}
+
+.offer-subtitle {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--color-white);
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .featured-content {
+        max-width: 100%;
+    }
+
+    :host ::ng-deep .p-carousel-next-button,
+    :host ::ng-deep .p-carousel-prev-button {
+        display: none !important;
+    }
+}

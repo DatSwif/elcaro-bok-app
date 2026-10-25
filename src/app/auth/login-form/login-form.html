@@ -1,0 +1,20 @@
+<div class="login-form-head">
+  <h3 class="auth-header" i18n>Logowanie</h3>
+  <p class="text" i18n>Podaj numer telefonu użyty podczas<br>zawierania umowy.</p>
+</div>
+
+<div class="form-container">
+  <form [formGroup]="loginForm" (ngSubmit)="$event.preventDefault(); verifyForm()" class="login-form">
+    <form [formGroup]="loginForm">
+      <app-phone-input formControlName="phoneNumber"></app-phone-input>
+    </form>
+    
+    <button 
+      pButton 
+      label="Login" 
+      type="submit" 
+      class="w-full mt-4 btn btn-primary"
+      i18n
+    >Zaloguj się</button>
+  </form>
+</div>

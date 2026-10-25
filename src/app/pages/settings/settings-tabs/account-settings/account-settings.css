@@ -1,0 +1,176 @@
+.account-settings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 24px;
+}
+
+.main-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+
+  gap: clamp(12px, 2vw, 24px);
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.text-and-data-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.data-box {
+  width: clamp(306px, 29.4vw, 564px);
+
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-lighter);
+  padding: 16px;
+  border-radius: 16px;
+  
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: relative;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.data-box-editing {
+  width: clamp(306px, 29.4vw, 564px);
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.textfield-with-label > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.textfield-with-label .textfield-label {
+  flex: 1;
+}
+
+.data-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+
+  padding: 6px 0px;
+}
+
+.data-line .title {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.data-line .content {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.textfield.invalid {
+  border-color: var(--color-error-secondary);
+}
+
+.textfield {
+  width: 100%;
+}
+
+.error-text {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--color-error-secondary);
+}
+
+.btn-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.btn-delete:hover {
+  background: var(--color-error-light-bg);
+}
+
+.add-button-wrapper-phone {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 72.22px;
+}
+
+.add-button-wrapper-mail {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 72px;
+}
+
+.add-button-wrapper-mail .btn {
+  width: 100%;
+}
+
+.add-button-wrapper-phone .btn {
+  width: 100%;
+}
+
+app-phone-input ::ng-deep .prefix-dropdown {
+  width: auto;
+  border: 1px solid var(--color-border-light);
+  border-radius: 16px;
+  background-color: var(--color-white);
+  padding: 9.5px 0px;
+
+  --p-select-focus-border-color: var(--color-primary-blue);
+  --p-select-invalid-border-color: var(--color-error-secondary);
+  --p-inputtext-color: var(--color-text-dark);
+}
+
+app-phone-input ::ng-deep .main-input {
+  width: 100%;
+  --p-floatlabel-focus-color: var(--color-primary-blue);
+  --p-floatlabel-invalid-color: var(--color-error-secondary);
+  --p-input-focus-border-color: var(--color-primary-blue);
+}
+
+app-phone-input ::ng-deep .textfield-label {
+  display: none;
+}
+
+app-phone-input ::ng-deep .p-inputtext {
+  height: 56px;
+  border: 1px solid var(--color-border-light);
+  padding: 9.5px 10px;
+  border-radius: 16px;
+  width: 100%;
+  background-color: var(--color-white);
+  font-size: 16px;
+  color: var(--color-text-dark);
+  font-weight: 700;
+
+  --p-inputtext-focus-border-color: var(--color-primary-blue);
+  --p-inputtext-invalid-border-color: var(--color-error-secondary);
+}
+
+app-phone-input ::ng-deep .p-inputtext.p-invalid:not(:focus) {
+  border-color: var(--color-error-secondary) !important;
+}

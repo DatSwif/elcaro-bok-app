@@ -1,0 +1,330 @@
+.details-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ERROR */
+
+.error-state {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-status {
+  margin-bottom: 0;
+  font-family: "Inter";
+  font-weight: 700;
+  color: var(--color-primary-blue);
+}
+
+.error-description {
+  margin-bottom: 50px;
+  font-family: "Inter";
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+/* OFFER DETAILS (outside of variant info) */
+
+.title-text {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--color-primary-blue);
+}
+
+.subtitle-text {
+  width: 60%;
+  min-width: 300px;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-text-dark);
+  text-align: center;
+
+}
+
+.legal-note-text {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.variants-scroll-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+
+.variant-card {
+  max-width: 350px;
+  height: fit-content;
+  border: 1px solid var(--color-gray-lighter);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem 1rem;
+  margin: 1rem 0;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 768px) {
+  .variants-scroll-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .variants-scroll-container {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+  }
+  
+  .variant-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+
+  .variant-card:first-child {
+    margin-left: 20vw; 
+  }
+  
+  .variant-card:last-child {
+    margin-right: 20vw;
+  }
+}
+
+/* BLOCKS */
+
+p, small {
+  margin: 0.2rem;
+  max-width: 250px;
+  text-align: center;
+}
+
+.break-line {
+  margin: 0;
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  width: 100%;
+}
+
+.thick-line {
+  margin: 0;
+  border: none;
+  border-top: 2px solid var(--color-primary-blue);
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.4rem 1rem;
+  font-family: 'Inter';
+}
+
+.regular-price {
+  margin: 0;
+  text-decoration: line-through;
+  color: var(--color-error-dark);
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.current-price {
+  margin: 0;
+  color: var(--color-primary-blue);
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.promo-description {
+  margin: 0;
+  border-radius: 0.5rem;
+  background-color: var(--color-border-medium);
+  color: var(--color-primary-blue);
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.3rem;
+}
+
+.block-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.block-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cyan-small {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--color-cyan);
+  margin: 0;
+}
+
+.promo-headline {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 1.8rem;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--color-primary-blue);
+  margin: 0 0 0.5rem;
+}
+
+.block-icon {
+  margin: 0.5rem;
+  width: 4rem;
+  height: auto;
+}
+
+.mobile-title, .tv-title, .internet-title {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+
+.mobile-data-limit, .tv-primary-metric, .internet-primary-metric {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--color-primary-blue);
+  margin: 0.3rem;
+}
+
+.mobile-calls-sms, .mobile-roaming, .tv-secondary-metric, .internet-secondary-metric {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: var(--color-text-dark);
+}
+
+.addons-title, .contract-title, .hardware-title {
+  margin-bottom: 0.5rem;
+}
+
+.addons-description, .contract-upfront-fee {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: var(--color-border-light);
+}
+
+.hardware-note {
+  border: 1px solid var(--color-primary-blue);
+  border-radius: 1rem;
+  padding: 2px 0.5rem;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: var(--color-primary-blue);
+}
+
+.contract-duration {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: var(--color-text-dark);
+}
+
+.dialog {
+  max-width: 90vw;
+  width: fit-content;
+}
+
+::ng-deep .p-dialog-content {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.text-header {
+  color: var(--color-primary-blue);
+  font-size: 1.2rem;
+}
+
+.dialog-content {
+  font-family: 'Inter';
+  font-size: 1rem;
+  justify-self: center;
+  max-width: 250px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.dropdown-small {
+  height: 44px;
+  padding: 8px;
+  width: 250px;
+}
+
+@media (max-width: 768px) {
+  .dialog-content {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
